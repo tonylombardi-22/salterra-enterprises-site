@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 
+const CALENDLY_URL = "https://calendly.com/amber-salterra/consultation";
+
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
@@ -168,6 +170,12 @@ export default function Navbar() {
           margin-top: 14px;
         }
 
+        .tl-mobile-cta:hover {
+          background: rgba(200, 169, 110, 0.09);
+          border-color: rgba(200, 169, 110, 0.86);
+          color: #f0ede8;
+        }
+
         @media (max-width: 1120px) {
           .tl-nav-inner {
             padding: 0 32px;
@@ -256,9 +264,15 @@ export default function Navbar() {
             </Link>
           </div>
 
-          <Link href="/contact" className="tl-cta">
+          <a
+            href={CALENDLY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="tl-cta"
+            aria-label="Schedule a consultation with Amber through Calendly"
+          >
             Schedule Consultation →
-          </Link>
+          </a>
 
           <button
             className="tl-hamburger"
@@ -284,9 +298,17 @@ export default function Navbar() {
           <Link href="/contact" className={`tl-mobile-link${isActive("/contact") ? " active" : ""}`} onClick={() => setMenuOpen(false)}>
             Contact
           </Link>
-          <Link href="/contact" className="tl-mobile-cta" onClick={() => setMenuOpen(false)}>
+
+          <a
+            href={CALENDLY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="tl-mobile-cta"
+            onClick={() => setMenuOpen(false)}
+            aria-label="Schedule a consultation with Amber through Calendly"
+          >
             Schedule Consultation →
-          </Link>
+          </a>
         </div>
       </nav>
     </>
