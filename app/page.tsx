@@ -115,17 +115,28 @@ export default function Home() {
 
         .hero-portrait-glow {
           position: absolute;
-          inset: 7%;
+          top: -60px;
+          left: -60px;
+          right: -60px;
+          bottom: -60px;
           background:
-            radial-gradient(circle at 50% 38%, rgba(200,169,110,0.18), transparent 44%),
-            radial-gradient(circle at 68% 52%, rgba(240,237,232,0.06), transparent 48%);
-          filter: blur(34px);
-          opacity: 0.9;
+            radial-gradient(
+              ellipse at center,
+              rgba(240,237,232,0.12) 0%,
+              rgba(200,169,110,0.12) 35%,
+              rgba(200,169,110,0.06) 55%,
+              transparent 75%
+            );
+          filter: blur(70px);
+          opacity: 0.95;
           pointer-events: none;
+          z-index: 0;
         }
 
         .hero-portrait-frame {
           position: relative;
+          isolation: isolate;
+          z-index: 1;
           width: 100%;
           max-width: 470px;
           height: 520px;
@@ -137,16 +148,16 @@ export default function Home() {
             0 24px 60px rgba(0,0,0,0.35);
           -webkit-mask-image: radial-gradient(
             ellipse at center,
-            rgba(0,0,0,1) 74%,
-            rgba(0,0,0,0.92) 86%,
-            rgba(0,0,0,0.55) 95%,
+            rgba(0,0,0,1) 68%,
+            rgba(0,0,0,0.92) 82%,
+            rgba(0,0,0,0.55) 92%,
             rgba(0,0,0,0) 100%
           );
           mask-image: radial-gradient(
             ellipse at center,
-            rgba(0,0,0,1) 74%,
-            rgba(0,0,0,0.92) 86%,
-            rgba(0,0,0,0.55) 95%,
+            rgba(0,0,0,1) 68%,
+            rgba(0,0,0,0.92) 82%,
+            rgba(0,0,0,0.55) 92%,
             rgba(0,0,0,0) 100%
           );
         }
@@ -163,6 +174,7 @@ export default function Home() {
 
         .portrait-caption {
           position: absolute;
+          z-index: 2;
           right: 26px;
           bottom: 82px;
           background: rgba(10,10,10,0.72);
