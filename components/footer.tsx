@@ -129,9 +129,14 @@ export default function Footer() {
               <span className="footer-link">
                 Active FINRA licensing across 40+ states
               </span>
-              <Link href="/contact" className="footer-link">
+              <a
+                href="https://calendly.com/amber-salterraenterprises/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-link"
+              >
                 Schedule Consultation →
-              </Link>
+              </a>
             </div>
           </div>
         </div>
