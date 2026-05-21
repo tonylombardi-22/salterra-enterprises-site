@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/footer";
 import Link from "next/link";
 
 export default function AboutPage() {
@@ -232,15 +233,13 @@ export default function AboutPage() {
             Salterra Enterprises helps organizations simplify operations, improve workflows,
             and move strategic priorities forward with confidence. Founded by Amber Zeigler,
             the company brings together corporate experience, product management discipline,
-            sales perspective, and hands-on operational support for businesses that need a
-            clearer way to work and grow.
+            sales perspective, regulated financial services experience, and hands-on operational
+            support for businesses that need a clearer way to work and grow.
           </p>
 
           <div className="split">
             <div>
-              <div className="section-title">
-                Meet Amber Zeigler
-              </div>
+              <div className="section-title">Meet Amber Zeigler</div>
 
               <p className="body-copy">
                 Amber Zeigler is a business professional with experience across product
@@ -258,10 +257,9 @@ export default function AboutPage() {
               </p>
 
               <p className="body-copy">
-                Whether supporting a strategic initiative, redesigning a workflow, organizing
-                administrative operations, or helping a team improve customer experience,
-                Amber brings a balanced mix of analytical thinking, relationship management,
-                and execution-focused leadership.
+                Amber also maintains active FINRA licensing across more than 40 states,
+                providing valuable familiarity with regulated environments, financial services
+                operations, and compliance-driven business processes.
               </p>
 
               <div className="capabilities">
@@ -272,7 +270,7 @@ export default function AboutPage() {
                 <span className="pill">Business Operations</span>
                 <span className="pill">Project Management</span>
                 <span className="pill">Administrative Support</span>
-                <span className="pill">FINRA Background</span>
+                <span className="pill">FINRA Licensed in 40+ States</span>
               </div>
             </div>
 
@@ -339,6 +337,8 @@ export default function AboutPage() {
             </Link>
           </div>
         </section>
+
+        <Footer />
       </main>
     </>
   );
