@@ -12,7 +12,7 @@ export default function Navbar() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=DM+Sans:wght@300;400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=DM+Sans:wght@300;400;500;600&display=swap');
 
         .tl-nav {
           background: #0d0d0d;
@@ -35,17 +35,42 @@ export default function Navbar() {
         .tl-logo-zone {
           display: flex;
           align-items: center;
+          gap: 14px;
           padding-right: 32px;
           border-right: 0.5px solid rgba(240, 237, 232, 0.1);
           flex-shrink: 0;
           text-decoration: none;
-          line-height: 0;
         }
 
-        .tl-logo-svg {
-          height: 44px;
-          width: auto;
-          display: block;
+        .tl-logo-mark {
+          height: 42px;
+          width: 42px;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+
+        .tl-logo-text {
+          display: flex;
+          flex-direction: column;
+          line-height: 1;
+        }
+
+        .tl-logo-main {
+          font-family: 'Cormorant Garamond', serif;
+          font-size: 28px;
+          font-weight: 600;
+          letter-spacing: 0.18em;
+          color: #f0ede8;
+        }
+
+        .tl-logo-sub {
+          margin-top: 5px;
+          font-family: 'DM Sans', sans-serif;
+          font-size: 10px;
+          font-weight: 600;
+          letter-spacing: 0.22em;
+          color: #C8A96E;
+          text-transform: uppercase;
         }
 
         .tl-links {
@@ -81,7 +106,7 @@ export default function Navbar() {
         .tl-cta {
           font-family: 'DM Sans', sans-serif;
           font-size: 11px;
-          font-weight: 500;
+          font-weight: 600;
           letter-spacing: 0.12em;
           color: #C8A96E;
           text-decoration: none;
@@ -145,7 +170,7 @@ export default function Navbar() {
         .tl-mobile-cta {
           font-family: 'DM Sans', sans-serif;
           font-size: 13px;
-          font-weight: 500;
+          font-weight: 600;
           letter-spacing: 0.08em;
           color: #C8A96E;
           text-decoration: none;
@@ -156,55 +181,49 @@ export default function Navbar() {
           margin-top: 12px;
         }
 
+        @media (max-width: 900px) {
+          .tl-logo-main { font-size: 23px; }
+          .tl-logo-sub { font-size: 9px; }
+          .tl-logo-zone { padding-right: 20px; }
+        }
+
         @media (max-width: 768px) {
           .tl-nav-inner { padding: 0 24px; }
           .tl-links { display: none; }
           .tl-cta { display: none; }
           .tl-hamburger { display: flex; }
+          .tl-logo-zone { border-right: none; padding-right: 0; }
+        }
+
+        @media (max-width: 430px) {
+          .tl-logo-main { font-size: 20px; letter-spacing: 0.12em; }
+          .tl-logo-sub { font-size: 8px; letter-spacing: 0.14em; }
+          .tl-logo-mark { height: 36px; width: 36px; }
         }
       `}</style>
 
       <nav className="tl-nav">
         <div className="tl-nav-inner">
-
-          <Link href="/" className="tl-logo-zone" aria-label="tonylombardi.ai home">
-            <svg
-              className="tl-logo-svg"
-              viewBox="0 0 640 132"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-            >
-              <polygon points="16,124 34,8 46,8 28,124" fill="#FFFFFF"/>
-              <polygon points="32,124 50,8 62,8 44,124" fill="#FFFFFF" opacity="0.4"/>
-              <polygon points="48,124 66,8 78,8 60,124" fill="#FFFFFF" opacity="0.15"/>
-
-              <text x="100" y="72"
-                fontFamily="'Helvetica Neue', Helvetica, Arial, sans-serif"
-                fontSize="58" fontWeight="800" fill="#FFFFFF" letterSpacing="-0.5">TONY</text>
-
-              <text x="282" y="72"
-                fontFamily="'Helvetica Neue', Helvetica, Arial, sans-serif"
-                fontSize="58" fontWeight="800" fill="#B3995E" letterSpacing="-0.5">LOMBARDI</text>
-
-              <line x1="100" y1="84" x2="616" y2="84" stroke="#B3995E" strokeWidth="0.8"/>
-
-              {/* Tagline: single text element starting at x=100, same as TONY — natural word spacing */}
-              <text x="100" y="118"
-                fontFamily="'Helvetica Neue', Helvetica, Arial, sans-serif"
-                fontSize="26" fontWeight="700" letterSpacing="4">
-                <tspan fill="#B3995E">AI &amp; </tspan><tspan fill="#FFFFFF">HUMAN </tspan><tspan fill="#B3995E">FACILITATOR</tspan>
-              </text>
-            </svg>
+          <Link href="/" className="tl-logo-zone" aria-label="Salterra Enterprises home">
+            <img
+              src="/salterra-logo.jpg"
+              alt="Salterra Enterprises logo"
+              className="tl-logo-mark"
+            />
+            <div className="tl-logo-text">
+              <span className="tl-logo-main">SALTERRA</span>
+              <span className="tl-logo-sub">Enterprises, LLC</span>
+            </div>
           </Link>
 
           <div className="tl-links">
-            <Link href="/about"      className={`tl-link${isActive("/about")      ? " active" : ""}`}>About</Link>
-            <Link href="/experience" className={`tl-link${isActive("/experience") ? " active" : ""}`}>Experience</Link>
-            <Link href="/projects"   className={`tl-link${isActive("/projects")   ? " active" : ""}`}>Projects</Link>
-            <Link href="/writing"    className={`tl-link${isActive("/writing")    ? " active" : ""}`}>Writing</Link>
+            <Link href="/about" className={`tl-link${isActive("/about") ? " active" : ""}`}>About</Link>
+            <Link href="/services" className={`tl-link${isActive("/services") ? " active" : ""}`}>Services</Link>
+            <Link href="/industries" className={`tl-link${isActive("/industries") ? " active" : ""}`}>Industries</Link>
+            <Link href="/contact" className={`tl-link${isActive("/contact") ? " active" : ""}`}>Contact</Link>
           </div>
 
-          <Link href="/contact" className="tl-cta">GET IN TOUCH →</Link>
+          <Link href="/contact" className="tl-cta">SCHEDULE CONSULTATION →</Link>
 
           <button
             className="tl-hamburger"
@@ -218,11 +237,11 @@ export default function Navbar() {
         </div>
 
         <div className={`tl-mobile-menu${menuOpen ? " open" : ""}`}>
-          <Link href="/about"      className={`tl-mobile-link${isActive("/about")      ? " active" : ""}`} onClick={() => setMenuOpen(false)}>About</Link>
-          <Link href="/experience" className={`tl-mobile-link${isActive("/experience") ? " active" : ""}`} onClick={() => setMenuOpen(false)}>Experience</Link>
-          <Link href="/projects"   className={`tl-mobile-link${isActive("/projects")   ? " active" : ""}`} onClick={() => setMenuOpen(false)}>Projects</Link>
-          <Link href="/writing"    className={`tl-mobile-link${isActive("/writing")    ? " active" : ""}`} onClick={() => setMenuOpen(false)}>Writing</Link>
-          <Link href="/contact"    className="tl-mobile-cta"                                               onClick={() => setMenuOpen(false)}>GET IN TOUCH →</Link>
+          <Link href="/about" className={`tl-mobile-link${isActive("/about") ? " active" : ""}`} onClick={() => setMenuOpen(false)}>About</Link>
+          <Link href="/services" className={`tl-mobile-link${isActive("/services") ? " active" : ""}`} onClick={() => setMenuOpen(false)}>Services</Link>
+          <Link href="/industries" className={`tl-mobile-link${isActive("/industries") ? " active" : ""}`} onClick={() => setMenuOpen(false)}>Industries</Link>
+          <Link href="/contact" className={`tl-mobile-link${isActive("/contact") ? " active" : ""}`} onClick={() => setMenuOpen(false)}>Contact</Link>
+          <Link href="/contact" className="tl-mobile-cta" onClick={() => setMenuOpen(false)}>SCHEDULE CONSULTATION →</Link>
         </div>
       </nav>
     </>
