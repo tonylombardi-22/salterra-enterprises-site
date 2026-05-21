@@ -26,7 +26,7 @@ export default function Navbar() {
         .tl-nav-inner {
           display: flex;
           align-items: center;
-          height: 76px;
+          height: 88px;
           max-width: 1200px;
           margin: 0 auto;
           padding: 0 48px;
@@ -35,7 +35,7 @@ export default function Navbar() {
         .tl-logo-zone {
           display: flex;
           align-items: center;
-          gap: 14px;
+          gap: 16px;
           padding-right: 32px;
           border-right: 0.5px solid rgba(240, 237, 232, 0.1);
           flex-shrink: 0;
@@ -43,9 +43,9 @@ export default function Navbar() {
         }
 
         .tl-logo-mark {
-          height: 42px;
-          width: 42px;
-          object-fit: cover;
+          height: 68px;
+          width: 68px;
+          object-fit: contain;
           border-radius: 50%;
         }
 
@@ -64,11 +64,11 @@ export default function Navbar() {
         }
 
         .tl-logo-sub {
-          margin-top: 5px;
+          margin-top: 6px;
           font-family: 'DM Sans', sans-serif;
           font-size: 10px;
           font-weight: 600;
-          letter-spacing: 0.22em;
+          letter-spacing: 0.24em;
           color: #C8A96E;
           text-transform: uppercase;
         }
@@ -151,7 +151,9 @@ export default function Navbar() {
           gap: 4px;
         }
 
-        .tl-mobile-menu.open { display: flex; }
+        .tl-mobile-menu.open {
+          display: flex;
+        }
 
         .tl-mobile-link {
           font-family: 'DM Sans', sans-serif;
@@ -165,7 +167,9 @@ export default function Navbar() {
         }
 
         .tl-mobile-link:hover,
-        .tl-mobile-link.active { color: #f0ede8; }
+        .tl-mobile-link.active {
+          color: #f0ede8;
+        }
 
         .tl-mobile-cta {
           font-family: 'DM Sans', sans-serif;
@@ -182,23 +186,70 @@ export default function Navbar() {
         }
 
         @media (max-width: 900px) {
-          .tl-logo-main { font-size: 23px; }
-          .tl-logo-sub { font-size: 9px; }
-          .tl-logo-zone { padding-right: 20px; }
+          .tl-nav-inner {
+            height: 82px;
+          }
+
+          .tl-logo-mark {
+            height: 60px;
+            width: 60px;
+          }
+
+          .tl-logo-main {
+            font-size: 23px;
+          }
+
+          .tl-logo-sub {
+            font-size: 9px;
+          }
+
+          .tl-logo-zone {
+            padding-right: 20px;
+          }
         }
 
         @media (max-width: 768px) {
-          .tl-nav-inner { padding: 0 24px; }
-          .tl-links { display: none; }
-          .tl-cta { display: none; }
-          .tl-hamburger { display: flex; }
-          .tl-logo-zone { border-right: none; padding-right: 0; }
+          .tl-nav-inner {
+            padding: 0 24px;
+          }
+
+          .tl-links {
+            display: none;
+          }
+
+          .tl-cta {
+            display: none;
+          }
+
+          .tl-hamburger {
+            display: flex;
+          }
+
+          .tl-logo-zone {
+            border-right: none;
+            padding-right: 0;
+          }
         }
 
         @media (max-width: 430px) {
-          .tl-logo-main { font-size: 20px; letter-spacing: 0.12em; }
-          .tl-logo-sub { font-size: 8px; letter-spacing: 0.14em; }
-          .tl-logo-mark { height: 36px; width: 36px; }
+          .tl-nav-inner {
+            height: 76px;
+          }
+
+          .tl-logo-mark {
+            height: 52px;
+            width: 52px;
+          }
+
+          .tl-logo-main {
+            font-size: 20px;
+            letter-spacing: 0.12em;
+          }
+
+          .tl-logo-sub {
+            font-size: 8px;
+            letter-spacing: 0.14em;
+          }
         }
       `}</style>
 
@@ -210,6 +261,7 @@ export default function Navbar() {
               alt="Salterra Enterprises logo"
               className="tl-logo-mark"
             />
+
             <div className="tl-logo-text">
               <span className="tl-logo-main">SALTERRA</span>
               <span className="tl-logo-sub">Enterprises, LLC</span>
@@ -217,31 +269,75 @@ export default function Navbar() {
           </Link>
 
           <div className="tl-links">
-            <Link href="/about" className={`tl-link${isActive("/about") ? " active" : ""}`}>About</Link>
-            <Link href="/services" className={`tl-link${isActive("/services") ? " active" : ""}`}>Services</Link>
-            <Link href="/industries" className={`tl-link${isActive("/industries") ? " active" : ""}`}>Industries</Link>
-            <Link href="/contact" className={`tl-link${isActive("/contact") ? " active" : ""}`}>Contact</Link>
+            <Link href="/about" className={`tl-link${isActive("/about") ? " active" : ""}`}>
+              About
+            </Link>
+            <Link href="/services" className={`tl-link${isActive("/services") ? " active" : ""}`}>
+              Services
+            </Link>
+            <Link href="/industries" className={`tl-link${isActive("/industries") ? " active" : ""}`}>
+              Industries
+            </Link>
+            <Link href="/contact" className={`tl-link${isActive("/contact") ? " active" : ""}`}>
+              Contact
+            </Link>
           </div>
 
-          <Link href="/contact" className="tl-cta">SCHEDULE CONSULTATION →</Link>
+          <Link href="/contact" className="tl-cta">
+            SCHEDULE CONSULTATION →
+          </Link>
 
           <button
             className="tl-hamburger"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label={menuOpen ? "Close menu" : "Open menu"}
           >
-            <span style={{ transform: menuOpen ? "rotate(45deg) translate(5px, 5px)" : "none" }} />
+            <span
+              style={{
+                transform: menuOpen ? "rotate(45deg) translate(5px, 5px)" : "none",
+              }}
+            />
             <span style={{ opacity: menuOpen ? 0 : 1 }} />
-            <span style={{ transform: menuOpen ? "rotate(-45deg) translate(5px, -5px)" : "none" }} />
+            <span
+              style={{
+                transform: menuOpen ? "rotate(-45deg) translate(5px, -5px)" : "none",
+              }}
+            />
           </button>
         </div>
 
         <div className={`tl-mobile-menu${menuOpen ? " open" : ""}`}>
-          <Link href="/about" className={`tl-mobile-link${isActive("/about") ? " active" : ""}`} onClick={() => setMenuOpen(false)}>About</Link>
-          <Link href="/services" className={`tl-mobile-link${isActive("/services") ? " active" : ""}`} onClick={() => setMenuOpen(false)}>Services</Link>
-          <Link href="/industries" className={`tl-mobile-link${isActive("/industries") ? " active" : ""}`} onClick={() => setMenuOpen(false)}>Industries</Link>
-          <Link href="/contact" className={`tl-mobile-link${isActive("/contact") ? " active" : ""}`} onClick={() => setMenuOpen(false)}>Contact</Link>
-          <Link href="/contact" className="tl-mobile-cta" onClick={() => setMenuOpen(false)}>SCHEDULE CONSULTATION →</Link>
+          <Link
+            href="/about"
+            className={`tl-mobile-link${isActive("/about") ? " active" : ""}`}
+            onClick={() => setMenuOpen(false)}
+          >
+            About
+          </Link>
+          <Link
+            href="/services"
+            className={`tl-mobile-link${isActive("/services") ? " active" : ""}`}
+            onClick={() => setMenuOpen(false)}
+          >
+            Services
+          </Link>
+          <Link
+            href="/industries"
+            className={`tl-mobile-link${isActive("/industries") ? " active" : ""}`}
+            onClick={() => setMenuOpen(false)}
+          >
+            Industries
+          </Link>
+          <Link
+            href="/contact"
+            className={`tl-mobile-link${isActive("/contact") ? " active" : ""}`}
+            onClick={() => setMenuOpen(false)}
+          >
+            Contact
+          </Link>
+          <Link href="/contact" className="tl-mobile-cta" onClick={() => setMenuOpen(false)}>
+            SCHEDULE CONSULTATION →
+          </Link>
         </div>
       </nav>
     </>
