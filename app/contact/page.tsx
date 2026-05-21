@@ -59,7 +59,9 @@ export default function ContactPage() {
 
         .page {
           min-height: 100vh;
-          background: #0a0a0a;
+          background:
+            radial-gradient(circle at 50% 6%, rgba(200,169,110,0.08), transparent 34%),
+            #0a0a0a;
         }
 
         .container {
@@ -86,6 +88,7 @@ export default function ContactPage() {
           letter-spacing: -0.04em;
           margin-bottom: 28px;
           max-width: 940px;
+          font-weight: 600;
         }
 
         .gold {
@@ -94,7 +97,7 @@ export default function ContactPage() {
         }
 
         .intro {
-          max-width: 760px;
+          max-width: 800px;
           color: rgba(240,237,232,0.6);
           line-height: 1.9;
           font-size: 16px;
@@ -112,6 +115,12 @@ export default function ContactPage() {
           border: 0.5px solid rgba(240,237,232,0.08);
           background: rgba(240,237,232,0.02);
           padding: 36px;
+          transition: all 0.3s ease;
+        }
+
+        .panel:hover {
+          border-color: rgba(200,169,110,0.24);
+          box-shadow: 0 0 42px rgba(200,169,110,0.08);
         }
 
         .panel-title {
@@ -119,6 +128,7 @@ export default function ContactPage() {
           font-size: 38px;
           line-height: 1;
           margin-bottom: 18px;
+          font-weight: 600;
         }
 
         .panel-copy {
@@ -156,12 +166,14 @@ export default function ContactPage() {
           font-family: 'DM Sans', sans-serif;
           font-size: 14px;
           outline: none;
+          transition: border-color 0.25s ease, box-shadow 0.25s ease;
         }
 
         input:focus,
         textarea:focus,
         select:focus {
           border-color: rgba(200,169,110,0.55);
+          box-shadow: 0 0 24px rgba(200,169,110,0.08);
         }
 
         textarea {
@@ -178,15 +190,19 @@ export default function ContactPage() {
           font-size: 13px;
           cursor: pointer;
           width: fit-content;
+          transition: all 0.3s ease;
         }
 
         .submit:hover {
-          opacity: 0.88;
+          transform: translateY(-3px);
+          box-shadow: 0 18px 38px rgba(200,169,110,0.18);
         }
 
         .submit:disabled {
           opacity: 0.55;
           cursor: not-allowed;
+          transform: none;
+          box-shadow: none;
         }
 
         .note {
@@ -242,15 +258,23 @@ export default function ContactPage() {
           color: rgba(240,237,232,0.6);
           text-decoration: none;
           font-size: 14px;
+          transition: color 0.25s ease, text-shadow 0.25s ease;
         }
 
         .quick-link:hover {
           color: #C8A96E;
+          text-shadow: 0 0 18px rgba(200,169,110,0.18);
         }
 
         .disclaimer {
           margin-top: 72px;
-          border-top: 0.5px solid rgba(240,237,232,0.08);
+          border-top: 1px solid transparent;
+          border-image: linear-gradient(
+            90deg,
+            transparent,
+            rgba(200,169,110,0.35),
+            transparent
+          ) 1;
           padding-top: 28px;
           color: rgba(240,237,232,0.38);
           font-size: 12px;
@@ -276,14 +300,14 @@ export default function ContactPage() {
           <div className="eyebrow">Contact</div>
 
           <h1>
-            Let’s discuss where your business needs{" "}
-            <span className="gold">more clarity, structure, and support.</span>
+            Let’s discuss how your business can{" "}
+            <span className="gold">grow with greater clarity and momentum.</span>
           </h1>
 
           <p className="intro">
-            Whether you need help improving workflows, supporting a strategic initiative,
-            organizing operations, or strengthening client-facing processes, Salterra
-            Enterprises can help identify practical next steps.
+            Whether you need help aligning strategy, improving operations, strengthening your
+            brand, implementing technology solutions, or supporting growth initiatives, Salterra
+            Enterprises helps organizations move from complexity to confident execution.
           </p>
 
           <div className="contact-grid">
@@ -291,10 +315,10 @@ export default function ContactPage() {
               <div className="panel-title">Start the conversation</div>
 
               <p className="panel-copy">
-                Share a few details about your business, your goals, and the challenge
-                you are trying to solve. Salterra Enterprises will follow up to determine
-                whether there is a good fit for consulting, operations support, or
-                project-based work.
+                Share a few details about your business, growth goals, and the challenges you are
+                facing. Salterra Enterprises will follow up to discuss opportunities to improve
+                strategy, operations, customer experience, brand positioning, technology execution,
+                or business growth initiatives.
               </p>
 
               <form className="form" onSubmit={handleSubmit}>
@@ -330,12 +354,27 @@ export default function ContactPage() {
                     <option value="" disabled>
                       Select one
                     </option>
-                    <option value="Business Operations">Business Operations</option>
-                    <option value="Product Strategy & Planning">Product Strategy & Planning</option>
-                    <option value="Administrative Support">Administrative Support</option>
-                    <option value="Strategic Project Support">Strategic Project Support</option>
-                    <option value="Financial Services Operations">Financial Services Operations</option>
-                    <option value="Not sure yet">Not sure yet</option>
+                    <option value="Strategic Growth & Advisory">
+                      Strategic Growth & Advisory
+                    </option>
+                    <option value="Operations & Process Improvement">
+                      Operations & Process Improvement
+                    </option>
+                    <option value="Brand & Content Strategy">
+                      Brand & Content Strategy
+                    </option>
+                    <option value="Technology & Digital Solutions">
+                      Technology & Digital Solutions
+                    </option>
+                    <option value="Customer Experience & Business Performance">
+                      Customer Experience & Business Performance
+                    </option>
+                    <option value="Administrative & Business Infrastructure">
+                      Administrative & Business Infrastructure
+                    </option>
+                    <option value="Not sure yet">
+                      Not sure yet
+                    </option>
                   </select>
                 </div>
 
@@ -344,7 +383,7 @@ export default function ContactPage() {
                   <textarea
                     id="message"
                     name="message"
-                    placeholder="Tell us what you are trying to improve, simplify, or move forward."
+                    placeholder="Tell us about your business goals, challenges, and what success looks like for your organization."
                     required
                   />
                 </div>
@@ -366,8 +405,8 @@ export default function ContactPage() {
               <div className="panel-title">Contact Information</div>
 
               <p className="panel-copy">
-                For consulting inquiries, operations support, workflow improvement,
-                or project-based engagements, email Salterra Enterprises directly.
+                For strategic advisory, operational support, brand development, technology
+                initiatives, or growth-focused engagements, contact Salterra Enterprises directly.
               </p>
 
               <div className="info-block">
@@ -382,15 +421,16 @@ export default function ContactPage() {
               <div className="info-block">
                 <div className="info-label">Services</div>
                 <div className="info-value">
-                  Consulting · Operations · Workflow Strategy · Product & Project Support
+                  Strategy · Operations · Brand · Technology · Growth
                 </div>
               </div>
 
               <div className="info-block">
                 <div className="info-label">Professional Background</div>
                 <div className="info-value">
-                  Product management, sales operations, customer experience, workflow
-                  optimization, and active FINRA licensing across 40+ states.
+                  Experience spanning product management, customer experience, sales, operations,
+                  regulated financial services, workflow improvement, business strategy, and
+                  growth-focused execution.
                 </div>
               </div>
 
@@ -412,10 +452,11 @@ export default function ContactPage() {
           </div>
 
           <p className="disclaimer">
-            Salterra Enterprises provides consulting, operations, workflow, and business
-            support services. References to financial services experience or FINRA licensing
-            describe professional background and familiarity with regulated environments,
-            not securities, investment advisory, brokerage, legal, or tax services.
+            Salterra Enterprises provides strategic advisory, operational support, brand strategy,
+            technology coordination, and business growth services. References to financial services
+            experience or FINRA licensing describe professional background and familiarity with
+            regulated environments, not securities, investment advisory, brokerage, legal, or tax
+            services.
           </p>
         </section>
 
