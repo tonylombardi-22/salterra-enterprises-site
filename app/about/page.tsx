@@ -89,6 +89,9 @@ export default function AboutPage() {
 
         .panel img {
           width: 100%;
+          height: 520px;
+          object-fit: cover;
+          object-position: center top;
           display: block;
           border: 0.5px solid rgba(200,169,110,0.18);
           margin-bottom: 28px;
@@ -207,6 +210,10 @@ export default function AboutPage() {
             grid-template-columns: 1fr;
           }
 
+          .panel img {
+            height: 460px;
+          }
+
           .values-grid {
             grid-template-columns: 1fr;
           }
@@ -275,10 +282,10 @@ export default function AboutPage() {
             </div>
 
             <aside className="panel">
-              <img src="/salterra-hero.jpg" alt="Salterra Enterprises brand mark" />
+              <img src="/amber-headshot-1.jpg" alt="Amber Zeigler" />
 
-              <div className="panel-title">Salterra Enterprises, LLC</div>
-              <div className="panel-sub">Business Consulting · Operations · Workflow Strategy</div>
+              <div className="panel-title">Amber Zeigler</div>
+              <div className="panel-sub">Founder & Principal Consultant</div>
 
               <p className="body-copy">
                 Built to support organizations that need practical help improving how work
