@@ -530,33 +530,33 @@ export default function Home() {
         <hr className="rule" />
 
         <section className="section">
-          <div className="section-eyebrow fade-up">What Salterra does</div>
+          <div className="section-eyebrow fade-up">How Salterra helps</div>
 
           <div className="cards">
             <div className="card fade-up">
               <div className="card-num">01</div>
-              <div className="card-title">Operational Excellence</div>
+              <div className="card-title">Optimize Operations</div>
               <div className="card-body">
-                We help businesses identify inefficiencies, redesign workflows, document repeatable
-                processes, and build operating systems that are easier to manage and scale.
+                Improve workflows, eliminate bottlenecks, document repeatable processes,
+                and create systems that help the business operate with less friction and more consistency.
               </div>
             </div>
 
             <div className="card fade-up">
               <div className="card-num">02</div>
-              <div className="card-title">Product & Business Strategy</div>
+              <div className="card-title">Launch Strategic Initiatives</div>
               <div className="card-body">
-                We support product planning, roadmap development, stakeholder alignment,
-                requirements gathering, and practical business cases that connect strategy to execution.
+                Support product launches, business transformations, process changes, and cross-functional
+                initiatives with structure, communication, and practical execution support.
               </div>
             </div>
 
             <div className="card fade-up">
               <div className="card-num">03</div>
-              <div className="card-title">Project Leadership</div>
+              <div className="card-title">Improve Client Experience</div>
               <div className="card-body">
-                We provide hands-on leadership for important initiatives, helping teams stay organized,
-                aligned, accountable, and focused on measurable business outcomes.
+                Strengthen onboarding, service delivery, communication workflows, and customer-facing
+                processes so clients experience a more organized and responsive business.
               </div>
             </div>
           </div>
@@ -606,10 +606,10 @@ export default function Home() {
           <div className="cta-bar-inner">
             <div>
               <div className="cta-bar-headline">
-                Ready to simplify the way your business works?
+                Ready to move your business forward with clarity?
               </div>
               <div className="cta-bar-sub">
-                Start with a conversation about your goals, workflows, and operational challenges.
+                Start with a conversation about your goals, workflows, and the execution support your business needs next.
               </div>
             </div>
             <Link href="/contact" className="cta-bar-btn">
