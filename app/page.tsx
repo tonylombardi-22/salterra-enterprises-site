@@ -20,13 +20,19 @@ export default function Home() {
 
         .page {
           background:
+            radial-gradient(circle at 50% 6%, rgba(200,169,110,0.09), transparent 34%),
             radial-gradient(circle at 72% 8%, rgba(200,169,110,0.08), transparent 30%),
             radial-gradient(circle at 12% 34%, rgba(200,169,110,0.045), transparent 28%),
             #0a0a0a;
           min-height: 100vh;
         }
 
+        .fade-up {
+          transition: opacity 0.9s ease, transform 0.9s ease;
+        }
+
         .hero {
+          position: relative;
           padding: 72px 48px 76px;
           max-width: 1200px;
           margin: 0 auto;
@@ -34,6 +40,21 @@ export default function Home() {
           grid-template-columns: 1fr 470px;
           gap: 72px;
           align-items: center;
+        }
+
+        .hero::before {
+          content: "";
+          position: absolute;
+          inset: 20px 0 auto 0;
+          height: 420px;
+          background: radial-gradient(circle at 38% 18%, rgba(200,169,110,0.08), transparent 46%);
+          pointer-events: none;
+          z-index: 0;
+        }
+
+        .hero > * {
+          position: relative;
+          z-index: 1;
         }
 
         .hero-tag {
@@ -45,6 +66,7 @@ export default function Home() {
           border: 0.5px solid rgba(200,169,110,0.22);
           padding: 8px 14px;
           margin-bottom: 34px;
+          box-shadow: 0 0 24px rgba(200,169,110,0.04);
         }
 
         .hero-h1 {
@@ -85,7 +107,7 @@ export default function Home() {
           text-decoration: none;
           padding: 14px 28px;
           border-radius: 2px;
-          transition: all 0.25s ease;
+          transition: all 0.3s ease;
         }
 
         .btn-primary {
@@ -94,8 +116,8 @@ export default function Home() {
         }
 
         .btn-primary:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 18px 38px rgba(240,237,232,0.10);
+          transform: translateY(-3px);
+          box-shadow: 0 20px 44px rgba(240,237,232,0.14);
         }
 
         .btn-ghost {
@@ -105,8 +127,8 @@ export default function Home() {
 
         .btn-ghost:hover {
           color: #f0ede8;
-          border-color: rgba(200,169,110,0.45);
-          box-shadow: 0 0 32px rgba(200,169,110,0.08);
+          border-color: rgba(200,169,110,0.50);
+          box-shadow: 0 0 38px rgba(200,169,110,0.12);
         }
 
         .hero-portrait-wrap {
@@ -144,7 +166,8 @@ export default function Home() {
           border-radius: 18px;
           background: transparent;
           box-shadow:
-            0 0 0 0.5px rgba(200,169,110,0.08),
+            0 0 0 0.5px rgba(200,169,110,0.10),
+            0 0 52px rgba(200,169,110,0.08),
             0 24px 60px rgba(0,0,0,0.35);
           -webkit-mask-image: radial-gradient(
             ellipse at center,
@@ -201,8 +224,13 @@ export default function Home() {
 
         .rule {
           border: none;
-          height: 0.5px;
-          background: rgba(240,237,232,0.08);
+          height: 1px;
+          background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(200,169,110,0.35),
+            transparent
+          );
           max-width: 1200px;
           margin: 0 auto;
         }
@@ -256,13 +284,14 @@ export default function Home() {
           padding: 22px;
           font-size: 14px;
           color: rgba(240,237,232,0.68);
-          transition: all 0.25s ease;
+          transition: all 0.3s ease;
         }
 
         .outcome:hover {
-          transform: translateY(-4px);
-          border-color: rgba(200,169,110,0.30);
-          box-shadow: 0 0 42px rgba(200,169,110,0.08);
+          transform: translateY(-6px);
+          border-color: rgba(200,169,110,0.36);
+          background: rgba(240,237,232,0.035);
+          box-shadow: 0 0 48px rgba(200,169,110,0.12);
         }
 
         .cards {
@@ -276,14 +305,14 @@ export default function Home() {
           padding: 30px;
           background: rgba(240,237,232,0.02);
           min-height: 250px;
-          transition: all 0.25s ease;
+          transition: all 0.3s ease;
         }
 
         .card:hover {
-          transform: translateY(-6px);
-          border-color: rgba(200,169,110,0.32);
-          background: rgba(240,237,232,0.035);
-          box-shadow: 0 0 48px rgba(200,169,110,0.12);
+          transform: translateY(-8px);
+          border-color: rgba(200,169,110,0.40);
+          background: rgba(240,237,232,0.04);
+          box-shadow: 0 0 60px rgba(200,169,110,0.14);
         }
 
         .card-num {
@@ -345,13 +374,14 @@ export default function Home() {
           border: 0.5px solid rgba(200,169,110,0.22);
           padding: 6px 12px;
           border-radius: 2px;
-          transition: all 0.2s ease;
+          transition: all 0.25s ease;
         }
 
         .pill:hover {
           border-color: rgba(200,169,110,0.48);
           color: rgba(240,237,232,0.88);
-          box-shadow: 0 0 22px rgba(200,169,110,0.08);
+          box-shadow: 0 0 24px rgba(200,169,110,0.10);
+          transform: translateY(-2px);
         }
 
         .cta-bar {
@@ -393,12 +423,12 @@ export default function Home() {
           border-radius: 2px;
           text-decoration: none;
           white-space: nowrap;
-          transition: all 0.25s ease;
+          transition: all 0.3s ease;
         }
 
         .cta-bar-btn:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 16px 34px rgba(10,10,10,0.22);
+          transform: translateY(-3px);
+          box-shadow: 0 18px 38px rgba(10,10,10,0.26);
         }
 
         @media (max-width: 900px) {
