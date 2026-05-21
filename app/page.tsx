@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/footer";
 import ScrollAnimations from "@/components/ScrollAnimations";
 import Link from "next/link";
 
@@ -34,7 +35,6 @@ export default function Home() {
 
         .hero-tag {
           display: inline-block;
-          font-family: 'DM Sans', sans-serif;
           font-size: 11px;
           letter-spacing: 0.14em;
           text-transform: uppercase;
@@ -250,10 +250,6 @@ export default function Home() {
         .cta-bar {
           background: #C8A96E;
           padding: 72px 48px;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          gap: 40px;
         }
 
         .cta-bar-inner {
@@ -290,45 +286,6 @@ export default function Home() {
           border-radius: 2px;
           text-decoration: none;
           white-space: nowrap;
-        }
-
-        .footer {
-          padding: 36px 48px;
-          border-top: 0.5px solid rgba(240,237,232,0.08);
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          max-width: 1200px;
-          margin: 0 auto;
-          flex-wrap: wrap;
-          gap: 16px;
-        }
-
-        .footer-logo {
-          font-family: 'Cormorant Garamond', serif;
-          font-size: 18px;
-          font-weight: 600;
-          letter-spacing: 0.1em;
-          color: rgba(240,237,232,0.35);
-          text-decoration: none;
-        }
-
-        .footer-links {
-          display: flex;
-          gap: 28px;
-          align-items: center;
-          flex-wrap: wrap;
-        }
-
-        .footer-link {
-          font-size: 12px;
-          color: rgba(240,237,232,0.35);
-          text-decoration: none;
-          letter-spacing: 0.04em;
-        }
-
-        .footer-link:hover {
-          color: rgba(240,237,232,0.65);
         }
 
         @media (max-width: 900px) {
@@ -371,12 +328,6 @@ export default function Home() {
           }
 
           .cta-bar-inner {
-            flex-direction: column;
-            align-items: flex-start;
-          }
-
-          .footer {
-            padding: 32px 24px;
             flex-direction: column;
             align-items: flex-start;
           }
@@ -545,20 +496,7 @@ export default function Home() {
           </div>
         </div>
 
-        <footer className="footer">
-          <Link href="/" className="footer-logo">
-            SALTERRA ENTERPRISES
-          </Link>
-
-          <div className="footer-links">
-            <Link href="/about" className="footer-link">About</Link>
-            <Link href="/services" className="footer-link">Services</Link>
-            <Link href="/contact" className="footer-link">Contact</Link>
-            <a href="mailto:amber@salterraenterprises.com" className="footer-link">
-              amber@salterraenterprises.com
-            </a>
-          </div>
-        </footer>
+        <Footer />
       </div>
     </>
   );
