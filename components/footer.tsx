@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+const CALENDLY_URL = "https://calendly.com/amber-salterraenterprises/30min";
+
 export default function Footer() {
   return (
     <>
@@ -40,7 +42,7 @@ export default function Footer() {
           color: rgba(240,237,232,0.45);
           font-size: 13px;
           line-height: 1.7;
-          max-width: 360px;
+          max-width: 390px;
         }
 
         .footer-heading {
@@ -62,10 +64,12 @@ export default function Footer() {
           text-decoration: none;
           font-size: 13px;
           line-height: 1.5;
+          transition: color 0.25s ease, text-shadow 0.25s ease;
         }
 
         .footer-link:hover {
-          color: #f0ede8;
+          color: #C8A96E;
+          text-shadow: 0 0 18px rgba(200,169,110,0.18);
         }
 
         .footer-bottom {
@@ -105,8 +109,8 @@ export default function Footer() {
             </Link>
             <div className="footer-sub">Enterprises, LLC</div>
             <p className="footer-copy">
-              Business consulting, operations support, workflow optimization, and project
-              leadership for organizations that need clearer systems and stronger execution.
+              Strategic advisory, operational support, brand direction, and technology solutions
+              for growing businesses ready to scale with clarity, confidence, and purpose.
             </p>
           </div>
 
@@ -130,7 +134,7 @@ export default function Footer() {
                 Active FINRA licensing across 40+ states
               </span>
               <a
-                href="https://calendly.com/amber-salterraenterprises/30min"
+                href={CALENDLY_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer-link"
@@ -144,7 +148,7 @@ export default function Footer() {
         <div className="footer-bottom">
           <span>© 2026 Salterra Enterprises, LLC. All rights reserved.</span>
           <span>
-            Consulting · Operations · Workflow Strategy · Project Support
+            Strategy · Operations · Brand · Technology · Growth
           </span>
         </div>
       </footer>
