@@ -113,24 +113,19 @@ export default function Home() {
           padding-left: 18px;
         }
 
-        .hero-portrait-glow {
+        .hero-portrait-blur {
           position: absolute;
-          top: -60px;
-          left: -60px;
-          right: -60px;
-          bottom: -60px;
-          background:
-            radial-gradient(
-              ellipse at center,
-              rgba(240,237,232,0.12) 0%,
-              rgba(200,169,110,0.12) 35%,
-              rgba(200,169,110,0.06) 55%,
-              transparent 75%
-            );
-          filter: blur(70px);
-          opacity: 0.95;
-          pointer-events: none;
+          width: 108%;
+          max-width: 520px;
+          height: 560px;
+          object-fit: cover;
+          object-position: center 28%;
+          transform: scale(1.2);
+          filter: blur(28px) brightness(0.72) saturate(0.9);
+          opacity: 0.42;
+          border-radius: 24px;
           z-index: 0;
+          pointer-events: none;
         }
 
         .hero-portrait-frame {
@@ -384,6 +379,10 @@ export default function Home() {
             padding-left: 0;
           }
 
+          .hero-portrait-blur {
+            height: 540px;
+          }
+
           .hero-portrait-frame {
             height: 500px;
           }
@@ -462,7 +461,13 @@ export default function Home() {
           </div>
 
           <div className="hero-portrait-wrap fade-up">
-            <div className="hero-portrait-glow" />
+            <img
+              src="/amber-headshot-2.png"
+              alt=""
+              aria-hidden="true"
+              className="hero-portrait-blur"
+            />
+
             <div className="hero-portrait-frame">
               <img
                 src="/amber-headshot-2.png"
@@ -470,6 +475,7 @@ export default function Home() {
                 className="hero-portrait"
               />
             </div>
+
             <div className="portrait-caption">
               <div className="portrait-name">Amber Zeigler</div>
               <div className="portrait-title">Founder & Principal Consultant</div>
