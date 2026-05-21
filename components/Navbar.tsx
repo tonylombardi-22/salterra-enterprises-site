@@ -18,12 +18,16 @@ export default function Navbar() {
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=DM+Sans:wght@300;400;500;600&display=swap');
 
         .tl-nav {
-          background: #0d0d0d;
-          border-bottom: 0.5px solid rgba(240, 237, 232, 0.08);
+          background:
+            radial-gradient(circle at 78% 0%, rgba(200, 169, 110, 0.055), transparent 28%),
+            rgba(13, 13, 13, 0.96);
+          border-bottom: 0.5px solid rgba(200, 169, 110, 0.12);
           position: sticky;
           top: 0;
           z-index: 100;
           width: 100%;
+          backdrop-filter: blur(14px);
+          box-shadow: 0 14px 38px rgba(0, 0, 0, 0.18);
         }
 
         .tl-nav-inner {
@@ -42,6 +46,12 @@ export default function Navbar() {
           border-right: 0.5px solid rgba(200, 169, 110, 0.22);
           flex-shrink: 0;
           text-decoration: none;
+          transition: filter 0.3s ease, opacity 0.3s ease;
+        }
+
+        .tl-logo-zone:hover {
+          filter: drop-shadow(0 0 18px rgba(200, 169, 110, 0.16));
+          opacity: 0.96;
         }
 
         .tl-logo-wordmark {
@@ -71,19 +81,29 @@ export default function Navbar() {
           padding: 8px 13px;
           border-radius: 3px;
           border: 0.5px solid transparent;
-          transition: color 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+          transition:
+            color 0.28s ease,
+            background 0.28s ease,
+            border-color 0.28s ease,
+            box-shadow 0.28s ease,
+            text-shadow 0.28s ease,
+            transform 0.28s ease;
         }
 
         .tl-link:hover {
-          color: #f0ede8;
+          color: #C8A96E;
           background: rgba(200, 169, 110, 0.055);
-          border-color: rgba(200, 169, 110, 0.16);
+          border-color: rgba(200, 169, 110, 0.22);
+          text-shadow: 0 0 18px rgba(200, 169, 110, 0.25);
+          box-shadow: 0 0 28px rgba(200, 169, 110, 0.08);
+          transform: translateY(-1px);
         }
 
         .tl-link.active {
           color: #C8A96E;
           background: rgba(200, 169, 110, 0.08);
-          border-color: rgba(200, 169, 110, 0.22);
+          border-color: rgba(200, 169, 110, 0.26);
+          text-shadow: 0 0 14px rgba(200, 169, 110, 0.18);
         }
 
         .tl-cta {
@@ -96,15 +116,24 @@ export default function Navbar() {
           border: 0.5px solid rgba(200, 169, 110, 0.52);
           border-radius: 3px;
           padding: 11px 22px;
-          transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+          transition:
+            background 0.3s ease,
+            border-color 0.3s ease,
+            color 0.3s ease,
+            box-shadow 0.3s ease,
+            transform 0.3s ease,
+            text-shadow 0.3s ease;
           white-space: nowrap;
           flex-shrink: 0;
         }
 
         .tl-cta:hover {
-          background: rgba(200, 169, 110, 0.09);
-          border-color: rgba(200, 169, 110, 0.86);
+          background: rgba(200, 169, 110, 0.105);
+          border-color: rgba(200, 169, 110, 0.9);
           color: #f0ede8;
+          text-shadow: 0 0 18px rgba(200, 169, 110, 0.28);
+          box-shadow: 0 0 34px rgba(200, 169, 110, 0.14);
+          transform: translateY(-2px);
         }
 
         .tl-hamburger {
@@ -112,10 +141,17 @@ export default function Navbar() {
           flex-direction: column;
           gap: 5px;
           background: none;
-          border: none;
+          border: 0.5px solid rgba(200, 169, 110, 0.16);
+          border-radius: 3px;
           cursor: pointer;
-          padding: 6px;
+          padding: 8px;
           margin-left: auto;
+          transition: border-color 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .tl-hamburger:hover {
+          border-color: rgba(200, 169, 110, 0.42);
+          box-shadow: 0 0 24px rgba(200, 169, 110, 0.10);
         }
 
         .tl-hamburger span {
@@ -123,16 +159,19 @@ export default function Navbar() {
           width: 24px;
           height: 1.5px;
           background: rgba(200, 169, 110, 0.85);
-          transition: all 0.2s ease;
+          transition: all 0.25s ease;
         }
 
         .tl-mobile-menu {
           display: none;
           flex-direction: column;
-          background: #0d0d0d;
-          border-top: 0.5px solid rgba(240, 237, 232, 0.08);
+          background:
+            radial-gradient(circle at 80% 0%, rgba(200, 169, 110, 0.06), transparent 36%),
+            #0d0d0d;
+          border-top: 0.5px solid rgba(200, 169, 110, 0.12);
           padding: 18px 24px 26px;
           gap: 6px;
+          box-shadow: 0 20px 44px rgba(0, 0, 0, 0.22);
         }
 
         .tl-mobile-menu.open {
@@ -148,12 +187,14 @@ export default function Navbar() {
           text-decoration: none;
           padding: 12px 0;
           border-bottom: 0.5px solid rgba(240, 237, 232, 0.06);
-          transition: color 0.15s ease;
+          transition: color 0.25s ease, text-shadow 0.25s ease, padding-left 0.25s ease;
         }
 
         .tl-mobile-link:hover,
         .tl-mobile-link.active {
           color: #C8A96E;
+          text-shadow: 0 0 18px rgba(200, 169, 110, 0.22);
+          padding-left: 4px;
         }
 
         .tl-mobile-cta {
@@ -168,12 +209,20 @@ export default function Navbar() {
           padding: 12px 16px;
           text-align: center;
           margin-top: 14px;
+          transition:
+            background 0.3s ease,
+            border-color 0.3s ease,
+            color 0.3s ease,
+            box-shadow 0.3s ease,
+            transform 0.3s ease;
         }
 
         .tl-mobile-cta:hover {
-          background: rgba(200, 169, 110, 0.09);
+          background: rgba(200, 169, 110, 0.105);
           border-color: rgba(200, 169, 110, 0.86);
           color: #f0ede8;
+          box-shadow: 0 0 34px rgba(200, 169, 110, 0.13);
+          transform: translateY(-2px);
         }
 
         @media (max-width: 1120px) {
