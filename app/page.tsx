@@ -114,47 +114,61 @@ export default function Home() {
 
         .hero-portrait-glow {
           position: absolute;
-          inset: 8%;
+          inset: 7%;
           background:
-            radial-gradient(circle at 50% 42%, rgba(200,169,110,0.18), transparent 46%),
-            radial-gradient(circle at 70% 55%, rgba(240,237,232,0.07), transparent 50%);
-          filter: blur(32px);
+            radial-gradient(circle at 50% 38%, rgba(200,169,110,0.18), transparent 44%),
+            radial-gradient(circle at 68% 52%, rgba(240,237,232,0.06), transparent 48%);
+          filter: blur(34px);
           opacity: 0.9;
           pointer-events: none;
         }
 
-        .hero-portrait {
+        .hero-portrait-frame {
           position: relative;
           width: 100%;
           max-width: 470px;
-          display: block;
-          object-fit: cover;
-          object-position: center;
-          filter: contrast(1.03) saturate(0.96);
+          height: 520px;
+          overflow: hidden;
+          border-radius: 14px;
+          background: rgba(240,237,232,0.025);
+          box-shadow:
+            0 0 0 0.5px rgba(200,169,110,0.18),
+            0 28px 70px rgba(0,0,0,0.45);
           -webkit-mask-image: radial-gradient(
             ellipse at center,
-            rgba(0,0,0,1) 55%,
-            rgba(0,0,0,0.88) 70%,
-            rgba(0,0,0,0.45) 84%,
+            rgba(0,0,0,1) 66%,
+            rgba(0,0,0,0.88) 80%,
+            rgba(0,0,0,0.48) 92%,
             rgba(0,0,0,0) 100%
           );
           mask-image: radial-gradient(
             ellipse at center,
-            rgba(0,0,0,1) 55%,
-            rgba(0,0,0,0.88) 70%,
-            rgba(0,0,0,0.45) 84%,
+            rgba(0,0,0,1) 66%,
+            rgba(0,0,0,0.88) 80%,
+            rgba(0,0,0,0.48) 92%,
             rgba(0,0,0,0) 100%
           );
         }
 
+        .hero-portrait {
+          width: 100%;
+          height: 100%;
+          display: block;
+          object-fit: cover;
+          object-position: center 28%;
+          transform: scale(1.18);
+          filter: contrast(1.03) saturate(0.96);
+        }
+
         .portrait-caption {
           position: absolute;
-          right: 24px;
-          bottom: 34px;
-          background: rgba(10,10,10,0.68);
-          border: 0.5px solid rgba(200,169,110,0.28);
+          right: 26px;
+          bottom: 82px;
+          background: rgba(10,10,10,0.72);
+          border: 0.5px solid rgba(200,169,110,0.30);
           padding: 12px 16px;
           backdrop-filter: blur(8px);
+          box-shadow: 0 14px 34px rgba(0,0,0,0.34);
         }
 
         .portrait-name {
@@ -356,9 +370,13 @@ export default function Home() {
             margin: 0 auto;
           }
 
+          .hero-portrait-frame {
+            height: 500px;
+          }
+
           .portrait-caption {
             right: 18px;
-            bottom: 22px;
+            bottom: 58px;
           }
 
           .metrics {
@@ -431,11 +449,13 @@ export default function Home() {
 
           <div className="hero-portrait-wrap fade-up">
             <div className="hero-portrait-glow" />
-            <img
-              src="/amber-headshot-2.png"
-              alt="Amber Zeigler, founder of Salterra Enterprises"
-              className="hero-portrait"
-            />
+            <div className="hero-portrait-frame">
+              <img
+                src="/amber-headshot-2.png"
+                alt="Amber Zeigler, founder of Salterra Enterprises"
+                className="hero-portrait"
+              />
+            </div>
             <div className="portrait-caption">
               <div className="portrait-name">Amber Zeigler</div>
               <div className="portrait-title">Founder & Principal Consultant</div>
