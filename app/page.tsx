@@ -432,7 +432,7 @@ export default function Home() {
           <div className="hero-portrait-wrap fade-up">
             <div className="hero-portrait-glow" />
             <img
-              src="/amber-headshot-1.png"
+              src="/amber-headshot-2.png"
               alt="Amber Zeigler, founder of Salterra Enterprises"
               className="hero-portrait"
             />
