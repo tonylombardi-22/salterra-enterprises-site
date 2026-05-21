@@ -1,8 +1,51 @@
+"use client";
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/footer";
 import Link from "next/link";
+import { FormEvent, useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function ContactPage() {
+  const router = useRouter();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setIsSubmitting(true);
+    setErrorMessage("");
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("https://formspree.io/f/xpqndqoq", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        form.reset();
+        router.push("/thank-you");
+        return;
+      }
+
+      setErrorMessage(
+        "Something went wrong while sending your message. Please try again or email Amber directly."
+      );
+    } catch {
+      setErrorMessage(
+        "Something went wrong while sending your message. Please try again or email Amber directly."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+
   return (
     <>
       <style>{`
@@ -141,11 +184,25 @@ export default function ContactPage() {
           opacity: 0.88;
         }
 
+        .submit:disabled {
+          opacity: 0.55;
+          cursor: not-allowed;
+        }
+
         .note {
           color: rgba(240,237,232,0.4);
           font-size: 12px;
           line-height: 1.7;
           margin-top: 4px;
+        }
+
+        .error {
+          color: #f2b8b8;
+          border: 0.5px solid rgba(242,184,184,0.35);
+          background: rgba(242,184,184,0.07);
+          padding: 12px 14px;
+          font-size: 13px;
+          line-height: 1.6;
         }
 
         .info-block {
@@ -240,11 +297,7 @@ export default function ContactPage() {
                 project-based work.
               </p>
 
-              <form
-                className="form"
-                action="https://formspree.io/f/xpqndqoq"
-                method="POST"
-              >
+              <form className="form" onSubmit={handleSubmit}>
                 <input
                   type="hidden"
                   name="_subject"
@@ -296,8 +349,10 @@ export default function ContactPage() {
                   />
                 </div>
 
-                <button className="submit" type="submit">
-                  Send Message
+                {errorMessage && <p className="error">{errorMessage}</p>}
+
+                <button className="submit" type="submit" disabled={isSubmitting}>
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </button>
 
                 <p className="note">
