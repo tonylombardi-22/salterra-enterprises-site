@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/footer";
-import Link from "next/link";
+
+const CALENDLY_URL = "https://calendly.com/amber-salterraenterprises/30min";
 
 export default function AboutPage() {
   return (
@@ -89,9 +90,9 @@ export default function AboutPage() {
 
         .panel img {
           width: 100%;
-          height: 520px;
+          height: 340px;
           object-fit: cover;
-          object-position: center top;
+          object-position: center 18%;
           display: block;
           border: 0.5px solid rgba(200,169,110,0.18);
           margin-bottom: 28px;
@@ -129,7 +130,7 @@ export default function AboutPage() {
         }
 
         .values {
-          margin-top: 88px;
+          margin-top: 56px;
           border-top: 0.5px solid rgba(240,237,232,0.08);
           padding-top: 56px;
         }
@@ -211,7 +212,8 @@ export default function AboutPage() {
           }
 
           .panel img {
-            height: 460px;
+            height: 380px;
+            object-position: center 18%;
           }
 
           .values-grid {
@@ -339,9 +341,14 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <Link href="/contact" className="btn">
+            <a
+              href={CALENDLY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn"
+            >
               Schedule Consultation
-            </Link>
+            </a>
           </div>
         </section>
 
