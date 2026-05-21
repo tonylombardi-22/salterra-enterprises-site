@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 
-const CALENDLY_URL = "https://calendly.com/amber-salterra/consultation";
+const CALENDLY_URL = "https://calendly.com/amber-salterraenterprises/30min";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -269,7 +269,6 @@ export default function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             className="tl-cta"
-            aria-label="Schedule a consultation with Amber through Calendly"
           >
             Schedule Consultation →
           </a>
@@ -305,7 +304,6 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className="tl-mobile-cta"
             onClick={() => setMenuOpen(false)}
-            aria-label="Schedule a consultation with Amber through Calendly"
           >
             Schedule Consultation →
           </a>
