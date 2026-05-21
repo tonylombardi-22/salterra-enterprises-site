@@ -246,7 +246,7 @@ export default function Navbar() {
               className="tl-logo-icon"
             />
             <img
-              src="/salterra-nav-wordmark.png"
+              src="/salterra_wordmark_v2.png"
               alt="Salterra Enterprises, LLC"
               className="tl-logo-wordmark"
             />
