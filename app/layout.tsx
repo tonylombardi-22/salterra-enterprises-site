@@ -46,7 +46,13 @@ export const metadata: Metadata = {
     images: ["/salterra-hero.jpg"],
   },
   icons: {
-    icon: "/salterra-nav-icon.png",
+    icon: [
+      {
+        url: "/salterra-nav-icon.png",
+        type: "image/png",
+        sizes: "32x32",
+      },
+    ],
     shortcut: "/salterra-nav-icon.png",
     apple: "/salterra-nav-icon.png",
   },
