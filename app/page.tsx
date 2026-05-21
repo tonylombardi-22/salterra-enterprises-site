@@ -110,6 +110,7 @@ export default function Home() {
           display: flex;
           align-items: center;
           justify-content: center;
+          padding-left: 18px;
         }
 
         .hero-portrait-glow {
@@ -129,23 +130,23 @@ export default function Home() {
           max-width: 470px;
           height: 520px;
           overflow: hidden;
-          border-radius: 14px;
-          background: rgba(240,237,232,0.025);
+          border-radius: 18px;
+          background: transparent;
           box-shadow:
-            0 0 0 0.5px rgba(200,169,110,0.18),
-            0 28px 70px rgba(0,0,0,0.45);
+            0 0 0 0.5px rgba(200,169,110,0.08),
+            0 24px 60px rgba(0,0,0,0.35);
           -webkit-mask-image: radial-gradient(
             ellipse at center,
-            rgba(0,0,0,1) 66%,
-            rgba(0,0,0,0.88) 80%,
-            rgba(0,0,0,0.48) 92%,
+            rgba(0,0,0,1) 74%,
+            rgba(0,0,0,0.92) 86%,
+            rgba(0,0,0,0.55) 95%,
             rgba(0,0,0,0) 100%
           );
           mask-image: radial-gradient(
             ellipse at center,
-            rgba(0,0,0,1) 66%,
-            rgba(0,0,0,0.88) 80%,
-            rgba(0,0,0,0.48) 92%,
+            rgba(0,0,0,1) 74%,
+            rgba(0,0,0,0.92) 86%,
+            rgba(0,0,0,0.55) 95%,
             rgba(0,0,0,0) 100%
           );
         }
@@ -368,6 +369,7 @@ export default function Home() {
             min-height: auto;
             max-width: 470px;
             margin: 0 auto;
+            padding-left: 0;
           }
 
           .hero-portrait-frame {
