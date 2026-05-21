@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/footer";
 import Link from "next/link";
 
 export default function ContactPage() {
@@ -18,7 +19,7 @@ export default function ContactPage() {
           background: #0a0a0a;
         }
 
-        .wrap {
+        .container {
           max-width: 1200px;
           margin: 0 auto;
           padding: 88px 48px;
@@ -32,17 +33,16 @@ export default function ContactPage() {
           color: rgba(200,169,110,0.72);
           border: 0.5px solid rgba(200,169,110,0.22);
           padding: 8px 14px;
-          margin-bottom: 32px;
+          margin-bottom: 30px;
         }
 
         h1 {
           font-family: 'Cormorant Garamond', serif;
-          font-size: clamp(54px, 7vw, 86px);
+          font-size: clamp(54px, 7vw, 84px);
           line-height: 0.95;
           letter-spacing: -0.04em;
-          font-weight: 600;
-          max-width: 900px;
           margin-bottom: 28px;
+          max-width: 940px;
         }
 
         .gold {
@@ -52,67 +52,37 @@ export default function ContactPage() {
 
         .intro {
           max-width: 760px;
-          font-size: 16px;
-          line-height: 1.85;
           color: rgba(240,237,232,0.6);
+          line-height: 1.9;
+          font-size: 16px;
           margin-bottom: 72px;
         }
 
         .contact-grid {
           display: grid;
-          grid-template-columns: 1fr 420px;
-          gap: 72px;
+          grid-template-columns: 1.1fr 0.9fr;
+          gap: 48px;
           align-items: start;
         }
 
         .panel {
-          border: 0.5px solid rgba(240,237,232,0.09);
-          background: rgba(240,237,232,0.025);
+          border: 0.5px solid rgba(240,237,232,0.08);
+          background: rgba(240,237,232,0.02);
           padding: 36px;
         }
 
         .panel-title {
           font-family: 'Cormorant Garamond', serif;
-          font-size: 34px;
-          line-height: 1.05;
+          font-size: 38px;
+          line-height: 1;
           margin-bottom: 18px;
         }
 
         .panel-copy {
           color: rgba(240,237,232,0.55);
+          line-height: 1.85;
           font-size: 14px;
-          line-height: 1.8;
           margin-bottom: 28px;
-        }
-
-        .contact-methods {
-          display: flex;
-          flex-direction: column;
-          gap: 18px;
-        }
-
-        .method {
-          border-top: 0.5px solid rgba(240,237,232,0.08);
-          padding-top: 18px;
-        }
-
-        .method-label {
-          font-size: 11px;
-          letter-spacing: 0.14em;
-          text-transform: uppercase;
-          color: rgba(200,169,110,0.72);
-          margin-bottom: 8px;
-        }
-
-        .method-value,
-        .method-value a {
-          color: #f0ede8;
-          font-size: 15px;
-          text-decoration: none;
-        }
-
-        .method-value a:hover {
-          color: #C8A96E;
         }
 
         .form {
@@ -120,30 +90,29 @@ export default function ContactPage() {
           gap: 18px;
         }
 
-        .field-group {
+        .field {
           display: grid;
           gap: 8px;
         }
 
         label {
+          color: rgba(200,169,110,0.72);
           font-size: 11px;
           letter-spacing: 0.12em;
           text-transform: uppercase;
-          color: rgba(240,237,232,0.5);
         }
 
         input,
         textarea,
         select {
           width: 100%;
-          background: rgba(240,237,232,0.035);
           border: 0.5px solid rgba(240,237,232,0.12);
+          background: rgba(10,10,10,0.7);
           color: #f0ede8;
+          padding: 13px 14px;
           font-family: 'DM Sans', sans-serif;
           font-size: 14px;
-          padding: 14px 14px;
           outline: none;
-          border-radius: 2px;
         }
 
         input:focus,
@@ -157,22 +126,13 @@ export default function ContactPage() {
           resize: vertical;
         }
 
-        .submit-note {
-          color: rgba(240,237,232,0.42);
-          font-size: 12.5px;
-          line-height: 1.65;
-        }
-
         .submit {
           background: #C8A96E;
           color: #0a0a0a;
           border: none;
-          padding: 15px 28px;
-          font-size: 12px;
-          letter-spacing: 0.1em;
-          text-transform: uppercase;
-          font-weight: 600;
-          border-radius: 2px;
+          padding: 14px 26px;
+          font-family: 'DM Sans', sans-serif;
+          font-size: 13px;
           cursor: pointer;
           width: fit-content;
         }
@@ -181,35 +141,73 @@ export default function ContactPage() {
           opacity: 0.88;
         }
 
-        .direct-email {
-          display: inline-block;
-          color: #C8A96E;
-          text-decoration: none;
-          margin-top: 10px;
+        .note {
+          color: rgba(240,237,232,0.4);
+          font-size: 12px;
+          line-height: 1.7;
+          margin-top: 4px;
         }
 
-        .direct-email:hover {
-          color: #f0ede8;
+        .info-block {
+          border-top: 0.5px solid rgba(240,237,232,0.08);
+          padding-top: 22px;
+          margin-top: 22px;
+        }
+
+        .info-label {
+          color: rgba(200,169,110,0.72);
+          font-size: 11px;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          margin-bottom: 10px;
+        }
+
+        .info-value,
+        .info-value a {
+          color: rgba(240,237,232,0.76);
+          font-size: 14px;
+          line-height: 1.8;
+          text-decoration: none;
+        }
+
+        .info-value a:hover {
+          color: #C8A96E;
+        }
+
+        .quick-links {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          margin-top: 18px;
+        }
+
+        .quick-link {
+          color: rgba(240,237,232,0.6);
+          text-decoration: none;
+          font-size: 14px;
+        }
+
+        .quick-link:hover {
+          color: #C8A96E;
         }
 
         .disclaimer {
           margin-top: 72px;
           border-top: 0.5px solid rgba(240,237,232,0.08);
-          padding-top: 34px;
+          padding-top: 28px;
           color: rgba(240,237,232,0.38);
           font-size: 12px;
-          line-height: 1.7;
-          max-width: 900px;
+          line-height: 1.75;
+          max-width: 920px;
         }
 
         @media (max-width: 900px) {
-          .wrap {
+          .container {
             padding: 56px 24px;
           }
 
           .contact-grid {
             grid-template-columns: 1fr;
-            gap: 36px;
           }
         }
       `}</style>
@@ -217,18 +215,18 @@ export default function ContactPage() {
       <main className="page">
         <Navbar />
 
-        <section className="wrap">
+        <section className="container">
           <div className="eyebrow">Contact</div>
 
           <h1>
-            Let’s talk about where your business needs{" "}
-            <span className="gold">more clarity and support.</span>
+            Let’s discuss where your business needs{" "}
+            <span className="gold">more clarity, structure, and support.</span>
           </h1>
 
           <p className="intro">
             Whether you need help improving workflows, supporting a strategic initiative,
-            organizing operations, or strengthening client-facing processes, Salterra Enterprises
-            can help you identify the next practical step forward.
+            organizing operations, or strengthening client-facing processes, Salterra
+            Enterprises can help identify practical next steps.
           </p>
 
           <div className="contact-grid">
@@ -236,9 +234,10 @@ export default function ContactPage() {
               <div className="panel-title">Start the conversation</div>
 
               <p className="panel-copy">
-                Share a few details about your business, your goals, and the challenge you are
-                trying to solve. Salterra Enterprises will follow up to determine whether there is
-                a good fit for consulting, operations support, or project-based engagement.
+                Share a few details about your business, your goals, and the challenge
+                you are trying to solve. Salterra Enterprises will follow up to determine
+                whether there is a good fit for consulting, operations support, or
+                project-based work.
               </p>
 
               <form
@@ -247,38 +246,37 @@ export default function ContactPage() {
                 method="post"
                 encType="text/plain"
               >
-                <div className="field-group">
+                <div className="field">
                   <label htmlFor="name">Name</label>
                   <input id="name" name="Name" type="text" placeholder="Your name" />
                 </div>
 
-                <div className="field-group">
+                <div className="field">
                   <label htmlFor="email">Email</label>
                   <input id="email" name="Email" type="email" placeholder="you@example.com" />
                 </div>
 
-                <div className="field-group">
+                <div className="field">
                   <label htmlFor="company">Company</label>
                   <input id="company" name="Company" type="text" placeholder="Company name" />
                 </div>
 
-                <div className="field-group">
-                  <label htmlFor="service">Area of Interest</label>
-                  <select id="service" name="Area of Interest" defaultValue="">
+                <div className="field">
+                  <label htmlFor="interest">Area of Interest</label>
+                  <select id="interest" name="Area of Interest" defaultValue="">
                     <option value="" disabled>
                       Select one
                     </option>
-                    <option>Business Operations Consulting</option>
-                    <option>Workflow Optimization</option>
-                    <option>Product & Project Management</option>
-                    <option>Administrative & Operational Support</option>
-                    <option>Customer Experience Optimization</option>
+                    <option>Business Operations</option>
+                    <option>Product Strategy & Planning</option>
+                    <option>Administrative Support</option>
+                    <option>Strategic Project Support</option>
                     <option>Financial Services Operations</option>
-                    <option>Not Sure Yet</option>
+                    <option>Not sure yet</option>
                   </select>
                 </div>
 
-                <div className="field-group">
+                <div className="field">
                   <label htmlFor="message">Message</label>
                   <textarea
                     id="message"
@@ -291,9 +289,9 @@ export default function ContactPage() {
                   Send Message
                 </button>
 
-                <p className="submit-note">
-                  This form opens your email client so you can review the message before sending.
-                  You can also email Amber directly using the address below.
+                <p className="note">
+                  This form opens your email client so you can review the message before
+                  sending. You can also email Amber directly at the address listed here.
                 </p>
               </form>
             </div>
@@ -302,53 +300,60 @@ export default function ContactPage() {
               <div className="panel-title">Contact Information</div>
 
               <p className="panel-copy">
-                For consulting inquiries, business operations support, or project-based work,
-                email Salterra Enterprises directly.
+                For consulting inquiries, operations support, workflow improvement,
+                or project-based engagements, email Salterra Enterprises directly.
               </p>
 
-              <div className="contact-methods">
-                <div className="method">
-                  <div className="method-label">Email</div>
-                  <div className="method-value">
-                    <a href="mailto:amber@salterraenterprises.com">
-                      amber@salterraenterprises.com
-                    </a>
-                  </div>
+              <div className="info-block">
+                <div className="info-label">Email</div>
+                <div className="info-value">
+                  <a href="mailto:amber@salterraenterprises.com">
+                    amber@salterraenterprises.com
+                  </a>
                 </div>
+              </div>
 
-                <div className="method">
-                  <div className="method-label">Services</div>
-                  <div className="method-value">
-                    Consulting · Operations · Workflow Strategy · Project Support
-                  </div>
+              <div className="info-block">
+                <div className="info-label">Services</div>
+                <div className="info-value">
+                  Consulting · Operations · Workflow Strategy · Product & Project Support
                 </div>
+              </div>
 
-                <div className="method">
-                  <div className="method-label">Regulated Business Experience</div>
-                  <div className="method-value">
-                    Active FINRA licensing across 40+ states
-                  </div>
+              <div className="info-block">
+                <div className="info-label">Professional Background</div>
+                <div className="info-value">
+                  Product management, sales operations, customer experience, workflow
+                  optimization, and active FINRA licensing across 40+ states.
                 </div>
+              </div>
 
-                <div className="method">
-                  <div className="method-label">Next Step</div>
-                  <div className="method-value">
-                    <Link href="/services" className="direct-email">
-                      Review Services →
-                    </Link>
-                  </div>
+              <div className="info-block">
+                <div className="info-label">Explore</div>
+                <div className="quick-links">
+                  <Link href="/services" className="quick-link">
+                    View Services →
+                  </Link>
+                  <Link href="/industries" className="quick-link">
+                    View Industries →
+                  </Link>
+                  <Link href="/about" className="quick-link">
+                    Learn About Amber →
+                  </Link>
                 </div>
               </div>
             </aside>
           </div>
 
           <p className="disclaimer">
-            Salterra Enterprises provides consulting, operations, workflow, and business support
-            services. Any reference to financial services experience or FINRA licensing is intended
-            to describe professional background and familiarity with regulated environments, not to
-            advertise securities, investment advisory, brokerage, or legal services.
+            Salterra Enterprises provides consulting, operations, workflow, and business
+            support services. References to financial services experience or FINRA licensing
+            describe professional background and familiarity with regulated environments,
+            not securities, investment advisory, brokerage, legal, or tax services.
           </p>
         </section>
+
+        <Footer />
       </main>
     </>
   );
