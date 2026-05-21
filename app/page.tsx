@@ -28,7 +28,7 @@ export default function Home() {
           max-width: 1200px;
           margin: 0 auto;
           display: grid;
-          grid-template-columns: 1fr 430px;
+          grid-template-columns: 1fr 470px;
           gap: 72px;
           align-items: center;
         }
@@ -60,7 +60,7 @@ export default function Home() {
         }
 
         .hero-sub {
-          max-width: 610px;
+          max-width: 620px;
           font-size: 16px;
           font-weight: 300;
           line-height: 1.75;
@@ -104,17 +104,72 @@ export default function Home() {
           border-color: rgba(200,169,110,0.45);
         }
 
-        .hero-image-wrap {
+        .hero-portrait-wrap {
           position: relative;
-          border: 0.5px solid rgba(200,169,110,0.22);
-          background: rgba(240,237,232,0.03);
-          padding: 14px;
+          min-height: 520px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
 
-        .hero-image {
+        .hero-portrait-glow {
+          position: absolute;
+          inset: 8%;
+          background:
+            radial-gradient(circle at 50% 42%, rgba(200,169,110,0.18), transparent 46%),
+            radial-gradient(circle at 70% 55%, rgba(240,237,232,0.07), transparent 50%);
+          filter: blur(32px);
+          opacity: 0.9;
+          pointer-events: none;
+        }
+
+        .hero-portrait {
+          position: relative;
           width: 100%;
+          max-width: 470px;
           display: block;
           object-fit: cover;
+          object-position: center;
+          filter: contrast(1.03) saturate(0.96);
+          -webkit-mask-image: radial-gradient(
+            ellipse at center,
+            rgba(0,0,0,1) 55%,
+            rgba(0,0,0,0.88) 70%,
+            rgba(0,0,0,0.45) 84%,
+            rgba(0,0,0,0) 100%
+          );
+          mask-image: radial-gradient(
+            ellipse at center,
+            rgba(0,0,0,1) 55%,
+            rgba(0,0,0,0.88) 70%,
+            rgba(0,0,0,0.45) 84%,
+            rgba(0,0,0,0) 100%
+          );
+        }
+
+        .portrait-caption {
+          position: absolute;
+          right: 24px;
+          bottom: 34px;
+          background: rgba(10,10,10,0.68);
+          border: 0.5px solid rgba(200,169,110,0.28);
+          padding: 12px 16px;
+          backdrop-filter: blur(8px);
+        }
+
+        .portrait-name {
+          font-family: 'Cormorant Garamond', serif;
+          font-size: 24px;
+          line-height: 1;
+          color: #f0ede8;
+          margin-bottom: 5px;
+        }
+
+        .portrait-title {
+          font-size: 10px;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          color: rgba(200,169,110,0.78);
         }
 
         .rule {
@@ -292,11 +347,18 @@ export default function Home() {
           .hero {
             grid-template-columns: 1fr;
             padding: 56px 24px;
-            gap: 42px;
+            gap: 32px;
           }
 
-          .hero-image-wrap {
-            max-width: 420px;
+          .hero-portrait-wrap {
+            min-height: auto;
+            max-width: 470px;
+            margin: 0 auto;
+          }
+
+          .portrait-caption {
+            right: 18px;
+            bottom: 22px;
           }
 
           .metrics {
@@ -367,12 +429,17 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="hero-image-wrap fade-up">
+          <div className="hero-portrait-wrap fade-up">
+            <div className="hero-portrait-glow" />
             <img
-              src="/salterra-hero.jpg"
-              alt="Salterra Enterprises logo"
-              className="hero-image"
+              src="/amber-headshot-1.png"
+              alt="Amber Zeigler, founder of Salterra Enterprises"
+              className="hero-portrait"
             />
+            <div className="portrait-caption">
+              <div className="portrait-name">Amber Zeigler</div>
+              <div className="portrait-title">Founder & Principal Consultant</div>
+            </div>
           </div>
         </section>
 
@@ -380,27 +447,27 @@ export default function Home() {
 
         <section className="metrics">
           <div className="metric fade-up">
-            <div className="metric-num">01</div>
+            <div className="metric-num">40+</div>
             <div className="metric-label">
-              Workflow redesign<br />and process improvement
+              States with active<br />FINRA licensing
             </div>
           </div>
           <div className="metric fade-up">
-            <div className="metric-num">02</div>
+            <div className="metric-num">01</div>
             <div className="metric-label">
               Product strategy<br />and business planning
             </div>
           </div>
           <div className="metric fade-up">
-            <div className="metric-num">03</div>
+            <div className="metric-num">02</div>
             <div className="metric-label">
-              Customer experience<br />and service optimization
+              Workflow redesign<br />and process improvement
             </div>
           </div>
           <div className="metric fade-up">
-            <div className="metric-num">04</div>
+            <div className="metric-num">03</div>
             <div className="metric-label">
-              Project execution<br />and operational support
+              Customer experience<br />and operational support
             </div>
           </div>
         </section>
@@ -468,6 +535,7 @@ export default function Home() {
               <span className="gold">growing organizations.</span>
             </div>
             <div className="pills">
+              <span className="pill">FINRA Licensed in 40+ States</span>
               <span className="pill">Product Management</span>
               <span className="pill">Workflow Re-engineering</span>
               <span className="pill">Sales Enablement</span>
@@ -475,7 +543,6 @@ export default function Home() {
               <span className="pill">Business Operations</span>
               <span className="pill">Project Management</span>
               <span className="pill">Administrative Systems</span>
-              <span className="pill">FINRA Background</span>
             </div>
           </div>
         </section>
