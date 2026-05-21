@@ -1,455 +1,355 @@
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
-import type { Metadata } from "next";
 
-export const dynamic = 'force-static';
-
-export const metadata: Metadata = {
-  title: "Contact | Tony Lombardi",
-  description:
-    "Get in touch with Tony Lombardi — enterprise transformation leader, AI operations executive, and operator with range.",
-};
-
-export default function Contact() {
+export default function ContactPage() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap');
-
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=DM+Sans:wght@300;400;500;600&display=swap');
 
         body {
           background: #0a0a0a;
           color: #f0ede8;
           font-family: 'DM Sans', sans-serif;
-          -webkit-font-smoothing: antialiased;
         }
 
-        /* ── HERO ─────────────────────────────── */
-        .ct-hero {
-          padding: 100px 48px 80px;
-          max-width: 1100px;
+        .page {
+          min-height: 100vh;
+          background: #0a0a0a;
+        }
+
+        .wrap {
+          max-width: 1200px;
           margin: 0 auto;
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 80px;
-          align-items: start;
+          padding: 88px 48px;
         }
 
-        .ct-eyebrow {
+        .eyebrow {
+          display: inline-block;
           font-size: 11px;
           letter-spacing: 0.14em;
           text-transform: uppercase;
-          color: rgba(240,237,232,0.3);
-          margin-bottom: 28px;
+          color: rgba(200,169,110,0.72);
+          border: 0.5px solid rgba(200,169,110,0.22);
+          padding: 8px 14px;
+          margin-bottom: 32px;
         }
 
-        .ct-h1 {
+        h1 {
           font-family: 'Cormorant Garamond', serif;
-          font-size: clamp(48px, 6vw, 72px);
+          font-size: clamp(54px, 7vw, 86px);
+          line-height: 0.95;
+          letter-spacing: -0.04em;
           font-weight: 600;
-          line-height: 0.93;
-          color: #f0ede8;
+          max-width: 900px;
           margin-bottom: 28px;
-          letter-spacing: -0.01em;
         }
 
-        .ct-h1 em {
+        .gold {
           color: #C8A96E;
           font-style: italic;
         }
 
-        .ct-lead {
-          font-size: 14px;
-          font-weight: 300;
+        .intro {
+          max-width: 760px;
+          font-size: 16px;
           line-height: 1.85;
-          color: rgba(240,237,232,0.48);
-          margin-bottom: 40px;
+          color: rgba(240,237,232,0.6);
+          margin-bottom: 72px;
         }
 
-        /* ── CONTACT OPTIONS ──────────────────── */
-        .ct-options {
+        .contact-grid {
+          display: grid;
+          grid-template-columns: 1fr 420px;
+          gap: 72px;
+          align-items: start;
+        }
+
+        .panel {
+          border: 0.5px solid rgba(240,237,232,0.09);
+          background: rgba(240,237,232,0.025);
+          padding: 36px;
+        }
+
+        .panel-title {
+          font-family: 'Cormorant Garamond', serif;
+          font-size: 34px;
+          line-height: 1.05;
+          margin-bottom: 18px;
+        }
+
+        .panel-copy {
+          color: rgba(240,237,232,0.55);
+          font-size: 14px;
+          line-height: 1.8;
+          margin-bottom: 28px;
+        }
+
+        .contact-methods {
           display: flex;
           flex-direction: column;
-          gap: 10px;
+          gap: 18px;
         }
 
-        .ct-option {
-          display: flex;
-          align-items: center;
-          gap: 16px;
-          padding: 18px 20px;
-          border: 0.5px solid rgba(240,237,232,0.1);
-          border-radius: 4px;
-          text-decoration: none;
-          transition: border-color 0.2s ease, background 0.2s ease;
-          background: transparent;
+        .method {
+          border-top: 0.5px solid rgba(240,237,232,0.08);
+          padding-top: 18px;
         }
 
-        .ct-option:hover {
-          border-color: rgba(200,169,110,0.4);
-          background: rgba(240,237,232,0.02);
-        }
-
-        .ct-option-icon {
-          width: 36px;
-          height: 36px;
-          border-radius: 3px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-shrink: 0;
-          font-size: 16px;
-        }
-
-        .ct-option-icon.gold {
-          background: rgba(200,169,110,0.12);
-          color: #C8A96E;
-        }
-
-        .ct-option-icon.white {
-          background: rgba(240,237,232,0.06);
-          color: rgba(240,237,232,0.6);
-        }
-
-        .ct-option-body { flex: 1; }
-
-        .ct-option-label {
-          font-size: 13px;
-          font-weight: 500;
-          color: #f0ede8;
-          margin-bottom: 2px;
-        }
-
-        .ct-option-value {
-          font-size: 11.5px;
-          color: rgba(240,237,232,0.35);
-          letter-spacing: 0.03em;
-        }
-
-        .ct-option-arrow {
-          font-size: 14px;
-          color: rgba(240,237,232,0.2);
-          flex-shrink: 0;
-        }
-
-        /* ── FORM SIDE ────────────────────────── */
-        .ct-form-wrap {
-          padding-top: 4px;
-        }
-
-        .ct-form-label {
+        .method-label {
           font-size: 11px;
           letter-spacing: 0.14em;
           text-transform: uppercase;
-          color: rgba(240,237,232,0.25);
-          margin-bottom: 20px;
+          color: rgba(200,169,110,0.72);
+          margin-bottom: 8px;
         }
 
-        .ct-form {
-          display: flex;
-          flex-direction: column;
-          gap: 12px;
-        }
-
-        .ct-field {
-          display: flex;
-          flex-direction: column;
-          gap: 6px;
-        }
-
-        .ct-field label {
-          font-size: 11px;
-          letter-spacing: 0.06em;
-          color: rgba(240,237,232,0.35);
-          text-transform: uppercase;
-        }
-
-        .ct-field input,
-        .ct-field textarea {
-          background: rgba(240,237,232,0.03);
-          border: 0.5px solid rgba(240,237,232,0.12);
-          border-radius: 3px;
-          padding: 12px 16px;
-          font-family: 'DM Sans', sans-serif;
-          font-size: 13px;
-          font-weight: 300;
+        .method-value,
+        .method-value a {
           color: #f0ede8;
-          outline: none;
-          transition: border-color 0.2s ease;
+          font-size: 15px;
+          text-decoration: none;
+        }
+
+        .method-value a:hover {
+          color: #C8A96E;
+        }
+
+        .form {
+          display: grid;
+          gap: 18px;
+        }
+
+        .field-group {
+          display: grid;
+          gap: 8px;
+        }
+
+        label {
+          font-size: 11px;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          color: rgba(240,237,232,0.5);
+        }
+
+        input,
+        textarea,
+        select {
           width: 100%;
+          background: rgba(240,237,232,0.035);
+          border: 0.5px solid rgba(240,237,232,0.12);
+          color: #f0ede8;
+          font-family: 'DM Sans', sans-serif;
+          font-size: 14px;
+          padding: 14px 14px;
+          outline: none;
+          border-radius: 2px;
         }
 
-        .ct-field input::placeholder,
-        .ct-field textarea::placeholder {
-          color: rgba(240,237,232,0.2);
+        input:focus,
+        textarea:focus,
+        select:focus {
+          border-color: rgba(200,169,110,0.55);
         }
 
-        .ct-field input:focus,
-        .ct-field textarea:focus {
-          border-color: rgba(200,169,110,0.4);
-        }
-
-        .ct-field textarea {
+        textarea {
+          min-height: 150px;
           resize: vertical;
-          min-height: 120px;
-          line-height: 1.7;
         }
 
-        .ct-submit {
+        .submit-note {
+          color: rgba(240,237,232,0.42);
+          font-size: 12.5px;
+          line-height: 1.65;
+        }
+
+        .submit {
           background: #C8A96E;
           color: #0a0a0a;
           border: none;
-          padding: 14px 28px;
-          font-family: 'DM Sans', sans-serif;
-          font-size: 12.5px;
-          font-weight: 500;
-          letter-spacing: 0.08em;
+          padding: 15px 28px;
+          font-size: 12px;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          font-weight: 600;
           border-radius: 2px;
           cursor: pointer;
-          transition: opacity 0.2s ease;
-          align-self: flex-start;
-          margin-top: 4px;
+          width: fit-content;
         }
 
-        .ct-submit:hover { opacity: 0.88; }
-
-        .ct-form-note {
-          font-size: 11px;
-          color: rgba(240,237,232,0.2);
-          line-height: 1.6;
-          margin-top: 8px;
+        .submit:hover {
+          opacity: 0.88;
         }
 
-        /* ── RULE ─────────────────────────────── */
-        .rule {
-          border: none;
-          border-top: 0.5px solid rgba(240,237,232,0.08);
-          margin: 0 48px;
-        }
-
-        /* ── AVAILABILITY BAR ─────────────────── */
-        .ct-avail {
-          padding: 48px 48px;
-          max-width: 1100px;
-          margin: 0 auto;
-          display: flex;
-          align-items: center;
-          gap: 16px;
-        }
-
-        .ct-avail-dot {
-          width: 8px;
-          height: 8px;
-          border-radius: 50%;
-          background: #4ec994;
-          flex-shrink: 0;
-        }
-
-        .ct-avail-text {
-          font-size: 13px;
-          font-weight: 300;
-          color: rgba(240,237,232,0.45);
-        }
-
-        .ct-avail-text strong {
-          color: rgba(240,237,232,0.7);
-          font-weight: 500;
-        }
-
-        /* ── FOOTER ───────────────────────────── */
-        .ct-footer {
-          padding: 36px 48px;
-          border-top: 0.5px solid rgba(240,237,232,0.08);
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          max-width: 1200px;
-          margin: 0 auto;
-          flex-wrap: wrap;
-          gap: 16px;
-        }
-
-        .ct-footer-logo {
-          font-family: 'Cormorant Garamond', serif;
-          font-size: 17px;
-          font-weight: 600;
-          letter-spacing: 0.04em;
-          color: rgba(240,237,232,0.2);
+        .direct-email {
+          display: inline-block;
+          color: #C8A96E;
           text-decoration: none;
+          margin-top: 10px;
         }
 
-        .ct-footer-logo span { color: rgba(200,169,110,0.35); }
-
-        .ct-footer-links {
-          display: flex;
-          gap: 28px;
+        .direct-email:hover {
+          color: #f0ede8;
         }
 
-        .ct-footer-link {
+        .disclaimer {
+          margin-top: 72px;
+          border-top: 0.5px solid rgba(240,237,232,0.08);
+          padding-top: 34px;
+          color: rgba(240,237,232,0.38);
           font-size: 12px;
-          color: rgba(240,237,232,0.25);
-          text-decoration: none;
-          letter-spacing: 0.04em;
-          transition: color 0.2s ease;
+          line-height: 1.7;
+          max-width: 900px;
         }
 
-        .ct-footer-link:hover { color: rgba(240,237,232,0.55); }
-
-        /* ── RESPONSIVE ───────────────────────── */
         @media (max-width: 900px) {
-          .ct-hero {
-            grid-template-columns: 1fr;
-            gap: 48px;
-            padding: 72px 24px 56px;
+          .wrap {
+            padding: 56px 24px;
           }
 
-          .ct-avail { padding: 36px 24px; }
-          .rule { margin: 0 24px; }
-
-          .ct-footer {
-            padding: 32px 24px;
-            flex-direction: column;
-            align-items: flex-start;
+          .contact-grid {
+            grid-template-columns: 1fr;
+            gap: 36px;
           }
         }
       `}</style>
 
-      <div style={{ background: "#0a0a0a", minHeight: "100vh" }}>
+      <main className="page">
         <Navbar />
 
-        <section className="ct-hero">
-          {/* Left — headline + contact options */}
-          <div>
-            <div className="ct-eyebrow">Contact</div>
-            <h1 className="ct-h1">
-              Let's build<br />
-              something<br />
-              <em>that works.</em>
-            </h1>
-            <p className="ct-lead">
-              Open to transformation leadership, consulting, and strategic advisory roles.
-              On-site, hybrid, or remote. If you're working on something complex and need
-              an operator who's been in every seat — let's talk.
-            </p>
+        <section className="wrap">
+          <div className="eyebrow">Contact</div>
 
-            <div className="ct-options">
-              <a href="mailto:tony@tonylombardi.ai" className="ct-option">
-                <div className="ct-option-icon gold">
-                  <i className="ti ti-mail" aria-hidden="true"></i>
-                </div>
-                <div className="ct-option-body">
-                  <div className="ct-option-label">Email</div>
-                  <div className="ct-option-value">tony@tonylombardi.ai</div>
-                </div>
-                <div className="ct-option-arrow">→</div>
-              </a>
+          <h1>
+            Let’s talk about where your business needs{" "}
+            <span className="gold">more clarity and support.</span>
+          </h1>
 
-              <a
-                href="https://calendly.com/tonylombardi"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="ct-option"
-              >
-                <div className="ct-option-icon gold">
-                  <i className="ti ti-calendar" aria-hidden="true"></i>
-                </div>
-                <div className="ct-option-body">
-                  <div className="ct-option-label">Book a call</div>
-                  <div className="ct-option-value">calendly.com/tonylombardi</div>
-                </div>
-                <div className="ct-option-arrow">→</div>
-              </a>
-
-              <a
-                href="https://linkedin.com/in/tonylombardi1"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="ct-option"
-              >
-                <div className="ct-option-icon white">
-                  <i className="ti ti-brand-linkedin" aria-hidden="true"></i>
-                </div>
-                <div className="ct-option-body">
-                  <div className="ct-option-label">LinkedIn</div>
-                  <div className="ct-option-value">linkedin.com/in/tonylombardi1</div>
-                </div>
-                <div className="ct-option-arrow">→</div>
-              </a>
-            </div>
-          </div>
-
-          {/* Right — contact form */}
-          <div className="ct-form-wrap">
-            <div className="ct-form-label">Send a message</div>
-            <form
-              className="ct-form"
-              action="https://formspree.io/f/YOUR_FORM_ID"
-              method="POST"
-            >
-              <div className="ct-field">
-                <label htmlFor="name">Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Your name"
-                  required
-                />
-              </div>
-              <div className="ct-field">
-                <label htmlFor="email">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="your@email.com"
-                  required
-                />
-              </div>
-              <div className="ct-field">
-                <label htmlFor="context">What are you working on?</label>
-                <textarea
-                  id="context"
-                  name="context"
-                  placeholder="Brief context on your organization, the role or project, and what you're looking for..."
-                />
-              </div>
-              <button type="submit" className="ct-submit">
-                Send message →
-              </button>
-              <p className="ct-form-note">
-                Typically responds within 24–48 hours.
-              </p>
-            </form>
-          </div>
-        </section>
-
-        <hr className="rule" />
-
-        {/* Availability indicator */}
-        <div className="ct-avail">
-          <div className="ct-avail-dot" />
-          <p className="ct-avail-text">
-            <strong>Currently available</strong> for transformation leadership, consulting, and strategic advisory roles —
-            on-site, hybrid, or remote. Based in Fuquay-Varina, NC.
+          <p className="intro">
+            Whether you need help improving workflows, supporting a strategic initiative,
+            organizing operations, or strengthening client-facing processes, Salterra Enterprises
+            can help you identify the next practical step forward.
           </p>
-        </div>
 
-        <hr className="rule" />
+          <div className="contact-grid">
+            <div className="panel">
+              <div className="panel-title">Start the conversation</div>
 
-        {/* Footer */}
-        <footer className="ct-footer">
-          <Link href="/" className="ct-footer-logo">
-            tonyLombardi<span>.ai</span>
-          </Link>
-          <div className="ct-footer-links">
-            <a href="https://linkedin.com/in/tonylombardi1" target="_blank" rel="noopener noreferrer" className="ct-footer-link">LinkedIn</a>
-            <a href="/experience" className="ct-footer-link">Experience</a>
-            <a href="/about" className="ct-footer-link">About</a>
+              <p className="panel-copy">
+                Share a few details about your business, your goals, and the challenge you are
+                trying to solve. Salterra Enterprises will follow up to determine whether there is
+                a good fit for consulting, operations support, or project-based engagement.
+              </p>
+
+              <form
+                className="form"
+                action="mailto:amber@salterraenterprises.com"
+                method="post"
+                encType="text/plain"
+              >
+                <div className="field-group">
+                  <label htmlFor="name">Name</label>
+                  <input id="name" name="Name" type="text" placeholder="Your name" />
+                </div>
+
+                <div className="field-group">
+                  <label htmlFor="email">Email</label>
+                  <input id="email" name="Email" type="email" placeholder="you@example.com" />
+                </div>
+
+                <div className="field-group">
+                  <label htmlFor="company">Company</label>
+                  <input id="company" name="Company" type="text" placeholder="Company name" />
+                </div>
+
+                <div className="field-group">
+                  <label htmlFor="service">Area of Interest</label>
+                  <select id="service" name="Area of Interest" defaultValue="">
+                    <option value="" disabled>
+                      Select one
+                    </option>
+                    <option>Business Operations Consulting</option>
+                    <option>Workflow Optimization</option>
+                    <option>Product & Project Management</option>
+                    <option>Administrative & Operational Support</option>
+                    <option>Customer Experience Optimization</option>
+                    <option>Financial Services Operations</option>
+                    <option>Not Sure Yet</option>
+                  </select>
+                </div>
+
+                <div className="field-group">
+                  <label htmlFor="message">Message</label>
+                  <textarea
+                    id="message"
+                    name="Message"
+                    placeholder="Tell us what you are trying to improve, simplify, or move forward."
+                  />
+                </div>
+
+                <button className="submit" type="submit">
+                  Send Message
+                </button>
+
+                <p className="submit-note">
+                  This form opens your email client so you can review the message before sending.
+                  You can also email Amber directly using the address below.
+                </p>
+              </form>
+            </div>
+
+            <aside className="panel">
+              <div className="panel-title">Contact Information</div>
+
+              <p className="panel-copy">
+                For consulting inquiries, business operations support, or project-based work,
+                email Salterra Enterprises directly.
+              </p>
+
+              <div className="contact-methods">
+                <div className="method">
+                  <div className="method-label">Email</div>
+                  <div className="method-value">
+                    <a href="mailto:amber@salterraenterprises.com">
+                      amber@salterraenterprises.com
+                    </a>
+                  </div>
+                </div>
+
+                <div className="method">
+                  <div className="method-label">Services</div>
+                  <div className="method-value">
+                    Consulting · Operations · Workflow Strategy · Project Support
+                  </div>
+                </div>
+
+                <div className="method">
+                  <div className="method-label">Regulated Business Experience</div>
+                  <div className="method-value">
+                    Active FINRA licensing across 40+ states
+                  </div>
+                </div>
+
+                <div className="method">
+                  <div className="method-label">Next Step</div>
+                  <div className="method-value">
+                    <Link href="/services" className="direct-email">
+                      Review Services →
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </aside>
           </div>
-        </footer>
-      </div>
+
+          <p className="disclaimer">
+            Salterra Enterprises provides consulting, operations, workflow, and business support
+            services. Any reference to financial services experience or FINRA licensing is intended
+            to describe professional background and familiarity with regulated environments, not to
+            advertise securities, investment advisory, brokerage, or legal services.
+          </p>
+        </section>
+      </main>
     </>
   );
 }
