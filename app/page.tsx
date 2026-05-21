@@ -19,12 +19,15 @@ export default function Home() {
         }
 
         .page {
-          background: #0a0a0a;
+          background:
+            radial-gradient(circle at 72% 8%, rgba(200,169,110,0.08), transparent 30%),
+            radial-gradient(circle at 12% 34%, rgba(200,169,110,0.045), transparent 28%),
+            #0a0a0a;
           min-height: 100vh;
         }
 
         .hero {
-          padding: 72px 48px 72px;
+          padding: 72px 48px 76px;
           max-width: 1200px;
           margin: 0 auto;
           display: grid;
@@ -60,11 +63,11 @@ export default function Home() {
         }
 
         .hero-sub {
-          max-width: 620px;
+          max-width: 660px;
           font-size: 16px;
           font-weight: 300;
           line-height: 1.75;
-          color: rgba(240,237,232,0.6);
+          color: rgba(240,237,232,0.62);
           margin-bottom: 34px;
         }
 
@@ -82,7 +85,7 @@ export default function Home() {
           text-decoration: none;
           padding: 14px 28px;
           border-radius: 2px;
-          transition: all 0.2s ease;
+          transition: all 0.25s ease;
         }
 
         .btn-primary {
@@ -91,7 +94,8 @@ export default function Home() {
         }
 
         .btn-primary:hover {
-          opacity: 0.86;
+          transform: translateY(-2px);
+          box-shadow: 0 18px 38px rgba(240,237,232,0.10);
         }
 
         .btn-ghost {
@@ -102,6 +106,7 @@ export default function Home() {
         .btn-ghost:hover {
           color: #f0ede8;
           border-color: rgba(200,169,110,0.45);
+          box-shadow: 0 0 32px rgba(200,169,110,0.08);
         }
 
         .hero-portrait-wrap {
@@ -202,52 +207,10 @@ export default function Home() {
           margin: 0 auto;
         }
 
-        .metrics {
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 48px;
-        }
-
-        .metric {
-          border-right: 0.5px solid rgba(240,237,232,0.08);
-          padding-right: 32px;
-          margin-right: 32px;
-        }
-
-        .metric:last-child {
-          border-right: none;
-          margin-right: 0;
-        }
-
-        .metric-num {
-          font-family: 'Cormorant Garamond', serif;
-          font-size: 42px;
-          font-weight: 600;
-          color: #C8A96E;
-          line-height: 1;
-          margin-bottom: 10px;
-        }
-
-        .metric-kicker {
-          color: rgba(240,237,232,0.74);
-          font-size: 12px;
-          letter-spacing: 0.12em;
-          text-transform: uppercase;
-          margin-bottom: 8px;
-        }
-
-        .metric-label {
-          font-size: 12px;
-          line-height: 1.55;
-          color: rgba(240,237,232,0.42);
-        }
-
         .section {
           max-width: 1200px;
           margin: 0 auto;
-          padding: 72px 48px;
+          padding: 76px 48px;
         }
 
         .section-eyebrow {
@@ -256,6 +219,50 @@ export default function Home() {
           text-transform: uppercase;
           color: rgba(240,237,232,0.32);
           margin-bottom: 30px;
+        }
+
+        .vision {
+          display: grid;
+          grid-template-columns: 0.9fr 1.1fr;
+          gap: 64px;
+          align-items: center;
+        }
+
+        .section-headline {
+          font-family: 'Cormorant Garamond', serif;
+          font-size: clamp(40px, 5vw, 58px);
+          font-weight: 600;
+          line-height: 1.02;
+          color: #f0ede8;
+        }
+
+        .vision-copy {
+          font-size: 15px;
+          font-weight: 300;
+          line-height: 1.85;
+          color: rgba(240,237,232,0.56);
+          margin-bottom: 22px;
+        }
+
+        .outcomes {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 14px;
+        }
+
+        .outcome {
+          border: 0.5px solid rgba(240,237,232,0.08);
+          background: rgba(240,237,232,0.02);
+          padding: 22px;
+          font-size: 14px;
+          color: rgba(240,237,232,0.68);
+          transition: all 0.25s ease;
+        }
+
+        .outcome:hover {
+          transform: translateY(-4px);
+          border-color: rgba(200,169,110,0.30);
+          box-shadow: 0 0 42px rgba(200,169,110,0.08);
         }
 
         .cards {
@@ -268,7 +275,15 @@ export default function Home() {
           border: 0.5px solid rgba(240,237,232,0.08);
           padding: 30px;
           background: rgba(240,237,232,0.02);
-          min-height: 230px;
+          min-height: 250px;
+          transition: all 0.25s ease;
+        }
+
+        .card:hover {
+          transform: translateY(-6px);
+          border-color: rgba(200,169,110,0.32);
+          background: rgba(240,237,232,0.035);
+          box-shadow: 0 0 48px rgba(200,169,110,0.12);
         }
 
         .card-num {
@@ -291,7 +306,7 @@ export default function Home() {
           font-size: 13.5px;
           font-weight: 300;
           line-height: 1.75;
-          color: rgba(240,237,232,0.48);
+          color: rgba(240,237,232,0.50);
         }
 
         .split {
@@ -330,10 +345,17 @@ export default function Home() {
           border: 0.5px solid rgba(200,169,110,0.22);
           padding: 6px 12px;
           border-radius: 2px;
+          transition: all 0.2s ease;
+        }
+
+        .pill:hover {
+          border-color: rgba(200,169,110,0.48);
+          color: rgba(240,237,232,0.88);
+          box-shadow: 0 0 22px rgba(200,169,110,0.08);
         }
 
         .cta-bar {
-          background: #C8A96E;
+          background: linear-gradient(135deg, #C8A96E, #d8bd82);
           padding: 72px 48px;
         }
 
@@ -371,6 +393,12 @@ export default function Home() {
           border-radius: 2px;
           text-decoration: none;
           white-space: nowrap;
+          transition: all 0.25s ease;
+        }
+
+        .cta-bar-btn:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 16px 34px rgba(10,10,10,0.22);
         }
 
         @media (max-width: 900px) {
@@ -400,27 +428,18 @@ export default function Home() {
             bottom: 58px;
           }
 
-          .metrics {
-            grid-template-columns: repeat(2, 1fr);
-            padding: 42px 24px;
-            gap: 30px;
-          }
-
-          .metric {
-            border-right: none;
-            margin-right: 0;
-            padding-right: 0;
-          }
-
           .section {
-            padding: 56px 24px;
+            padding: 58px 24px;
           }
 
-          .cards {
-            grid-template-columns: 1fr;
-          }
-
+          .vision,
           .split {
+            grid-template-columns: 1fr;
+            gap: 34px;
+          }
+
+          .cards,
+          .outcomes {
             grid-template-columns: 1fr;
           }
 
@@ -442,25 +461,23 @@ export default function Home() {
         <section className="hero">
           <div className="fade-up">
             <div className="hero-tag">
-              Business Consulting · Operations · Workflow Strategy
+              Strategy · Operations · Brand · Technology
             </div>
 
             <h1 className="hero-h1">
-              Turning business<br />
+              Transforming<br />
               complexity into<br />
-              <span className="gold">operational clarity.</span>
+              <span className="gold">strategic momentum.</span>
             </h1>
 
             <p className="hero-sub">
-              Salterra Enterprises helps organizations streamline operations, improve workflows,
-              and execute strategic initiatives with confidence. From process improvement and
-              product strategy to business operations support, we help teams work smarter and grow
-              with purpose.
+              Salterra Enterprises helps growing businesses align strategy, operations, brand,
+              and technology so they can scale with clarity, confidence, and purpose.
             </p>
 
             <div className="hero-btns">
               <Link href="/contact" className="btn-primary">
-                Schedule Consultation
+                Start the Conversation
               </Link>
               <Link href="/services" className="btn-ghost">
                 Explore Services
@@ -493,37 +510,40 @@ export default function Home() {
 
         <hr className="rule" />
 
-        <section className="metrics">
-          <div className="metric fade-up">
-            <div className="metric-num">40+</div>
-            <div className="metric-kicker">FINRA Licensed States</div>
-            <div className="metric-label">
-              Experience supporting regulated financial services environments
+        <section className="section vision">
+          <div className="fade-up">
+            <div className="section-eyebrow">Built for businesses ready to evolve</div>
+            <div className="section-headline">
+              Growth requires more than isolated solutions.
             </div>
           </div>
 
-          <div className="metric fade-up">
-            <div className="metric-num">Product</div>
-            <div className="metric-kicker">Strategy & Planning</div>
-            <div className="metric-label">
-              Product management, roadmap support, prioritization, and execution
-            </div>
+          <div className="fade-up">
+            <p className="vision-copy">
+              Growing organizations need alignment between strategy, operations, customer
+              experience, brand presence, and technology execution.
+            </p>
+            <p className="vision-copy">
+              Salterra Enterprises helps businesses build the structure, systems, creative
+              direction, and execution support needed to move forward with intention.
+            </p>
           </div>
+        </section>
 
-          <div className="metric fade-up">
-            <div className="metric-num">Operations</div>
-            <div className="metric-kicker">Workflow Improvement</div>
-            <div className="metric-label">
-              Process redesign, documentation, operating rhythm, and business support
-            </div>
-          </div>
+        <hr className="rule" />
 
-          <div className="metric fade-up">
-            <div className="metric-num">Growth</div>
-            <div className="metric-kicker">Client-Focused Execution</div>
-            <div className="metric-label">
-              Sales support, customer experience, stakeholder coordination, and follow-through
-            </div>
+        <section className="section">
+          <div className="section-eyebrow fade-up">What we help businesses achieve</div>
+
+          <div className="outcomes">
+            <div className="outcome fade-up">Streamlined operational systems</div>
+            <div className="outcome fade-up">Greater organizational clarity</div>
+            <div className="outcome fade-up">Improved scalability and efficiency</div>
+            <div className="outcome fade-up">Stronger customer experiences</div>
+            <div className="outcome fade-up">Strategic growth alignment</div>
+            <div className="outcome fade-up">Technology-enabled execution</div>
+            <div className="outcome fade-up">Distinctive brand and market positioning</div>
+            <div className="outcome fade-up">Sustainable long-term infrastructure</div>
           </div>
         </section>
 
@@ -535,28 +555,46 @@ export default function Home() {
           <div className="cards">
             <div className="card fade-up">
               <div className="card-num">01</div>
-              <div className="card-title">Optimize Operations</div>
+              <div className="card-title">Strategic Growth & Business Advisory</div>
               <div className="card-body">
-                Improve workflows, eliminate bottlenecks, document repeatable processes,
-                and create systems that help the business operate with less friction and more consistency.
+                Clarify priorities, shape business plans, support growth decisions, and create
+                practical pathways from vision to execution.
               </div>
             </div>
 
             <div className="card fade-up">
               <div className="card-num">02</div>
-              <div className="card-title">Launch Strategic Initiatives</div>
+              <div className="card-title">Operational Excellence & Execution</div>
               <div className="card-body">
-                Support product launches, business transformations, process changes, and cross-functional
-                initiatives with structure, communication, and practical execution support.
+                Improve workflows, eliminate bottlenecks, document repeatable processes, and build
+                operating systems that reduce friction and increase consistency.
               </div>
             </div>
 
             <div className="card fade-up">
               <div className="card-num">03</div>
-              <div className="card-title">Improve Client Experience</div>
+              <div className="card-title">Brand, Content & Creative Strategy</div>
               <div className="card-body">
-                Strengthen onboarding, service delivery, communication workflows, and customer-facing
-                processes so clients experience a more organized and responsive business.
+                Strengthen positioning, messaging, content direction, and market differentiation so
+                the business presents itself with clarity and confidence.
+              </div>
+            </div>
+
+            <div className="card fade-up">
+              <div className="card-num">04</div>
+              <div className="card-title">Technology & Digital Solutions</div>
+              <div className="card-body">
+                Support web development, automation, systems integration, digital tools, and
+                full-stack technology execution through trusted partners.
+              </div>
+            </div>
+
+            <div className="card fade-up">
+              <div className="card-num">05</div>
+              <div className="card-title">Customer Experience & Business Performance</div>
+              <div className="card-body">
+                Improve onboarding, service delivery, communication workflows, client journeys, and
+                the systems that shape how customers experience the business.
               </div>
             </div>
           </div>
@@ -569,17 +607,18 @@ export default function Home() {
             <div className="section-eyebrow">About Amber Zeigler</div>
             <div className="split-headline">
               Corporate experience.<br />
-              <span className="gold">Independent focus.</span>
+              <span className="gold">Entrepreneurial focus.</span>
             </div>
             <p className="split-body">
               Amber Zeigler is a business professional with experience across product management,
-              sales, customer experience, regulated industries, and workflow improvement. Through
-              Salterra Enterprises, she partners with organizations that need practical structure,
-              clearer execution, and stronger business systems.
+              sales, customer experience, regulated industries, workflow improvement, and business
+              operations. Through Salterra Enterprises, she partners with organizations that need
+              practical structure, sharper execution, and stronger systems for growth.
             </p>
             <p className="split-body">
-              Her approach combines strategic thinking, operational discipline, and hands-on
-              execution to help leaders move from complexity to clarity.
+              Her approach combines strategic thinking, operational discipline, creative problem
+              solving, and trusted execution support to help leaders move from complexity to
+              capability.
             </p>
           </div>
 
@@ -591,13 +630,15 @@ export default function Home() {
             </div>
             <div className="pills">
               <span className="pill">FINRA Licensed in 40+ States</span>
+              <span className="pill">Business Advisory</span>
               <span className="pill">Product Management</span>
               <span className="pill">Workflow Re-engineering</span>
-              <span className="pill">Sales Enablement</span>
+              <span className="pill">Brand Strategy</span>
+              <span className="pill">Content Strategy</span>
+              <span className="pill">Technology Solutions</span>
               <span className="pill">Customer Experience</span>
-              <span className="pill">Business Operations</span>
               <span className="pill">Project Management</span>
-              <span className="pill">Administrative Systems</span>
+              <span className="pill">Operational Support</span>
             </div>
           </div>
         </section>
@@ -606,14 +647,14 @@ export default function Home() {
           <div className="cta-bar-inner">
             <div>
               <div className="cta-bar-headline">
-                Ready to move your business forward with clarity?
+                Ready to build what comes next?
               </div>
               <div className="cta-bar-sub">
-                Start with a conversation about your goals, workflows, and the execution support your business needs next.
+                Start with a conversation about your goals, systems, brand, technology needs, and the support your business needs to move forward.
               </div>
             </div>
             <Link href="/contact" className="cta-bar-btn">
-              Get in touch →
+              Start the Conversation →
             </Link>
           </div>
         </div>
