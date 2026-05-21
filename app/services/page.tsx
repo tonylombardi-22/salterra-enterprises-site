@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/footer";
-import Link from "next/link";
+
+const CALENDLY_URL = "https://calendly.com/amber-salterraenterprises/30min";
 
 export default function ServicesPage() {
   return (
@@ -16,7 +17,9 @@ export default function ServicesPage() {
 
         .page {
           min-height: 100vh;
-          background: #0a0a0a;
+          background:
+            radial-gradient(circle at 50% 6%, rgba(200,169,110,0.08), transparent 34%),
+            #0a0a0a;
         }
 
         .container {
@@ -42,7 +45,7 @@ export default function ServicesPage() {
           line-height: 0.95;
           letter-spacing: -0.04em;
           margin-bottom: 28px;
-          max-width: 950px;
+          max-width: 980px;
         }
 
         .gold {
@@ -51,7 +54,7 @@ export default function ServicesPage() {
         }
 
         .intro {
-          max-width: 780px;
+          max-width: 820px;
           color: rgba(240,237,232,0.6);
           line-height: 1.9;
           font-size: 16px;
@@ -68,6 +71,14 @@ export default function ServicesPage() {
           border: 0.5px solid rgba(240,237,232,0.08);
           background: rgba(240,237,232,0.02);
           padding: 36px;
+          transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+          transform: translateY(-8px);
+          border-color: rgba(200,169,110,0.40);
+          background: rgba(240,237,232,0.04);
+          box-shadow: 0 0 60px rgba(200,169,110,0.14);
         }
 
         .service-number {
@@ -110,7 +121,13 @@ export default function ServicesPage() {
         .section {
           margin-top: 88px;
           padding-top: 56px;
-          border-top: 0.5px solid rgba(240,237,232,0.08);
+          border-top: 1px solid transparent;
+          border-image: linear-gradient(
+            90deg,
+            transparent,
+            rgba(200,169,110,0.35),
+            transparent
+          ) 1;
         }
 
         .section-title {
@@ -121,7 +138,7 @@ export default function ServicesPage() {
         }
 
         .section-copy {
-          max-width: 760px;
+          max-width: 780px;
           color: rgba(240,237,232,0.55);
           line-height: 1.9;
           margin-bottom: 42px;
@@ -139,6 +156,14 @@ export default function ServicesPage() {
           padding: 8px 14px;
           font-size: 12px;
           letter-spacing: 0.06em;
+          transition: all 0.25s ease;
+        }
+
+        .industry:hover {
+          color: #f0ede8;
+          border-color: rgba(200,169,110,0.48);
+          box-shadow: 0 0 24px rgba(200,169,110,0.10);
+          transform: translateY(-2px);
         }
 
         .cta {
@@ -170,6 +195,12 @@ export default function ServicesPage() {
           padding: 14px 28px;
           font-size: 13px;
           white-space: nowrap;
+          transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 18px 38px rgba(10,10,10,0.26);
         }
 
         @media (max-width: 900px) {
@@ -197,17 +228,16 @@ export default function ServicesPage() {
           </div>
 
           <h1>
-            Practical business support that drives{" "}
-            <span className="gold">results, efficiency, and growth.</span>
+            Integrated support for businesses ready to{" "}
+            <span className="gold">grow with clarity and momentum.</span>
           </h1>
 
           <p className="intro">
-            Salterra Enterprises provides consulting and operational support
-            for organizations that need stronger processes, better workflow
-            visibility, improved execution, and practical business structure.
-            Whether you're managing growth, improving customer experiences,
-            refining internal operations, or launching strategic initiatives,
-            we help simplify complexity and move work forward.
+            Salterra Enterprises helps growing businesses align strategy, operations, brand,
+            technology, and execution. Whether you need stronger internal systems, sharper
+            positioning, digital support, improved customer experience, or help moving strategic
+            initiatives forward, Salterra provides practical partnership designed to reduce
+            complexity and support sustainable growth.
           </p>
 
           <div className="services-grid">
@@ -215,83 +245,120 @@ export default function ServicesPage() {
             <div className="service-card">
               <div className="service-number">01</div>
               <div className="service-title">
-                Business Operations
+                Strategic Growth & Business Advisory
               </div>
 
               <p className="service-description">
-                Improve operational efficiency through process redesign,
-                workflow documentation, accountability frameworks,
-                and business system optimization.
+                Clarify priorities, shape growth plans, align stakeholders, and create practical
+                pathways from business vision to execution.
               </p>
 
               <ul className="service-list">
-                <li>Workflow analysis</li>
-                <li>Process documentation</li>
-                <li>Operational improvements</li>
-                <li>Business systems optimization</li>
-                <li>Cross-functional coordination</li>
+                <li>Business planning and prioritization</li>
+                <li>Growth strategy support</li>
+                <li>Stakeholder alignment</li>
+                <li>Strategic roadmap development</li>
+                <li>Founder and leadership advisory</li>
               </ul>
             </div>
 
             <div className="service-card">
               <div className="service-number">02</div>
               <div className="service-title">
-                Product Strategy & Planning
+                Operational Excellence & Execution
               </div>
 
               <p className="service-description">
-                Align business objectives with customer needs through
-                structured planning, prioritization, stakeholder engagement,
-                and roadmap development.
+                Improve how work gets done through better workflows, clearer accountability,
+                stronger operating rhythms, and repeatable business systems.
               </p>
 
               <ul className="service-list">
-                <li>Product planning</li>
-                <li>Roadmap development</li>
-                <li>Requirements gathering</li>
-                <li>Stakeholder alignment</li>
-                <li>Strategic prioritization</li>
+                <li>Workflow analysis and redesign</li>
+                <li>Process documentation</li>
+                <li>Operational improvements</li>
+                <li>Cross-functional coordination</li>
+                <li>Execution support and project leadership</li>
               </ul>
             </div>
 
             <div className="service-card">
               <div className="service-number">03</div>
               <div className="service-title">
-                Administrative Support
+                Brand, Content & Creative Strategy
               </div>
 
               <p className="service-description">
-                Create structure around daily operations, communication,
-                scheduling, documentation, and organizational processes.
+                Strengthen how the business presents itself through clearer messaging, sharper
+                positioning, content direction, and creative strategy that supports growth.
               </p>
 
               <ul className="service-list">
-                <li>Documentation management</li>
-                <li>Scheduling coordination</li>
-                <li>Administrative workflows</li>
-                <li>Business organization</li>
-                <li>Process support</li>
+                <li>Brand positioning</li>
+                <li>Messaging strategy</li>
+                <li>Content planning</li>
+                <li>Thought leadership support</li>
+                <li>Market differentiation</li>
               </ul>
             </div>
 
             <div className="service-card">
               <div className="service-number">04</div>
               <div className="service-title">
-                Strategic Project Support
+                Technology & Digital Solutions
               </div>
 
               <p className="service-description">
-                Help important initiatives stay on track with structured
-                planning, stakeholder communication, risk awareness,
-                and execution oversight.
+                Support digital execution through web development, automation, systems integration,
+                full-stack technology services, and technical support through trusted partners.
               </p>
 
               <ul className="service-list">
-                <li>Project coordination</li>
-                <li>Status reporting</li>
-                <li>Stakeholder communication</li>
-                <li>Execution management</li>
-                <li>Operational planning</li>
+                <li>Website and application development</li>
+                <li>Automation and digital workflows</li>
+                <li>Systems integration</li>
+                <li>Technical consulting</li>
+                <li>Full-stack IT execution support</li>
+              </ul>
+            </div>
+
+            <div className="service-card">
+              <div className="service-number">05</div>
+              <div className="service-title">
+                Customer Experience & Business Performance
+              </div>
+
+              <p className="service-description">
+                Improve customer-facing systems, onboarding, communication workflows, and service
+                delivery so clients experience the business with greater consistency and confidence.
+              </p>
+
+              <ul className="service-list">
+                <li>Customer journey improvement</li>
+                <li>Client onboarding workflows</li>
+                <li>Service delivery refinement</li>
+                <li>Communication process improvement</li>
+                <li>Business performance support</li>
+              </ul>
+            </div>
+
+            <div className="service-card">
+              <div className="service-number">06</div>
+              <div className="service-title">
+                Administrative & Business Infrastructure
+              </div>
+
+              <p className="service-description">
+                Create practical structure around daily operations, documentation, communication,
+                scheduling, and the internal systems that keep growing businesses organized.
+              </p>
+
+              <ul className="service-list">
+                <li>Documentation management</li>
+                <li>Administrative workflow design</li>
+                <li>Business organization</li>
+                <li>Scheduling and coordination support</li>
+                <li>Operating structure development</li>
               </ul>
             </div>
 
@@ -299,45 +366,52 @@ export default function ServicesPage() {
 
           <section className="section">
             <div className="section-title">
-              Experience across multiple industries
+              Built for growing organizations with complex needs.
             </div>
 
             <p className="section-copy">
-              Amber's background includes regulated financial services,
-              product management, customer-facing operations, sales,
-              business process improvement, and operational support.
-              This experience allows Salterra Enterprises to quickly
-              understand business challenges and provide practical,
-              execution-focused solutions.
+              Amber's background includes regulated financial services, product management,
+              customer-facing operations, sales, business process improvement, and operational
+              support. Salterra brings that experience together with creative and technology
+              capabilities to help small businesses, founders, and growth-minded organizations
+              build stronger systems for what comes next.
             </p>
 
             <div className="industries">
+              <div className="industry">Small Business</div>
+              <div className="industry">Founders</div>
               <div className="industry">Financial Services</div>
               <div className="industry">Banking</div>
               <div className="industry">Insurance</div>
+              <div className="industry">Professional Services</div>
               <div className="industry">Product Management</div>
               <div className="industry">Sales Operations</div>
               <div className="industry">Customer Experience</div>
               <div className="industry">Business Operations</div>
-              <div className="industry">Professional Services</div>
+              <div className="industry">Technology-Enabled Businesses</div>
             </div>
           </section>
 
           <div className="cta">
             <div>
               <div className="cta-title">
-                Let's talk about your business goals.
+                Ready to build what comes next?
               </div>
 
               <div className="cta-copy">
-                Schedule a consultation and explore how Salterra Enterprises
-                can support your organization.
+                Schedule a conversation about your strategy, operations, brand, technology needs,
+                and the support your business needs to grow.
               </div>
             </div>
 
-            <Link href="/contact" className="cta-button">
+            <a
+              href={CALENDLY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-button"
+            >
               Schedule Consultation
-            </Link>
+            </a>
           </div>
 
         </section>
