@@ -7,16 +7,17 @@ import { usePathname } from "next/navigation";
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
+
   const isActive = (path: string) => pathname === path;
 
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=DM+Sans:wght@300;400;500;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap');
 
         .tl-nav {
           background: #0d0d0d;
-          border-bottom: 0.5px solid rgba(240, 237, 232, 0.08);
+          border-bottom: 0.5px solid rgba(240,237,232,0.08);
           position: sticky;
           top: 0;
           z-index: 100;
@@ -26,8 +27,8 @@ export default function Navbar() {
         .tl-nav-inner {
           display: flex;
           align-items: center;
-          height: 88px;
-          max-width: 1200px;
+          height: 92px;
+          max-width: 1280px;
           margin: 0 auto;
           padding: 0 48px;
         }
@@ -35,72 +36,45 @@ export default function Navbar() {
         .tl-logo-zone {
           display: flex;
           align-items: center;
-          gap: 16px;
-          padding-right: 32px;
-          border-right: 0.5px solid rgba(240, 237, 232, 0.1);
-          flex-shrink: 0;
           text-decoration: none;
+          flex-shrink: 0;
         }
 
-        .tl-logo-mark {
-          height: 68px;
-          width: 68px;
+        .tl-logo {
+          height: 90px;
+          width: auto;
           object-fit: contain;
-          border-radius: 50%;
-        }
-
-        .tl-logo-text {
-          display: flex;
-          flex-direction: column;
-          line-height: 1;
-        }
-
-        .tl-logo-main {
-          font-family: 'Cormorant Garamond', serif;
-          font-size: 28px;
-          font-weight: 600;
-          letter-spacing: 0.18em;
-          color: #f0ede8;
-        }
-
-        .tl-logo-sub {
-          margin-top: 6px;
-          font-family: 'DM Sans', sans-serif;
-          font-size: 10px;
-          font-weight: 600;
-          letter-spacing: 0.24em;
-          color: #C8A96E;
-          text-transform: uppercase;
+          display: block;
         }
 
         .tl-links {
           display: flex;
           align-items: center;
-          gap: 4px;
+          gap: 6px;
+          margin-left: 42px;
           flex: 1;
-          padding-left: 28px;
         }
 
         .tl-link {
           font-family: 'DM Sans', sans-serif;
           font-size: 13px;
           font-weight: 400;
-          letter-spacing: 0.05em;
-          color: rgba(240, 237, 232, 0.5);
+          letter-spacing: 0.04em;
+          color: rgba(240,237,232,0.58);
           text-decoration: none;
-          padding: 6px 14px;
+          padding: 8px 14px;
           border-radius: 4px;
-          transition: color 0.18s ease, background 0.18s ease;
+          transition: all 0.18s ease;
         }
 
         .tl-link:hover {
-          color: rgba(240, 237, 232, 0.9);
-          background: rgba(240, 237, 232, 0.05);
+          color: rgba(240,237,232,0.95);
+          background: rgba(240,237,232,0.05);
         }
 
         .tl-link.active {
           color: #f0ede8;
-          background: rgba(200, 169, 110, 0.1);
+          background: rgba(200,169,110,0.10);
         }
 
         .tl-cta {
@@ -110,17 +84,17 @@ export default function Navbar() {
           letter-spacing: 0.12em;
           color: #C8A96E;
           text-decoration: none;
-          border: 0.5px solid rgba(200, 169, 110, 0.5);
+          border: 0.5px solid rgba(200,169,110,0.5);
           border-radius: 4px;
-          padding: 8px 18px;
-          transition: background 0.18s ease, border-color 0.18s ease;
+          padding: 11px 22px;
+          transition: all 0.18s ease;
           white-space: nowrap;
           flex-shrink: 0;
         }
 
         .tl-cta:hover {
-          background: rgba(200, 169, 110, 0.08);
-          border-color: rgba(200, 169, 110, 0.8);
+          background: rgba(200,169,110,0.08);
+          border-color: rgba(200,169,110,0.85);
         }
 
         .tl-hamburger {
@@ -138,7 +112,7 @@ export default function Navbar() {
           display: block;
           width: 22px;
           height: 1.5px;
-          background: rgba(240, 237, 232, 0.6);
+          background: rgba(240,237,232,0.65);
           transition: all 0.2s ease;
         }
 
@@ -146,8 +120,8 @@ export default function Navbar() {
           display: none;
           flex-direction: column;
           background: #0d0d0d;
-          border-top: 0.5px solid rgba(240, 237, 232, 0.08);
-          padding: 16px 24px 24px;
+          border-top: 0.5px solid rgba(240,237,232,0.08);
+          padding: 18px 24px 24px;
           gap: 4px;
         }
 
@@ -158,16 +132,14 @@ export default function Navbar() {
         .tl-mobile-link {
           font-family: 'DM Sans', sans-serif;
           font-size: 15px;
-          font-weight: 400;
-          color: rgba(240, 237, 232, 0.6);
+          color: rgba(240,237,232,0.65);
           text-decoration: none;
           padding: 10px 0;
-          border-bottom: 0.5px solid rgba(240, 237, 232, 0.06);
-          transition: color 0.15s ease;
+          border-bottom: 0.5px solid rgba(240,237,232,0.06);
         }
 
-        .tl-mobile-link:hover,
-        .tl-mobile-link.active {
+        .tl-mobile-link.active,
+        .tl-mobile-link:hover {
           color: #f0ede8;
         }
 
@@ -178,41 +150,24 @@ export default function Navbar() {
           letter-spacing: 0.08em;
           color: #C8A96E;
           text-decoration: none;
-          border: 0.5px solid rgba(200, 169, 110, 0.4);
+          border: 0.5px solid rgba(200,169,110,0.45);
           border-radius: 4px;
-          padding: 10px 16px;
+          padding: 11px 16px;
           text-align: center;
           margin-top: 12px;
         }
 
         @media (max-width: 900px) {
           .tl-nav-inner {
-            height: 82px;
+            padding: 0 24px;
           }
 
-          .tl-logo-mark {
-            height: 60px;
-            width: 60px;
-          }
-
-          .tl-logo-main {
-            font-size: 23px;
-          }
-
-          .tl-logo-sub {
-            font-size: 9px;
-          }
-
-          .tl-logo-zone {
-            padding-right: 20px;
+          .tl-logo {
+            height: 78px;
           }
         }
 
         @media (max-width: 768px) {
-          .tl-nav-inner {
-            padding: 0 24px;
-          }
-
           .tl-links {
             display: none;
           }
@@ -225,60 +180,62 @@ export default function Navbar() {
             display: flex;
           }
 
-          .tl-logo-zone {
-            border-right: none;
-            padding-right: 0;
+          .tl-logo {
+            height: 72px;
           }
         }
 
-        @media (max-width: 430px) {
+        @media (max-width: 480px) {
           .tl-nav-inner {
-            height: 76px;
+            height: 82px;
           }
 
-          .tl-logo-mark {
-            height: 52px;
-            width: 52px;
-          }
-
-          .tl-logo-main {
-            font-size: 20px;
-            letter-spacing: 0.12em;
-          }
-
-          .tl-logo-sub {
-            font-size: 8px;
-            letter-spacing: 0.14em;
+          .tl-logo {
+            height: 62px;
           }
         }
       `}</style>
 
       <nav className="tl-nav">
         <div className="tl-nav-inner">
-          <Link href="/" className="tl-logo-zone" aria-label="Salterra Enterprises home">
+          <Link
+            href="/"
+            className="tl-logo-zone"
+            aria-label="Salterra Enterprises Home"
+          >
             <img
               src="/salterra-logo.jpg"
-              alt="Salterra Enterprises logo"
-              className="tl-logo-mark"
+              alt="Salterra Enterprises"
+              className="tl-logo"
             />
-
-            <div className="tl-logo-text">
-              <span className="tl-logo-main">SALTERRA</span>
-              <span className="tl-logo-sub">Enterprises, LLC</span>
-            </div>
           </Link>
 
           <div className="tl-links">
-            <Link href="/about" className={`tl-link${isActive("/about") ? " active" : ""}`}>
+            <Link
+              href="/about"
+              className={`tl-link${isActive("/about") ? " active" : ""}`}
+            >
               About
             </Link>
-            <Link href="/services" className={`tl-link${isActive("/services") ? " active" : ""}`}>
+
+            <Link
+              href="/services"
+              className={`tl-link${isActive("/services") ? " active" : ""}`}
+            >
               Services
             </Link>
-            <Link href="/industries" className={`tl-link${isActive("/industries") ? " active" : ""}`}>
+
+            <Link
+              href="/industries"
+              className={`tl-link${isActive("/industries") ? " active" : ""}`}
+            >
               Industries
             </Link>
-            <Link href="/contact" className={`tl-link${isActive("/contact") ? " active" : ""}`}>
+
+            <Link
+              href="/contact"
+              className={`tl-link${isActive("/contact") ? " active" : ""}`}
+            >
               Contact
             </Link>
           </div>
@@ -294,13 +251,17 @@ export default function Navbar() {
           >
             <span
               style={{
-                transform: menuOpen ? "rotate(45deg) translate(5px, 5px)" : "none",
+                transform: menuOpen
+                  ? "rotate(45deg) translate(5px,5px)"
+                  : "none",
               }}
             />
             <span style={{ opacity: menuOpen ? 0 : 1 }} />
             <span
               style={{
-                transform: menuOpen ? "rotate(-45deg) translate(5px, -5px)" : "none",
+                transform: menuOpen
+                  ? "rotate(-45deg) translate(5px,-5px)"
+                  : "none",
               }}
             />
           </button>
@@ -314,6 +275,7 @@ export default function Navbar() {
           >
             About
           </Link>
+
           <Link
             href="/services"
             className={`tl-mobile-link${isActive("/services") ? " active" : ""}`}
@@ -321,6 +283,7 @@ export default function Navbar() {
           >
             Services
           </Link>
+
           <Link
             href="/industries"
             className={`tl-mobile-link${isActive("/industries") ? " active" : ""}`}
@@ -328,6 +291,7 @@ export default function Navbar() {
           >
             Industries
           </Link>
+
           <Link
             href="/contact"
             className={`tl-mobile-link${isActive("/contact") ? " active" : ""}`}
@@ -335,7 +299,12 @@ export default function Navbar() {
           >
             Contact
           </Link>
-          <Link href="/contact" className="tl-mobile-cta" onClick={() => setMenuOpen(false)}>
+
+          <Link
+            href="/contact"
+            className="tl-mobile-cta"
+            onClick={() => setMenuOpen(false)}
+          >
             SCHEDULE CONSULTATION →
           </Link>
         </div>
