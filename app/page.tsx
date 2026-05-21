@@ -230,6 +230,14 @@ export default function Home() {
           margin-bottom: 10px;
         }
 
+        .metric-kicker {
+          color: rgba(240,237,232,0.74);
+          font-size: 12px;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          margin-bottom: 8px;
+        }
+
         .metric-label {
           font-size: 12px;
           line-height: 1.55;
@@ -488,26 +496,33 @@ export default function Home() {
         <section className="metrics">
           <div className="metric fade-up">
             <div className="metric-num">40+</div>
+            <div className="metric-kicker">FINRA Licensed States</div>
             <div className="metric-label">
-              States with active<br />FINRA licensing
+              Experience supporting regulated financial services environments
             </div>
           </div>
+
           <div className="metric fade-up">
-            <div className="metric-num">01</div>
+            <div className="metric-num">Product</div>
+            <div className="metric-kicker">Strategy & Planning</div>
             <div className="metric-label">
-              Product strategy<br />and business planning
+              Product management, roadmap support, prioritization, and execution
             </div>
           </div>
+
           <div className="metric fade-up">
-            <div className="metric-num">02</div>
+            <div className="metric-num">Operations</div>
+            <div className="metric-kicker">Workflow Improvement</div>
             <div className="metric-label">
-              Workflow redesign<br />and process improvement
+              Process redesign, documentation, operating rhythm, and business support
             </div>
           </div>
+
           <div className="metric fade-up">
-            <div className="metric-num">03</div>
+            <div className="metric-num">Growth</div>
+            <div className="metric-kicker">Client-Focused Execution</div>
             <div className="metric-label">
-              Customer experience<br />and operational support
+              Sales support, customer experience, stakeholder coordination, and follow-through
             </div>
           </div>
         </section>
