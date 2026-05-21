@@ -242,37 +242,47 @@ export default function ContactPage() {
 
               <form
                 className="form"
-                action="mailto:amber@salterraenterprises.com"
-                method="post"
-                encType="text/plain"
+                action="https://formspree.io/f/xpqndqoq"
+                method="POST"
               >
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="New Salterra Enterprises website inquiry"
+                />
+
                 <div className="field">
                   <label htmlFor="name">Name</label>
-                  <input id="name" name="Name" type="text" placeholder="Your name" />
+                  <input id="name" name="name" type="text" placeholder="Your name" required />
                 </div>
 
                 <div className="field">
                   <label htmlFor="email">Email</label>
-                  <input id="email" name="Email" type="email" placeholder="you@example.com" />
+                  <input id="email" name="email" type="email" placeholder="you@example.com" required />
+                </div>
+
+                <div className="field">
+                  <label htmlFor="phone">Phone</label>
+                  <input id="phone" name="phone" type="tel" placeholder="Optional" />
                 </div>
 
                 <div className="field">
                   <label htmlFor="company">Company</label>
-                  <input id="company" name="Company" type="text" placeholder="Company name" />
+                  <input id="company" name="company" type="text" placeholder="Company name" />
                 </div>
 
                 <div className="field">
                   <label htmlFor="interest">Area of Interest</label>
-                  <select id="interest" name="Area of Interest" defaultValue="">
+                  <select id="interest" name="area_of_interest" defaultValue="" required>
                     <option value="" disabled>
                       Select one
                     </option>
-                    <option>Business Operations</option>
-                    <option>Product Strategy & Planning</option>
-                    <option>Administrative Support</option>
-                    <option>Strategic Project Support</option>
-                    <option>Financial Services Operations</option>
-                    <option>Not sure yet</option>
+                    <option value="Business Operations">Business Operations</option>
+                    <option value="Product Strategy & Planning">Product Strategy & Planning</option>
+                    <option value="Administrative Support">Administrative Support</option>
+                    <option value="Strategic Project Support">Strategic Project Support</option>
+                    <option value="Financial Services Operations">Financial Services Operations</option>
+                    <option value="Not sure yet">Not sure yet</option>
                   </select>
                 </div>
 
@@ -280,8 +290,9 @@ export default function ContactPage() {
                   <label htmlFor="message">Message</label>
                   <textarea
                     id="message"
-                    name="Message"
+                    name="message"
                     placeholder="Tell us what you are trying to improve, simplify, or move forward."
+                    required
                   />
                 </div>
 
@@ -290,8 +301,8 @@ export default function ContactPage() {
                 </button>
 
                 <p className="note">
-                  This form opens your email client so you can review the message before
-                  sending. You can also email Amber directly at the address listed here.
+                  This secure form sends your inquiry directly to Salterra Enterprises.
+                  Amber will follow up using the contact information provided.
                 </p>
               </form>
             </div>
