@@ -13,7 +13,7 @@ export default function Navbar() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=DM+Sans:wght@300;400;500;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap');
 
         .tl-nav {
           background: #0d0d0d;
@@ -36,42 +36,25 @@ export default function Navbar() {
         .tl-logo-zone {
           display: flex;
           align-items: center;
-          gap: 14px;
-          padding-right: 32px;
+          gap: 12px;
+          padding-right: 36px;
           border-right: 0.5px solid rgba(240, 237, 232, 0.1);
           flex-shrink: 0;
           text-decoration: none;
         }
 
-        .tl-logo-mark {
-          height: 54px;
-          width: 54px;
+        .tl-logo-icon {
+          height: 56px;
+          width: 56px;
           object-fit: contain;
           display: block;
         }
 
-        .tl-logo-text {
-          display: flex;
-          flex-direction: column;
-          line-height: 1;
-        }
-
-        .tl-logo-main {
-          font-family: 'Cormorant Garamond', serif;
-          font-size: 28px;
-          font-weight: 600;
-          letter-spacing: 0.18em;
-          color: #f0ede8;
-        }
-
-        .tl-logo-sub {
-          margin-top: 6px;
-          font-family: 'DM Sans', sans-serif;
-          font-size: 10px;
-          font-weight: 600;
-          letter-spacing: 0.24em;
-          color: #C8A96E;
-          text-transform: uppercase;
+        .tl-logo-wordmark {
+          height: 44px;
+          width: auto;
+          object-fit: contain;
+          display: block;
         }
 
         .tl-links {
@@ -79,7 +62,7 @@ export default function Navbar() {
           align-items: center;
           gap: 4px;
           flex: 1;
-          padding-left: 28px;
+          padding-left: 30px;
         }
 
         .tl-link {
@@ -186,22 +169,22 @@ export default function Navbar() {
           margin-top: 12px;
         }
 
-        @media (max-width: 900px) {
-          .tl-logo-main {
-            font-size: 23px;
+        @media (max-width: 1000px) {
+          .tl-logo-icon {
+            height: 50px;
+            width: 50px;
           }
 
-          .tl-logo-sub {
-            font-size: 9px;
+          .tl-logo-wordmark {
+            height: 38px;
           }
 
           .tl-logo-zone {
-            padding-right: 20px;
+            padding-right: 24px;
           }
 
-          .tl-logo-mark {
-            height: 50px;
-            width: 50px;
+          .tl-links {
+            padding-left: 22px;
           }
         }
 
@@ -210,10 +193,7 @@ export default function Navbar() {
             padding: 0 24px;
           }
 
-          .tl-links {
-            display: none;
-          }
-
+          .tl-links,
           .tl-cta {
             display: none;
           }
@@ -226,6 +206,15 @@ export default function Navbar() {
             border-right: none;
             padding-right: 0;
           }
+
+          .tl-logo-icon {
+            height: 48px;
+            width: 48px;
+          }
+
+          .tl-logo-wordmark {
+            height: 34px;
+          }
         }
 
         @media (max-width: 430px) {
@@ -233,19 +222,17 @@ export default function Navbar() {
             height: 76px;
           }
 
-          .tl-logo-main {
-            font-size: 20px;
-            letter-spacing: 0.12em;
+          .tl-logo-zone {
+            gap: 8px;
           }
 
-          .tl-logo-sub {
-            font-size: 8px;
-            letter-spacing: 0.14em;
+          .tl-logo-icon {
+            height: 42px;
+            width: 42px;
           }
 
-          .tl-logo-mark {
-            height: 46px;
-            width: 46px;
+          .tl-logo-wordmark {
+            height: 28px;
           }
         }
       `}</style>
@@ -256,13 +243,13 @@ export default function Navbar() {
             <img
               src="/salterra-nav-icon.png"
               alt="Salterra Enterprises icon"
-              className="tl-logo-mark"
+              className="tl-logo-icon"
             />
-
-            <div className="tl-logo-text">
-              <span className="tl-logo-main">SALTERRA</span>
-              <span className="tl-logo-sub">Enterprises, LLC</span>
-            </div>
+            <img
+              src="/salterra-nav-wordmark.png"
+              alt="Salterra Enterprises, LLC"
+              className="tl-logo-wordmark"
+            />
           </Link>
 
           <div className="tl-links">
@@ -304,32 +291,16 @@ export default function Navbar() {
         </div>
 
         <div className={`tl-mobile-menu${menuOpen ? " open" : ""}`}>
-          <Link
-            href="/about"
-            className={`tl-mobile-link${isActive("/about") ? " active" : ""}`}
-            onClick={() => setMenuOpen(false)}
-          >
+          <Link href="/about" className={`tl-mobile-link${isActive("/about") ? " active" : ""}`} onClick={() => setMenuOpen(false)}>
             About
           </Link>
-          <Link
-            href="/services"
-            className={`tl-mobile-link${isActive("/services") ? " active" : ""}`}
-            onClick={() => setMenuOpen(false)}
-          >
+          <Link href="/services" className={`tl-mobile-link${isActive("/services") ? " active" : ""}`} onClick={() => setMenuOpen(false)}>
             Services
           </Link>
-          <Link
-            href="/industries"
-            className={`tl-mobile-link${isActive("/industries") ? " active" : ""}`}
-            onClick={() => setMenuOpen(false)}
-          >
+          <Link href="/industries" className={`tl-mobile-link${isActive("/industries") ? " active" : ""}`} onClick={() => setMenuOpen(false)}>
             Industries
           </Link>
-          <Link
-            href="/contact"
-            className={`tl-mobile-link${isActive("/contact") ? " active" : ""}`}
-            onClick={() => setMenuOpen(false)}
-          >
+          <Link href="/contact" className={`tl-mobile-link${isActive("/contact") ? " active" : ""}`} onClick={() => setMenuOpen(false)}>
             Contact
           </Link>
           <Link href="/contact" className="tl-mobile-cta" onClick={() => setMenuOpen(false)}>
