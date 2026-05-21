@@ -1,4 +1,5 @@
 ﻿import Navbar from "@/components/Navbar";
+import Footer from "@/components/footer";
 import Link from "next/link";
 
 export default function IndustriesPage() {
@@ -18,7 +19,7 @@ export default function IndustriesPage() {
           background: #0a0a0a;
         }
 
-        .wrap {
+        .container {
           max-width: 1200px;
           margin: 0 auto;
           padding: 88px 48px;
@@ -32,17 +33,16 @@ export default function IndustriesPage() {
           color: rgba(200,169,110,0.72);
           border: 0.5px solid rgba(200,169,110,0.22);
           padding: 8px 14px;
-          margin-bottom: 32px;
+          margin-bottom: 30px;
         }
 
         h1 {
           font-family: 'Cormorant Garamond', serif;
-          font-size: clamp(54px, 7vw, 86px);
+          font-size: clamp(54px, 7vw, 84px);
           line-height: 0.95;
           letter-spacing: -0.04em;
-          font-weight: 600;
-          max-width: 950px;
           margin-bottom: 28px;
+          max-width: 950px;
         }
 
         .gold {
@@ -52,85 +52,81 @@ export default function IndustriesPage() {
 
         .intro {
           max-width: 820px;
-          font-size: 16px;
-          line-height: 1.85;
           color: rgba(240,237,232,0.6);
+          line-height: 1.9;
+          font-size: 16px;
           margin-bottom: 72px;
         }
 
         .grid {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
-          gap: 18px;
+          gap: 24px;
         }
 
         .card {
-          border: 0.5px solid rgba(240,237,232,0.09);
-          background: rgba(240,237,232,0.025);
-          padding: 34px;
-          min-height: 320px;
-          transition: all 0.25s ease;
+          border: 0.5px solid rgba(240,237,232,0.08);
+          background: rgba(240,237,232,0.02);
+          padding: 36px;
         }
 
-        .card:hover {
-          border-color: rgba(200,169,110,0.24);
-          transform: translateY(-3px);
-        }
-
-        .num {
-          color: rgba(200,169,110,0.72);
+        .number {
           font-size: 11px;
           letter-spacing: 0.14em;
-          margin-bottom: 22px;
+          color: rgba(200,169,110,0.72);
+          margin-bottom: 20px;
         }
 
         .title {
           font-family: 'Cormorant Garamond', serif;
-          font-size: 34px;
-          line-height: 1.05;
-          margin-bottom: 16px;
+          font-size: 38px;
+          line-height: 1;
+          margin-bottom: 18px;
         }
 
         .body {
           color: rgba(240,237,232,0.55);
-          font-size: 14px;
           line-height: 1.85;
+          font-size: 14px;
           margin-bottom: 20px;
         }
 
-        .bullet-list {
-          display: flex;
-          flex-direction: column;
-          gap: 8px;
+        .list {
+          list-style: none;
+          padding: 0;
         }
 
-        .bullet {
-          color: rgba(240,237,232,0.45);
+        .list li {
+          color: rgba(240,237,232,0.72);
+          margin-bottom: 10px;
           font-size: 13px;
-          line-height: 1.7;
         }
 
-        .credibility {
-          margin-top: 90px;
+        .list li::before {
+          content: "• ";
+          color: #C8A96E;
+        }
+
+        .section {
+          margin-top: 88px;
+          padding-top: 56px;
           border-top: 0.5px solid rgba(240,237,232,0.08);
-          padding-top: 60px;
         }
 
-        .credibility-title {
+        .section-title {
           font-family: 'Cormorant Garamond', serif;
-          font-size: 46px;
-          line-height: 1.05;
+          font-size: 48px;
           margin-bottom: 24px;
         }
 
-        .credibility-copy {
-          max-width: 850px;
-          color: rgba(240,237,232,0.58);
+        .section-copy {
+          max-width: 780px;
+          color: rgba(240,237,232,0.55);
           line-height: 1.9;
-          margin-bottom: 34px;
+          margin-bottom: 36px;
         }
 
-        .pill-container {
+        .pills {
           display: flex;
           flex-wrap: wrap;
           gap: 10px;
@@ -146,9 +142,9 @@ export default function IndustriesPage() {
         }
 
         .cta {
-          margin-top: 90px;
+          margin-top: 88px;
           background: #C8A96E;
-          padding: 54px;
+          padding: 56px;
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -158,29 +154,26 @@ export default function IndustriesPage() {
         .cta-title {
           font-family: 'Cormorant Garamond', serif;
           font-size: 44px;
-          line-height: 1.05;
           color: #0a0a0a;
-          font-weight: 600;
+          margin-bottom: 8px;
         }
 
         .cta-copy {
-          margin-top: 10px;
-          color: rgba(10,10,10,0.65);
+          color: rgba(10,10,10,0.68);
           font-size: 14px;
         }
 
-        .btn {
+        .cta-button {
           background: #0a0a0a;
           color: #f0ede8;
-          padding: 14px 28px;
           text-decoration: none;
-          font-size: 13px;
-          border-radius: 2px;
+          padding: 14px 28px;
           white-space: nowrap;
+          font-size: 13px;
         }
 
         @media (max-width: 900px) {
-          .wrap {
+          .container {
             padding: 56px 24px;
           }
 
@@ -198,173 +191,128 @@ export default function IndustriesPage() {
       <main className="page">
         <Navbar />
 
-        <section className="wrap">
+        <section className="container">
           <div className="eyebrow">Industries Served</div>
 
           <h1>
-            Supporting organizations across{" "}
-            <span className="gold">regulated, operational, and growth-focused environments.</span>
+            Experience supporting organizations across{" "}
+            <span className="gold">regulated and growth-oriented industries.</span>
           </h1>
 
           <p className="intro">
-            Salterra Enterprises brings experience that spans product management,
-            business operations, customer experience, workflow optimization, sales support,
-            and regulated financial environments. While every organization is unique,
-            our approach focuses on creating clarity, improving execution, and helping
-            businesses operate more efficiently.
+            Salterra Enterprises supports organizations that require operational discipline,
+            customer focus, workflow efficiency, and practical execution. Amber's background
+            spans regulated financial services, business operations, product management,
+            customer experience, and sales support functions.
           </p>
 
           <div className="grid">
 
             <div className="card">
-              <div className="num">01</div>
+              <div className="number">01</div>
               <div className="title">Financial Services</div>
-
               <p className="body">
-                Experience supporting regulated business environments where
-                process consistency, documentation, client service, and operational
-                discipline are critical.
+                Experience working within regulated environments where documentation,
+                compliance awareness, process consistency, and customer service are critical.
               </p>
-
-              <div className="bullet-list">
-                <div className="bullet">• Compliance-aware workflows</div>
-                <div className="bullet">• Client onboarding support</div>
-                <div className="bullet">• Process documentation</div>
-                <div className="bullet">• Operational improvement initiatives</div>
-              </div>
+              <ul className="list">
+                <li>Client onboarding workflows</li>
+                <li>Operational process support</li>
+                <li>Documentation management</li>
+                <li>Compliance-aware procedures</li>
+              </ul>
             </div>
 
             <div className="card">
-              <div className="num">02</div>
+              <div className="number">02</div>
               <div className="title">Insurance</div>
-
               <p className="body">
-                Support operational teams, customer-facing functions,
-                and process improvement efforts within insurance and
-                risk-management organizations.
+                Support organizations focused on customer service, operational efficiency,
+                workflow optimization, and internal process improvement.
               </p>
-
-              <div className="bullet-list">
-                <div className="bullet">• Workflow optimization</div>
-                <div className="bullet">• Customer experience improvement</div>
-                <div className="bullet">• Project coordination</div>
-                <div className="bullet">• Documentation standards</div>
-              </div>
+              <ul className="list">
+                <li>Process improvement</li>
+                <li>Customer experience support</li>
+                <li>Project coordination</li>
+                <li>Operational documentation</li>
+              </ul>
             </div>
 
             <div className="card">
-              <div className="num">03</div>
+              <div className="number">03</div>
               <div className="title">Professional Services</div>
-
               <p className="body">
-                Help consulting firms, agencies, and service-based businesses
-                improve internal operations, client delivery, and organizational effectiveness.
+                Help service-based businesses improve internal operations,
+                client delivery, communication, and execution.
               </p>
-
-              <div className="bullet-list">
-                <div className="bullet">• Business process improvement</div>
-                <div className="bullet">• Client engagement workflows</div>
-                <div className="bullet">• Team coordination</div>
-                <div className="bullet">• Administrative efficiency</div>
-              </div>
+              <ul className="list">
+                <li>Workflow optimization</li>
+                <li>Client-facing processes</li>
+                <li>Administrative systems</li>
+                <li>Business organization</li>
+              </ul>
             </div>
 
             <div className="card">
-              <div className="num">04</div>
+              <div className="number">04</div>
               <div className="title">Small Business</div>
-
               <p className="body">
-                Provide practical operational support for growing businesses
-                that need structure, documentation, and stronger processes
-                without adding full-time overhead.
+                Provide structure, operational support, and process clarity
+                without requiring a full-time operations hire.
               </p>
-
-              <div className="bullet-list">
-                <div className="bullet">• Operating procedures</div>
-                <div className="bullet">• Business organization</div>
-                <div className="bullet">• Administrative support</div>
-                <div className="bullet">• Workflow design</div>
-              </div>
-            </div>
-
-            <div className="card">
-              <div className="num">05</div>
-              <div className="title">Startups & Growth Companies</div>
-
-              <p className="body">
-                Support fast-moving organizations that need scalable systems,
-                project coordination, operational structure, and execution discipline.
-              </p>
-
-              <div className="bullet-list">
-                <div className="bullet">• Product management support</div>
-                <div className="bullet">• Process development</div>
-                <div className="bullet">• Strategic initiative execution</div>
-                <div className="bullet">• Team alignment</div>
-              </div>
-            </div>
-
-            <div className="card">
-              <div className="num">06</div>
-              <div className="title">Operations-Focused Organizations</div>
-
-              <p className="body">
-                Partner with organizations that depend on repeatable processes,
-                strong execution, and coordinated teams to deliver value consistently.
-              </p>
-
-              <div className="bullet-list">
-                <div className="bullet">• Workflow redesign</div>
-                <div className="bullet">• Operational assessments</div>
-                <div className="bullet">• Process documentation</div>
-                <div className="bullet">• Execution support</div>
-              </div>
+              <ul className="list">
+                <li>Operating procedures</li>
+                <li>Administrative support</li>
+                <li>Process documentation</li>
+                <li>Business systems improvement</li>
+              </ul>
             </div>
 
           </div>
 
-          <section className="credibility">
-            <div className="credibility-title">
-              Experience that bridges operations, strategy, and regulated environments.
+          <section className="section">
+            <div className="section-title">
+              Experience built on practical execution.
             </div>
 
-            <p className="credibility-copy">
-              Amber Zeigler's background combines product management, customer experience,
-              sales support, business operations, and active FINRA licensing across more
-              than 40 states. This diverse experience provides practical insight into how
-              organizations can improve performance while maintaining consistency,
-              accountability, and operational discipline.
+            <p className="section-copy">
+              Amber maintains active FINRA licensing across more than 40 states and brings
+              experience spanning product management, operations, customer experience,
+              sales support, workflow optimization, and business process improvement.
             </p>
 
-            <div className="pill-container">
+            <div className="pills">
               <div className="pill">FINRA Licensed</div>
               <div className="pill">40+ States</div>
               <div className="pill">Financial Services</div>
               <div className="pill">Insurance</div>
-              <div className="pill">Professional Services</div>
-              <div className="pill">Product Management</div>
               <div className="pill">Operations</div>
               <div className="pill">Customer Experience</div>
+              <div className="pill">Product Management</div>
+              <div className="pill">Workflow Optimization</div>
             </div>
           </section>
 
           <div className="cta">
             <div>
               <div className="cta-title">
-                Looking for support within your industry?
+                Looking for operational support in your industry?
               </div>
 
               <div className="cta-copy">
-                Let's discuss your business goals and identify practical opportunities
-                to improve execution, efficiency, and operational effectiveness.
+                Let's discuss your business goals and identify practical ways
+                to improve execution, efficiency, and customer experience.
               </div>
             </div>
 
-            <Link href="/contact" className="btn">
+            <Link href="/contact" className="cta-button">
               Schedule Consultation
             </Link>
           </div>
+
         </section>
+
+        <Footer />
       </main>
     </>
   );
