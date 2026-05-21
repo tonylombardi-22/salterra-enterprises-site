@@ -13,7 +13,7 @@ export default function Navbar() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=DM+Sans:wght@300;400;500;600&display=swap');
 
         .tl-nav {
           background: #0d0d0d;
@@ -27,8 +27,8 @@ export default function Navbar() {
         .tl-nav-inner {
           display: flex;
           align-items: center;
-          height: 82px;
-          max-width: 1200px;
+          height: 96px;
+          max-width: 1280px;
           margin: 0 auto;
           padding: 0 48px;
         }
@@ -36,75 +36,83 @@ export default function Navbar() {
         .tl-logo-zone {
           display: flex;
           align-items: center;
-          gap: 12px;
-          padding-right: 36px;
-          border-right: 0.5px solid rgba(240, 237, 232, 0.1);
+          gap: 10px;
+          padding-right: 38px;
+          border-right: 0.5px solid rgba(200, 169, 110, 0.22);
           flex-shrink: 0;
           text-decoration: none;
         }
 
         .tl-logo-icon {
-          height: 56px;
-          width: 56px;
+          height: 58px;
+          width: 58px;
           object-fit: contain;
           display: block;
+          transform: translateZ(0);
+          backface-visibility: hidden;
         }
 
         .tl-logo-wordmark {
-          height: 44px;
+          height: 58px;
           width: auto;
           object-fit: contain;
           display: block;
+          transform: translateZ(0);
+          backface-visibility: hidden;
         }
 
         .tl-links {
           display: flex;
           align-items: center;
-          gap: 4px;
+          gap: 10px;
           flex: 1;
-          padding-left: 30px;
+          padding-left: 48px;
         }
 
         .tl-link {
-          font-family: 'DM Sans', sans-serif;
-          font-size: 13px;
-          font-weight: 400;
-          letter-spacing: 0.05em;
-          color: rgba(240, 237, 232, 0.5);
+          font-family: 'Cormorant Garamond', serif;
+          font-size: 20px;
+          font-weight: 500;
+          letter-spacing: 0.08em;
+          color: rgba(240, 237, 232, 0.68);
           text-decoration: none;
-          padding: 6px 14px;
-          border-radius: 4px;
-          transition: color 0.18s ease, background 0.18s ease;
+          padding: 8px 13px;
+          border-radius: 3px;
+          border: 0.5px solid transparent;
+          transition: color 0.18s ease, background 0.18s ease, border-color 0.18s ease;
         }
 
         .tl-link:hover {
-          color: rgba(240, 237, 232, 0.9);
-          background: rgba(240, 237, 232, 0.05);
+          color: #f0ede8;
+          background: rgba(200, 169, 110, 0.055);
+          border-color: rgba(200, 169, 110, 0.16);
         }
 
         .tl-link.active {
-          color: #f0ede8;
-          background: rgba(200, 169, 110, 0.1);
+          color: #C8A96E;
+          background: rgba(200, 169, 110, 0.08);
+          border-color: rgba(200, 169, 110, 0.22);
         }
 
         .tl-cta {
-          font-family: 'DM Sans', sans-serif;
-          font-size: 11px;
+          font-family: 'Cormorant Garamond', serif;
+          font-size: 17px;
           font-weight: 600;
-          letter-spacing: 0.12em;
+          letter-spacing: 0.11em;
           color: #C8A96E;
           text-decoration: none;
-          border: 0.5px solid rgba(200, 169, 110, 0.5);
-          border-radius: 4px;
-          padding: 8px 18px;
-          transition: background 0.18s ease, border-color 0.18s ease;
+          border: 0.5px solid rgba(200, 169, 110, 0.52);
+          border-radius: 3px;
+          padding: 11px 22px;
+          transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
           white-space: nowrap;
           flex-shrink: 0;
         }
 
         .tl-cta:hover {
-          background: rgba(200, 169, 110, 0.08);
-          border-color: rgba(200, 169, 110, 0.8);
+          background: rgba(200, 169, 110, 0.09);
+          border-color: rgba(200, 169, 110, 0.86);
+          color: #f0ede8;
         }
 
         .tl-hamburger {
@@ -120,9 +128,9 @@ export default function Navbar() {
 
         .tl-hamburger span {
           display: block;
-          width: 22px;
+          width: 24px;
           height: 1.5px;
-          background: rgba(240, 237, 232, 0.6);
+          background: rgba(200, 169, 110, 0.85);
           transition: all 0.2s ease;
         }
 
@@ -131,8 +139,8 @@ export default function Navbar() {
           flex-direction: column;
           background: #0d0d0d;
           border-top: 0.5px solid rgba(240, 237, 232, 0.08);
-          padding: 16px 24px 24px;
-          gap: 4px;
+          padding: 18px 24px 26px;
+          gap: 6px;
         }
 
         .tl-mobile-menu.open {
@@ -140,59 +148,71 @@ export default function Navbar() {
         }
 
         .tl-mobile-link {
-          font-family: 'DM Sans', sans-serif;
-          font-size: 15px;
-          font-weight: 400;
-          color: rgba(240, 237, 232, 0.6);
+          font-family: 'Cormorant Garamond', serif;
+          font-size: 22px;
+          font-weight: 500;
+          letter-spacing: 0.08em;
+          color: rgba(240, 237, 232, 0.72);
           text-decoration: none;
-          padding: 10px 0;
+          padding: 12px 0;
           border-bottom: 0.5px solid rgba(240, 237, 232, 0.06);
           transition: color 0.15s ease;
         }
 
         .tl-mobile-link:hover,
         .tl-mobile-link.active {
-          color: #f0ede8;
+          color: #C8A96E;
         }
 
         .tl-mobile-cta {
-          font-family: 'DM Sans', sans-serif;
-          font-size: 13px;
+          font-family: 'Cormorant Garamond', serif;
+          font-size: 18px;
           font-weight: 600;
-          letter-spacing: 0.08em;
+          letter-spacing: 0.1em;
           color: #C8A96E;
           text-decoration: none;
-          border: 0.5px solid rgba(200, 169, 110, 0.4);
-          border-radius: 4px;
-          padding: 10px 16px;
+          border: 0.5px solid rgba(200, 169, 110, 0.45);
+          border-radius: 3px;
+          padding: 12px 16px;
           text-align: center;
-          margin-top: 12px;
+          margin-top: 14px;
         }
 
-        @media (max-width: 1000px) {
-          .tl-logo-icon {
-            height: 50px;
-            width: 50px;
-          }
-
-          .tl-logo-wordmark {
-            height: 38px;
+        @media (max-width: 1120px) {
+          .tl-nav-inner {
+            padding: 0 32px;
           }
 
           .tl-logo-zone {
-            padding-right: 24px;
+            padding-right: 28px;
           }
 
           .tl-links {
-            padding-left: 22px;
+            padding-left: 30px;
+            gap: 4px;
+          }
+
+          .tl-link {
+            font-size: 18px;
+            padding: 8px 10px;
+          }
+
+          .tl-cta {
+            font-size: 15px;
+            padding: 10px 16px;
+          }
+
+          .tl-logo-icon {
+            height: 54px;
+            width: 54px;
+          }
+
+          .tl-logo-wordmark {
+            height: 52px;
           }
         }
 
-        @media (max-width: 768px) {
-          .tl-nav-inner {
-            padding: 0 24px;
-          }
-
+        @media (max-width: 900px) {
           .tl-links,
           .tl-cta {
             display: none;
@@ -206,20 +226,12 @@ export default function Navbar() {
             border-right: none;
             padding-right: 0;
           }
-
-          .tl-logo-icon {
-            height: 48px;
-            width: 48px;
-          }
-
-          .tl-logo-wordmark {
-            height: 34px;
-          }
         }
 
-        @media (max-width: 430px) {
+        @media (max-width: 520px) {
           .tl-nav-inner {
-            height: 76px;
+            height: 82px;
+            padding: 0 22px;
           }
 
           .tl-logo-zone {
@@ -227,12 +239,23 @@ export default function Navbar() {
           }
 
           .tl-logo-icon {
+            height: 48px;
+            width: 48px;
+          }
+
+          .tl-logo-wordmark {
+            height: 40px;
+          }
+        }
+
+        @media (max-width: 390px) {
+          .tl-logo-icon {
             height: 42px;
             width: 42px;
           }
 
           .tl-logo-wordmark {
-            height: 28px;
+            height: 34px;
           }
         }
       `}</style>
@@ -268,7 +291,7 @@ export default function Navbar() {
           </div>
 
           <Link href="/contact" className="tl-cta">
-            SCHEDULE CONSULTATION →
+            Schedule Consultation →
           </Link>
 
           <button
@@ -276,17 +299,9 @@ export default function Navbar() {
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label={menuOpen ? "Close menu" : "Open menu"}
           >
-            <span
-              style={{
-                transform: menuOpen ? "rotate(45deg) translate(5px, 5px)" : "none",
-              }}
-            />
+            <span style={{ transform: menuOpen ? "rotate(45deg) translate(5px, 5px)" : "none" }} />
             <span style={{ opacity: menuOpen ? 0 : 1 }} />
-            <span
-              style={{
-                transform: menuOpen ? "rotate(-45deg) translate(5px, -5px)" : "none",
-              }}
-            />
+            <span style={{ transform: menuOpen ? "rotate(-45deg) translate(5px, -5px)" : "none" }} />
           </button>
         </div>
 
@@ -304,7 +319,7 @@ export default function Navbar() {
             Contact
           </Link>
           <Link href="/contact" className="tl-mobile-cta" onClick={() => setMenuOpen(false)}>
-            SCHEDULE CONSULTATION →
+            Schedule Consultation →
           </Link>
         </div>
       </nav>
