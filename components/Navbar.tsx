@@ -36,24 +36,14 @@ export default function Navbar() {
         .tl-logo-zone {
           display: flex;
           align-items: center;
-          gap: 10px;
-          padding-right: 38px;
+          padding-right: 46px;
           border-right: 0.5px solid rgba(200, 169, 110, 0.22);
           flex-shrink: 0;
           text-decoration: none;
         }
 
-        .tl-logo-icon {
-          height: 58px;
-          width: 58px;
-          object-fit: contain;
-          display: block;
-          transform: translateZ(0);
-          backface-visibility: hidden;
-        }
-
         .tl-logo-wordmark {
-          height: 58px;
+          height: 64px;
           width: auto;
           object-fit: contain;
           display: block;
@@ -66,7 +56,7 @@ export default function Navbar() {
           align-items: center;
           gap: 10px;
           flex: 1;
-          padding-left: 48px;
+          padding-left: 58px;
         }
 
         .tl-link {
@@ -184,11 +174,11 @@ export default function Navbar() {
           }
 
           .tl-logo-zone {
-            padding-right: 28px;
+            padding-right: 32px;
           }
 
           .tl-links {
-            padding-left: 30px;
+            padding-left: 36px;
             gap: 4px;
           }
 
@@ -202,13 +192,8 @@ export default function Navbar() {
             padding: 10px 16px;
           }
 
-          .tl-logo-icon {
-            height: 54px;
-            width: 54px;
-          }
-
           .tl-logo-wordmark {
-            height: 52px;
+            height: 56px;
           }
         }
 
@@ -234,28 +219,14 @@ export default function Navbar() {
             padding: 0 22px;
           }
 
-          .tl-logo-zone {
-            gap: 8px;
-          }
-
-          .tl-logo-icon {
-            height: 48px;
-            width: 48px;
-          }
-
           .tl-logo-wordmark {
-            height: 40px;
+            height: 44px;
           }
         }
 
         @media (max-width: 390px) {
-          .tl-logo-icon {
-            height: 42px;
-            width: 42px;
-          }
-
           .tl-logo-wordmark {
-            height: 34px;
+            height: 38px;
           }
         }
       `}</style>
@@ -263,11 +234,6 @@ export default function Navbar() {
       <nav className="tl-nav">
         <div className="tl-nav-inner">
           <Link href="/" className="tl-logo-zone" aria-label="Salterra Enterprises home">
-            <img
-              src="/salterra-nav-icon.png"
-              alt="Salterra Enterprises icon"
-              className="tl-logo-icon"
-            />
             <img
               src="/salterra_wordmark_v2.png"
               alt="Salterra Enterprises, LLC"
