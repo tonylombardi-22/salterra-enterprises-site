@@ -247,7 +247,7 @@ export default function Home() {
         }
 
         .section-eyebrow {
-          font-size: 11px;
+          font-size: 14px;
           letter-spacing: 0.14em;
           text-transform: uppercase;
           color: rgba(240,237,232,0.32);
