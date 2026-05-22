@@ -1,0 +1,10 @@
+warning: in the working copy of 'app/industries/page.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'app/services/page.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'do-commit.bat', LF will be replaced by CRLF the next time Git touches it
+[main a96a11a] fix: add padding-right to .gold italic clip on about, services, industries, contact
+ 6 files changed, 5 insertions(+), 33 deletions(-)
+To https://github.com/tonylombardi-22/salterra-enterprises-site.git
+   97ce07f..a96a11a  main -> main
+a96a11a fix: add padding-right to .gold italic clip on about, services, industries, contact
+97ce07f refactor: unified luxury gold token system across all pages and components
+157652a style: Midnight Navy background + 24k gold gradient text across all pages
