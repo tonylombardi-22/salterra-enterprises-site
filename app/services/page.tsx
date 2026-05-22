@@ -276,11 +276,6 @@ export default function ServicesPage() {
                 Strategic Growth & Business Advisory
               </div>
 
-              <p className="service-description">
-                Clarify priorities, shape growth plans, align stakeholders, and create practical
-                pathways from business vision to execution.
-              </p>
-
               <ul className="service-list">
                 <li>Business planning and prioritization</li>
                 <li>Growth strategy support</li>
@@ -295,11 +290,6 @@ export default function ServicesPage() {
               <div className="service-title">
                 Operational Excellence & Execution
               </div>
-
-              <p className="service-description">
-                Improve how work gets done through better workflows, clearer accountability,
-                stronger operating rhythms, and repeatable business systems.
-              </p>
 
               <ul className="service-list">
                 <li>Workflow analysis and redesign</li>
@@ -316,11 +306,6 @@ export default function ServicesPage() {
                 Brand, Content & Creative Strategy
               </div>
 
-              <p className="service-description">
-                Strengthen how the business presents itself through clearer messaging, sharper
-                positioning, content direction, and creative strategy that supports growth.
-              </p>
-
               <ul className="service-list">
                 <li>Brand positioning</li>
                 <li>Messaging strategy</li>
@@ -335,11 +320,6 @@ export default function ServicesPage() {
               <div className="service-title">
                 Technology & Digital Solutions
               </div>
-
-              <p className="service-description">
-                Support digital execution through web development, automation, systems integration,
-                full-stack technology services, and technical support through trusted partners.
-              </p>
 
               <ul className="service-list">
                 <li>Website and application development</li>
@@ -356,11 +336,6 @@ export default function ServicesPage() {
                 Customer Experience & Business Performance
               </div>
 
-              <p className="service-description">
-                Improve customer-facing systems, onboarding, communication workflows, and service
-                delivery so clients experience the business with greater consistency and confidence.
-              </p>
-
               <ul className="service-list">
                 <li>Customer journey improvement</li>
                 <li>Client onboarding workflows</li>
@@ -375,11 +350,6 @@ export default function ServicesPage() {
               <div className="service-title">
                 Administrative & Business Infrastructure
               </div>
-
-              <p className="service-description">
-                Create practical structure around daily operations, documentation, communication,
-                scheduling, and the internal systems that keep growing businesses organized.
-              </p>
 
               <ul className="service-list">
                 <li>Documentation management</li>
