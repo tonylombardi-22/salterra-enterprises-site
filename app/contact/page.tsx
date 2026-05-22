@@ -52,7 +52,7 @@ export default function ContactPage() {
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=DM+Sans:wght@300;400;500;600&display=swap');
 
         body {
-          background: #0a0a0a;
+          background: #0D1B2A;
           color: #f0ede8;
           font-family: 'DM Sans', sans-serif;
         }
@@ -61,7 +61,7 @@ export default function ContactPage() {
           min-height: 100vh;
           background:
             radial-gradient(circle at 50% 6%, rgba(200,169,110,0.08), transparent 34%),
-            #0a0a0a;
+            #0D1B2A;
         }
 
         .container {
@@ -92,8 +92,12 @@ export default function ContactPage() {
         }
 
         .gold {
-          color: #C8A96E;
           font-style: italic;
+          color: #C8A96E;
+          background: linear-gradient(160deg, #F5D98A 0%, #C8A96E 50%, #8B6318 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
         }
 
         .intro {
@@ -160,7 +164,7 @@ export default function ContactPage() {
         select {
           width: 100%;
           border: 0.5px solid rgba(240,237,232,0.12);
-          background: rgba(10,10,10,0.7);
+          background: rgba(13,27,42,0.72);
           color: #f0ede8;
           padding: 13px 14px;
           font-family: 'DM Sans', sans-serif;
@@ -182,8 +186,8 @@ export default function ContactPage() {
         }
 
         .submit {
-          background: #C8A96E;
-          color: #0a0a0a;
+          background: linear-gradient(135deg, #E8CC7A 0%, #C8A96E 40%, #9A7030 100%);
+          color: #0D1B2A;
           border: none;
           padding: 14px 26px;
           font-family: 'DM Sans', sans-serif;

@@ -22,7 +22,7 @@ export default function ThankYouPage() {
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=DM+Sans:wght@300;400;500;600&display=swap');
 
         body {
-          background: #0a0a0a;
+          background: #0D1B2A;
           color: #f0ede8;
           font-family: 'DM Sans', sans-serif;
         }
@@ -31,7 +31,7 @@ export default function ThankYouPage() {
           min-height: 100vh;
           background:
             radial-gradient(circle at 50% 8%, rgba(200,169,110,0.08), transparent 36%),
-            #0a0a0a;
+            #0D1B2A;
         }
 
         .container {
@@ -80,8 +80,12 @@ export default function ThankYouPage() {
         }
 
         .gold {
-          color: #C8A96E;
           font-style: italic;
+          color: #C8A96E;
+          background: linear-gradient(160deg, #F5D98A 0%, #C8A96E 50%, #8B6318 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
         }
 
         .copy {
@@ -137,8 +141,8 @@ export default function ThankYouPage() {
         }
 
         .btn-calendly {
-          background: #C8A96E;
-          color: #0a0a0a;
+          background: linear-gradient(135deg, #E8CC7A 0%, #C8A96E 40%, #9A7030 100%);
+          color: #0D1B2A;
           text-decoration: none;
           padding: 15px 32px;
           font-size: 13px;

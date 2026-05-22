@@ -20,7 +20,7 @@ export default function Writing() {
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
-          background: #0a0a0a;
+          background: #0D1B2A;
           color: #f0ede8;
           font-family: 'DM Sans', sans-serif;
           -webkit-font-smoothing: antialiased;
@@ -127,6 +127,10 @@ export default function Writing() {
           letter-spacing: 0.06em;
           text-transform: uppercase;
           color: #C8A96E;
+          background: linear-gradient(160deg, #F5D98A 0%, #C8A96E 50%, #8B6318 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
           text-decoration: none;
           transition: gap 0.2s ease;
         }
@@ -194,7 +198,11 @@ export default function Writing() {
           font-size: 22px;
           font-style: italic;
           font-weight: 400;
-          color: rgba(200,169,110,0.65);
+          color: #C8A96E;
+          background: linear-gradient(160deg, #F5D98A 0%, #C8A96E 50%, #8B6318 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
           margin-bottom: 28px;
           letter-spacing: 0.01em;
         }
@@ -280,8 +288,8 @@ export default function Writing() {
         }
 
         .ar-nav-link:hover { color: rgba(240,237,232,0.6); }
-        .ar-nav-link.gold { color: #C8A96E; }
-        .ar-nav-link.gold:hover { color: #d4b87a; }
+        .ar-nav-link.gold { color: #C8A96E; background: linear-gradient(160deg, #F5D98A 0%, #C8A96E 50%, #8B6318 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .ar-nav-link.gold:hover { opacity: 0.8; }
 
         /* Footer */
         .wr-footer {
@@ -326,7 +334,7 @@ export default function Writing() {
         }
       `}</style>
 
-      <div style={{ background: "#0a0a0a", minHeight: "100vh" }}>
+      <div style={{ background: "#0D1B2A", minHeight: "100vh" }}>
         <ReadingProgress />
         <Navbar />
 

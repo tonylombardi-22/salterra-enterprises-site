@@ -20,7 +20,7 @@ export default function Navbar() {
         .tl-nav {
           background:
             radial-gradient(circle at 78% 0%, rgba(200, 169, 110, 0.055), transparent 28%),
-            rgba(13, 13, 13, 0.96);
+            rgba(13, 27, 42, 0.96);
           border-bottom: 0.5px solid rgba(200, 169, 110, 0.12);
           position: sticky;
           top: 0;
@@ -112,6 +112,10 @@ export default function Navbar() {
           font-weight: 600;
           letter-spacing: 0.11em;
           color: #C8A96E;
+          background-image: linear-gradient(160deg, #F5D98A 0%, #C8A96E 50%, #8B6318 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
           text-decoration: none;
           border: 0.5px solid rgba(200, 169, 110, 0.52);
           border-radius: 3px;
@@ -119,19 +123,19 @@ export default function Navbar() {
           transition:
             background 0.3s ease,
             border-color 0.3s ease,
-            color 0.3s ease,
             box-shadow 0.3s ease,
-            transform 0.3s ease,
-            text-shadow 0.3s ease;
+            transform 0.3s ease;
           white-space: nowrap;
           flex-shrink: 0;
         }
 
         .tl-cta:hover {
-          background: rgba(200, 169, 110, 0.105);
+          background-image: none;
+          background-color: rgba(200, 169, 110, 0.105);
+          -webkit-background-clip: initial;
+          -webkit-text-fill-color: #f0ede8;
+          background-clip: initial;
           border-color: rgba(200, 169, 110, 0.9);
-          color: #f0ede8;
-          text-shadow: 0 0 18px rgba(200, 169, 110, 0.28);
           box-shadow: 0 0 34px rgba(200, 169, 110, 0.14);
           transform: translateY(-2px);
         }
@@ -167,7 +171,7 @@ export default function Navbar() {
           flex-direction: column;
           background:
             radial-gradient(circle at 80% 0%, rgba(200, 169, 110, 0.06), transparent 36%),
-            #0d0d0d;
+            #0D1B2A;
           border-top: 0.5px solid rgba(200, 169, 110, 0.12);
           padding: 18px 24px 26px;
           gap: 6px;
@@ -203,6 +207,10 @@ export default function Navbar() {
           font-weight: 600;
           letter-spacing: 0.1em;
           color: #C8A96E;
+          background: linear-gradient(160deg, #F5D98A 0%, #C8A96E 50%, #8B6318 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
           text-decoration: none;
           border: 0.5px solid rgba(200, 169, 110, 0.45);
           border-radius: 3px;

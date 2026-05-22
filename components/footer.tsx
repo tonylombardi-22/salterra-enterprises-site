@@ -8,7 +8,7 @@ export default function Footer() {
       <style>{`
         .site-footer {
           border-top: 0.5px solid rgba(240,237,232,0.08);
-          background: #0a0a0a;
+          background: #0D1B2A;
           padding: 42px 48px;
         }
 

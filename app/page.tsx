@@ -12,7 +12,7 @@ export default function Home() {
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
-          background: #0a0a0a;
+          background: #0D1B2A;
           color: #f0ede8;
           font-family: 'DM Sans', sans-serif;
           -webkit-font-smoothing: antialiased;
@@ -23,7 +23,7 @@ export default function Home() {
             radial-gradient(circle at 50% 6%, rgba(200,169,110,0.09), transparent 34%),
             radial-gradient(circle at 72% 8%, rgba(200,169,110,0.08), transparent 30%),
             radial-gradient(circle at 12% 34%, rgba(200,169,110,0.045), transparent 28%),
-            #0a0a0a;
+            #0D1B2A;
           min-height: 100vh;
         }
 
@@ -80,8 +80,12 @@ export default function Home() {
         }
 
         .gold {
-          color: #C8A96E;
           font-style: italic;
+          color: #C8A96E;
+          background: linear-gradient(160deg, #F5D98A 0%, #C8A96E 50%, #8B6318 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
         }
 
         .hero-sub {
@@ -112,7 +116,7 @@ export default function Home() {
 
         .btn-primary {
           background: #f0ede8;
-          color: #0a0a0a;
+          color: #0D1B2A;
         }
 
         .btn-primary:hover {
@@ -200,7 +204,7 @@ export default function Home() {
           z-index: 2;
           right: 26px;
           bottom: 82px;
-          background: rgba(10,10,10,0.72);
+          background: rgba(13,27,42,0.88);
           border: 0.5px solid rgba(200,169,110,0.30);
           padding: 12px 16px;
           backdrop-filter: blur(8px);
@@ -385,7 +389,7 @@ export default function Home() {
         }
 
         .cta-bar {
-          background: linear-gradient(135deg, #C8A96E, #d8bd82);
+          background: linear-gradient(135deg, #E8CC7A 0%, #C8A96E 40%, #9A7030 75%, #C8A96E 100%);
           padding: 72px 48px;
         }
 
@@ -403,7 +407,7 @@ export default function Home() {
           font-family: 'Cormorant Garamond', serif;
           font-size: 44px;
           font-weight: 600;
-          color: #0a0a0a;
+          color: #0D1B2A;
           line-height: 1.05;
           margin-bottom: 8px;
         }
@@ -411,11 +415,11 @@ export default function Home() {
         .cta-bar-sub {
           font-size: 13px;
           font-weight: 300;
-          color: rgba(10,10,10,0.65);
+          color: rgba(13,27,42,0.72);
         }
 
         .cta-bar-btn {
-          background: #0a0a0a;
+          background: #0D1B2A;
           color: #f0ede8;
           padding: 15px 34px;
           font-size: 12px;

@@ -41,7 +41,7 @@ export default function ServicesPage() {
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=DM+Sans:wght@300;400;500;600&display=swap');
 
         body {
-          background: #0a0a0a;
+          background: #0D1B2A;
           color: #f0ede8;
           font-family: 'DM Sans', sans-serif;
         }
@@ -50,7 +50,7 @@ export default function ServicesPage() {
           min-height: 100vh;
           background:
             radial-gradient(circle at 50% 6%, rgba(200,169,110,0.08), transparent 34%),
-            #0a0a0a;
+            #0D1B2A;
         }
 
         .container {
@@ -80,8 +80,12 @@ export default function ServicesPage() {
         }
 
         .gold {
-          color: #C8A96E;
           font-style: italic;
+          color: #C8A96E;
+          background: linear-gradient(160deg, #F5D98A 0%, #C8A96E 50%, #8B6318 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
         }
 
         .intro {
@@ -199,7 +203,7 @@ export default function ServicesPage() {
 
         .cta {
           margin-top: 88px;
-          background: #C8A96E;
+          background: linear-gradient(135deg, #E8CC7A 0%, #C8A96E 40%, #9A7030 75%, #C8A96E 100%);
           padding: 56px;
           display: flex;
           justify-content: space-between;
@@ -210,17 +214,17 @@ export default function ServicesPage() {
         .cta-title {
           font-family: 'Cormorant Garamond', serif;
           font-size: 44px;
-          color: #0a0a0a;
+          color: #0D1B2A;
           margin-bottom: 8px;
         }
 
         .cta-copy {
-          color: rgba(10,10,10,0.7);
+          color: rgba(13,27,42,0.72);
           font-size: 14px;
         }
 
         .cta-button {
-          background: #0a0a0a;
+          background: #0D1B2A;
           color: #f0ede8;
           text-decoration: none;
           padding: 14px 28px;

@@ -142,7 +142,7 @@ export default function Experience() {
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
-          background: #0a0a0a;
+          background: #0D1B2A;
           color: #f0ede8;
           font-family: 'DM Sans', sans-serif;
           -webkit-font-smoothing: antialiased;
@@ -174,8 +174,12 @@ export default function Experience() {
         }
 
         .ex-h1 em {
-          color: #C8A96E;
           font-style: italic;
+          color: #C8A96E;
+          background: linear-gradient(160deg, #F5D98A 0%, #C8A96E 50%, #8B6318 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
         }
 
         .ex-lead {
@@ -201,11 +205,16 @@ export default function Experience() {
           text-transform: uppercase;
           text-decoration: none;
           color: #C8A96E;
-          transition: background 0.2s ease, color 0.2s ease;
+          background: linear-gradient(160deg, #F5D98A 0%, #C8A96E 50%, #8B6318 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          transition: opacity 0.2s ease;
         }
 
         .ex-resume-btn:hover {
-          background: rgba(200,169,110,0.08);
+          opacity: 0.75;
+          border-color: rgba(200,169,110,0.70);
         }
 
         .ex-resume-btn svg {
@@ -229,7 +238,7 @@ export default function Experience() {
         }
 
         .ex-role {
-          background: #0a0a0a;
+          background: #0D1B2A;
           padding: 56px 48px;
           display: grid;
           grid-template-columns: 220px 1fr;
@@ -237,7 +246,7 @@ export default function Experience() {
           transition: background 0.2s ease;
         }
 
-        .ex-role:hover { background: #0d0d0d; }
+        .ex-role:hover { background: #0E1E2F; }
 
         /* Left column */
         .ex-role-company {
@@ -310,6 +319,10 @@ export default function Experience() {
           font-size: 24px;
           font-weight: 600;
           color: #C8A96E;
+          background: linear-gradient(160deg, #F5D98A 0%, #C8A96E 50%, #8B6318 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
           line-height: 1;
           flex-shrink: 0;
           min-width: 80px;
@@ -381,7 +394,7 @@ export default function Experience() {
 
         /* ── CTA ──────────────────────────────── */
         .ex-cta {
-          background: #C8A96E;
+          background: linear-gradient(135deg, #E8CC7A 0%, #C8A96E 40%, #9A7030 75%, #C8A96E 100%);
           padding: 72px 48px;
           display: flex;
           align-items: center;
@@ -393,7 +406,7 @@ export default function Experience() {
           font-family: 'Cormorant Garamond', serif;
           font-size: 40px;
           font-weight: 600;
-          color: #0a0a0a;
+          color: #0D1B2A;
           margin-bottom: 8px;
           line-height: 1.05;
         }
@@ -401,11 +414,11 @@ export default function Experience() {
         .ex-cta-sub {
           font-size: 13px;
           font-weight: 300;
-          color: rgba(10,10,10,0.58);
+          color: rgba(13,27,42,0.72);
         }
 
         .ex-cta-btn {
-          background: #0a0a0a;
+          background: #0D1B2A;
           color: #f0ede8;
           padding: 15px 36px;
           font-size: 12.5px;
@@ -489,7 +502,7 @@ export default function Experience() {
         }
       `}</style>
 
-      <div style={{ background: "#0a0a0a", minHeight: "100vh" }}>
+      <div style={{ background: "#0D1B2A", minHeight: "100vh" }}>
         <Navbar />
 
         {/* Hero */}
