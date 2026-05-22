@@ -1,8 +1,13 @@
+// app/layout.tsx
 import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Salterra Enterprises | Business Consulting & Operational Excellence",
+  metadataBase: new URL("https://www.salterraenterprises.com"),
+  title: {
+    default: "Salterra Enterprises | Business Consulting & Operational Excellence",
+    template: "%s | Salterra Enterprises",
+  },
   description:
     "Salterra Enterprises helps organizations improve operations, streamline workflows, optimize customer experiences, and execute strategic initiatives through practical consulting and operational support.",
   keywords: [
@@ -20,13 +25,10 @@ export const metadata: Metadata = {
   authors: [{ name: "Salterra Enterprises, LLC" }],
   creator: "Salterra Enterprises, LLC",
   publisher: "Salterra Enterprises, LLC",
-  metadataBase: new URL("https://www.salterraenterprises.com"),
   openGraph: {
-    title: "Salterra Enterprises | Business Consulting & Operational Excellence",
-    description:
-      "Practical consulting, workflow optimization, operations support, and project leadership for growing organizations.",
-    url: "https://www.salterraenterprises.com",
     siteName: "Salterra Enterprises",
+    locale: "en_US",
+    type: "website",
     images: [
       {
         url: "/salterra-hero.jpg",
@@ -35,15 +37,9 @@ export const metadata: Metadata = {
         alt: "Salterra Enterprises",
       },
     ],
-    locale: "en_US",
-    type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Salterra Enterprises | Business Consulting & Operational Excellence",
-    description:
-      "Helping organizations simplify operations, improve workflows, and execute strategic initiatives with confidence.",
-    images: ["/salterra-hero.jpg"],
   },
   icons: {
     icon: [
