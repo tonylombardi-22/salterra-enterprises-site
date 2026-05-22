@@ -61,6 +61,7 @@ export default function Navbar() {
           display: block;
           transform: translateZ(0);
           backface-visibility: hidden;
+          mix-blend-mode: lighten;
         }
 
         .tl-links {
