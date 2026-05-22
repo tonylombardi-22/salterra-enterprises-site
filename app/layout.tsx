@@ -1,5 +1,6 @@
 // app/layout.tsx
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -54,6 +55,22 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "Salterra Enterprises, LLC",
+  url: "https://www.salterraenterprises.com",
+  founder: {
+    "@type": "Person",
+    name: "Amber Zeigler",
+  },
+  description:
+    "Salterra Enterprises helps organizations improve operations, streamline workflows, optimize customer experiences, and execute strategic initiatives through practical consulting and operational support.",
+  areaServed: "United States",
+  email: "amber@salterraenterprises.com",
+  sameAs: [],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -61,7 +78,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
