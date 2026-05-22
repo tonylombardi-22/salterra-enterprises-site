@@ -1,4 +1,4 @@
-// app/industries/page.tsx
+ï»¿// app/industries/page.tsx
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/footer";
@@ -56,7 +56,7 @@ export default function IndustriesPage() {
         .card-description { color: rgba(240,237,232,0.55); line-height: 1.85; font-size: 14px; margin-bottom: 22px; }
         .card-list { list-style: none; padding: 0; }
         .card-list li { color: rgba(240,237,232,0.72); margin-bottom: 10px; font-size: 13px; }
-        .card-list li::before { content: "• "; color: #C8A96E; }
+        .card-list li::before { content: "- "; color: #C8A96E; }
         .section { margin-top: 88px; padding-top: 56px; border-top: 1px solid transparent; border-image: linear-gradient(90deg, transparent, rgba(200,169,110,0.35), transparent) 1; }
         .section-title { font-family: 'Cormorant Garamond', serif; font-size: 48px; line-height: 1; margin-bottom: 24px; }
         .section-copy { max-width: 780px; color: rgba(240,237,232,0.55); line-height: 1.9; margin-bottom: 42px; }
@@ -95,7 +95,7 @@ export default function IndustriesPage() {
           <div className="grid">
             <div className="card">
               <div className="card-number">01</div>
-              <div className="card-title">Regulated & Compliance-Driven Organizations</div>
+              <div className="card-title">Regulated and Compliance-Driven Organizations</div>
               <p className="card-description">
                 Organizations operating in regulated environments need clear processes, strong
                 documentation, operational discipline, and consistent execution. Salterra helps
@@ -144,7 +144,7 @@ export default function IndustriesPage() {
 
             <div className="card">
               <div className="card-number">04</div>
-              <div className="card-title">Founders & Emerging Companies</div>
+              <div className="card-title">Founders and Emerging Companies</div>
               <p className="card-description">
                 Founders often need strategic guidance, operational structure, technology support,
                 and execution assistance before hiring a full internal leadership team. Salterra
