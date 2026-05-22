@@ -548,14 +548,13 @@ export default function Home() {
           <div className="fade-up">
             <div className="section-eyebrow">Built for businesses ready to evolve</div>
             <div className="section-headline">
-              Growth requires more than isolated solutions.
+              Built for businesses ready to evolve.
             </div>
           </div>
 
           <div className="fade-up">
             <p className="vision-copy">
-              Growing organizations need alignment between strategy, operations, customer
-              experience, brand presence, and technology execution.
+              Growing organizations need alignment between strategy, operations, and the customer experience.
             </p>
             <p className="vision-copy">
               Salterra Enterprises helps businesses build the structure, systems, creative
