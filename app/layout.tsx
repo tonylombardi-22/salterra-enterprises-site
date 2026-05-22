@@ -45,12 +45,16 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
+        url: "/favicon.svg",
+        type: "image/svg+xml",
+      },
+      {
         url: "/salterra-nav-icon.png",
         type: "image/png",
         sizes: "32x32",
       },
     ],
-    shortcut: "/salterra-nav-icon.png",
+    shortcut: "/favicon.svg",
     apple: "/salterra-nav-icon.png",
   },
 };
