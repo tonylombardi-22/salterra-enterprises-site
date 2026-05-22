@@ -130,9 +130,6 @@ export default function Footer() {
               <a href="mailto:amber@salterraenterprises.com" className="footer-link">
                 amber@salterraenterprises.com
               </a>
-              <span className="footer-link">
-                Active FINRA licensing across 40+ states
-              </span>
               <a
                 href={CALENDLY_URL}
                 target="_blank"
