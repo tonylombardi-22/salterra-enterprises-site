@@ -500,8 +500,7 @@ export default function Home() {
 
             <h1 className="hero-h1">
               Transforming<br />
-              complexity into<br />
-              <span className="gold">strategic momentum.</span>
+              complexity into <span className="gold">strategic momentum.</span>
             </h1>
 
             <p className="hero-sub">
