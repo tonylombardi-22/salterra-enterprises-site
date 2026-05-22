@@ -67,10 +67,9 @@ export default function AboutPage() {
           -webkit-text-fill-color: transparent;
           background-clip: text;
           line-height: 1.18;
-          padding-right: 0.5em;
+          padding-right: 0.24em;
           padding-bottom: 0.14em;
           overflow: visible;
-          box-sizing: content-box;
         }
 
         .gold-line-second {
@@ -115,7 +114,7 @@ export default function AboutPage() {
           <div className="eyebrow">About Salterra Enterprises</div>
           <h1>
             Practical business support led by{" "}
-            <span className="gold-line">clarity, discipline, and&nbsp;</span>
+            <span className="gold-line">clarity, discipline, and</span>
             <span className="gold-line gold-line-second">execution.</span>
           </h1>
 
