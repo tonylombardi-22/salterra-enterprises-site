@@ -1,5 +1,36 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/footer";
+
+export const metadata: Metadata = {
+  title: "About Amber Zeigler | Salterra Enterprises",
+  description:
+    "Meet Amber Zeigler, founder of Salterra Enterprises. Practical consulting led by product management discipline, financial services experience, and operational expertise.",
+  openGraph: {
+    title: "About Amber Zeigler | Salterra Enterprises",
+    description:
+      "Meet Amber Zeigler, founder of Salterra Enterprises. Practical consulting led by product management discipline, financial services experience, and operational expertise.",
+    url: "https://www.salterraenterprises.com/about",
+    siteName: "Salterra Enterprises",
+    images: [
+      {
+        url: "/amber-headshot-1.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Amber Zeigler, Founder of Salterra Enterprises",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Amber Zeigler | Salterra Enterprises",
+    description:
+      "Meet Amber Zeigler, founder of Salterra Enterprises. Practical consulting led by product management discipline, financial services experience, and operational expertise.",
+    images: ["/amber-headshot-1.jpg"],
+  },
+};
 
 const CALENDLY_URL = "https://calendly.com/amber-salterraenterprises/30min";
 

@@ -1,5 +1,36 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/footer";
+
+export const metadata: Metadata = {
+  title: "Consulting Services | Salterra Enterprises",
+  description:
+    "Strategic advisory, operational excellence, brand strategy, technology solutions, and customer experience consulting for growing businesses.",
+  openGraph: {
+    title: "Consulting Services | Salterra Enterprises",
+    description:
+      "Strategic advisory, operational excellence, brand strategy, technology solutions, and customer experience consulting for growing businesses.",
+    url: "https://www.salterraenterprises.com/services",
+    siteName: "Salterra Enterprises",
+    images: [
+      {
+        url: "/salterra-hero.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Salterra Enterprises Consulting Services",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Consulting Services | Salterra Enterprises",
+    description:
+      "Strategic advisory, operational excellence, brand strategy, technology solutions, and customer experience consulting for growing businesses.",
+    images: ["/salterra-hero.jpg"],
+  },
+};
 
 const CALENDLY_URL = "https://calendly.com/amber-salterraenterprises/30min";
 
@@ -370,7 +401,7 @@ export default function ServicesPage() {
             </div>
 
             <p className="section-copy">
-              Amber's background includes regulated financial services, product management,
+              Amber&apos;s background includes regulated financial services, product management,
               customer-facing operations, sales, business process improvement, and operational
               support. Salterra brings that experience together with creative and technology
               capabilities to help small businesses, founders, and growth-minded organizations
