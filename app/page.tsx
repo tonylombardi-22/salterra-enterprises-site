@@ -669,6 +669,41 @@ export default function Home() {
           </div>
         </section>
 
+        <hr className="rule" />
+
+        <section className="section">
+          <div className="section-eyebrow fade-up">How we work</div>
+          <div className="section-headline fade-up" style={{marginBottom: '34px'}}>
+            Clear thinking. Practical systems. Reliable follow-through.
+          </div>
+          <div className="cards">
+            <div className="card fade-up">
+              <div className="card-num">01</div>
+              <div className="card-title">Clarity</div>
+              <div className="card-body">
+                We help teams understand what is working, what is not, and where operational
+                changes can create the greatest impact.
+              </div>
+            </div>
+            <div className="card fade-up">
+              <div className="card-num">02</div>
+              <div className="card-title">Structure</div>
+              <div className="card-body">
+                We turn scattered processes, unclear responsibilities, and informal workflows
+                into practical systems that are easier to manage.
+              </div>
+            </div>
+            <div className="card fade-up">
+              <div className="card-num">03</div>
+              <div className="card-title">Execution</div>
+              <div className="card-body">
+                We support the follow-through required to move work forward, coordinate
+                stakeholders, and turn plans into measurable progress.
+              </div>
+            </div>
+          </div>
+        </section>
+
         <div className="cta-bar fade-up">
           <div className="cta-bar-inner">
             <div>

@@ -130,27 +130,6 @@ export default function AboutPage() {
               </p>
             </aside>
           </div>
-          <section className="values">
-            <div className="eyebrow">How we work</div>
-            <div className="section-title">Clear thinking. Practical systems. Reliable follow-through.</div>
-            <div className="values-grid">
-              <div className="value-card">
-                <div className="value-num">01</div>
-                <div className="value-title">Clarity</div>
-                <p className="value-body">We help teams understand what is working, what is not, and where operational changes can create the greatest impact.</p>
-              </div>
-              <div className="value-card">
-                <div className="value-num">02</div>
-                <div className="value-title">Structure</div>
-                <p className="value-body">We turn scattered processes, unclear responsibilities, and informal workflows into practical systems that are easier to manage.</p>
-              </div>
-              <div className="value-card">
-                <div className="value-num">03</div>
-                <div className="value-title">Execution</div>
-                <p className="value-body">We support the follow-through required to move work forward, coordinate stakeholders, and turn plans into measurable progress.</p>
-              </div>
-            </div>
-          </section>
           <div className="cta">
             <div>
               <div className="cta-title">Ready to improve how your business works?</div>
