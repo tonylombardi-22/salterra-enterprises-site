@@ -48,31 +48,32 @@ export default function AboutPage() {
 
         h1 {
           font-family: 'Cormorant Garamond', serif;
-          font-size: clamp(54px, 7vw, 86px);
-          line-height: 1.18;
+          font-size: clamp(54px, 6.4vw, 82px);
+          line-height: 1.16;
           letter-spacing: -0.04em;
           font-weight: 600;
-          max-width: 900px;
+          max-width: 860px;
           margin-bottom: 28px;
-          padding-bottom: 0.18em;
+          padding-bottom: 0.16em;
           overflow: visible;
         }
 
-        .gold-line {
-          display: inline-block;
+        .gold {
+          display: inline;
           font-style: italic;
           color: #D4AF63;
           background: linear-gradient(160deg, #E2C57D 0%, #D4AF63 35%, #B68A3C 70%, #8C6A2E 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
-          line-height: 1.18;
-          padding-right: 0.24em;
+          padding-right: 0.08em;
           padding-bottom: 0.14em;
-          overflow: visible;
+          line-height: 1.18;
+          -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
         }
 
-        .gold-line-second {
+        .gold-break {
           display: block;
         }
 
@@ -99,8 +100,8 @@ export default function AboutPage() {
 
         @media (max-width: 900px) {
           .wrap { padding: 56px 24px; }
-          h1 { font-size: clamp(46px, 13vw, 64px); line-height: 1.2; }
-          .gold-line-second { display: inline-block; }
+          h1 { font-size: clamp(44px, 12vw, 62px); line-height: 1.18; max-width: 100%; }
+          .gold-break { display: inline; }
           .split { grid-template-columns: 1fr; }
           .panel img { height: 380px; object-position: center 18%; }
           .values-grid { grid-template-columns: 1fr; }
@@ -114,8 +115,10 @@ export default function AboutPage() {
           <div className="eyebrow">About Salterra Enterprises</div>
           <h1>
             Practical business support led by{" "}
-            <span className="gold-line">clarity, discipline, and</span>
-            <span className="gold-line gold-line-second">execution.</span>
+            <span className="gold">
+              clarity, discipline, and
+              <span className="gold-break"> execution.</span>
+            </span>
           </h1>
 
           <p className="intro">
