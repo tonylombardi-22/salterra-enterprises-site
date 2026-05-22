@@ -3,6 +3,43 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* ── Salterra Gold Design Tokens ── */
+  --gold-bronze:    #8C6A2E;
+  --gold-primary:   #B68A3C;
+  --gold-rich:      #D4AF63;
+  --gold-highlight: #E2C57D;
+
+  /* Primary metallic gradient — matches the logo */
+  --gold-metallic: linear-gradient(
+    180deg,
+    #E2C57D 0%,
+    #D4AF63 35%,
+    #B68A3C 70%,
+    #8C6A2E 100%
+  );
+
+  /* Diagonal variant for italic text (looks more natural on slanted letterforms) */
+  --gold-metallic-text: linear-gradient(
+    160deg,
+    #E2C57D 0%,
+    #D4AF63 35%,
+    #B68A3C 70%,
+    #8C6A2E 100%
+  );
+
+  /* Horizontal sweep for CTA bars */
+  --gold-metallic-bar: linear-gradient(
+    135deg,
+    #E2C57D 0%,
+    #D4AF63 35%,
+    #B68A3C 70%,
+    #8C6A2E 100%
+  );
+
+  /* RGB bases for rgba() usage */
+  --gold-primary-rgb: 182, 138, 60;   /* #B68A3C */
+  --gold-rich-rgb:    212, 175, 99;   /* #D4AF63 */
 }
 
 @theme inline {

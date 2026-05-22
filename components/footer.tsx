@@ -31,7 +31,7 @@ export default function Footer() {
 
         .footer-sub {
           margin-top: 10px;
-          color: rgba(200,169,110,0.72);
+          color: rgba(182,138,60,0.72);
           font-size: 11px;
           letter-spacing: 0.12em;
           text-transform: uppercase;
@@ -46,7 +46,7 @@ export default function Footer() {
         }
 
         .footer-heading {
-          color: rgba(200,169,110,0.72);
+          color: rgba(182,138,60,0.72);
           font-size: 11px;
           letter-spacing: 0.14em;
           text-transform: uppercase;
@@ -68,8 +68,8 @@ export default function Footer() {
         }
 
         .footer-link:hover {
-          color: #C8A96E;
-          text-shadow: 0 0 18px rgba(200,169,110,0.18);
+          color: #D4AF63;
+          text-shadow: 0 0 18px rgba(182,138,60,0.18);
         }
 
         .footer-bottom {

@@ -20,9 +20,9 @@ export default function Home() {
 
         .page {
           background:
-            radial-gradient(circle at 50% 6%, rgba(200,169,110,0.09), transparent 34%),
-            radial-gradient(circle at 72% 8%, rgba(200,169,110,0.08), transparent 30%),
-            radial-gradient(circle at 12% 34%, rgba(200,169,110,0.045), transparent 28%),
+            radial-gradient(circle at 50% 6%, rgba(182,138,60,0.09), transparent 34%),
+            radial-gradient(circle at 72% 8%, rgba(182,138,60,0.08), transparent 30%),
+            radial-gradient(circle at 12% 34%, rgba(182,138,60,0.045), transparent 28%),
             #0D1B2A;
           min-height: 100vh;
         }
@@ -47,7 +47,7 @@ export default function Home() {
           position: absolute;
           inset: 20px 0 auto 0;
           height: 420px;
-          background: radial-gradient(circle at 38% 18%, rgba(200,169,110,0.08), transparent 46%);
+          background: radial-gradient(circle at 38% 18%, rgba(182,138,60,0.08), transparent 46%);
           pointer-events: none;
           z-index: 0;
         }
@@ -62,11 +62,11 @@ export default function Home() {
           font-size: 11px;
           letter-spacing: 0.14em;
           text-transform: uppercase;
-          color: rgba(200,169,110,0.72);
-          border: 0.5px solid rgba(200,169,110,0.22);
+          color: rgba(182,138,60,0.72);
+          border: 0.5px solid rgba(182,138,60,0.22);
           padding: 8px 14px;
           margin-bottom: 34px;
-          box-shadow: 0 0 24px rgba(200,169,110,0.04);
+          box-shadow: 0 0 24px rgba(182,138,60,0.04);
         }
 
         .hero-h1 {
@@ -81,8 +81,8 @@ export default function Home() {
 
         .gold {
           font-style: italic;
-          color: #C8A96E;
-          background: linear-gradient(160deg, #F5D98A 0%, #C8A96E 50%, #8B6318 100%);
+          color: var(--gold-rich);
+          background: var(--gold-metallic-text);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
@@ -131,8 +131,8 @@ export default function Home() {
 
         .btn-ghost:hover {
           color: #f0ede8;
-          border-color: rgba(200,169,110,0.50);
-          box-shadow: 0 0 38px rgba(200,169,110,0.12);
+          border-color: rgba(182,138,60,0.50);
+          box-shadow: 0 0 38px rgba(182,138,60,0.12);
         }
 
         .hero-portrait-wrap {
@@ -170,8 +170,8 @@ export default function Home() {
           border-radius: 18px;
           background: transparent;
           box-shadow:
-            0 0 0 0.5px rgba(200,169,110,0.10),
-            0 0 52px rgba(200,169,110,0.08),
+            0 0 0 0.5px rgba(182,138,60,0.10),
+            0 0 52px rgba(182,138,60,0.08),
             0 24px 60px rgba(0,0,0,0.35);
           -webkit-mask-image: radial-gradient(
             ellipse at center,
@@ -205,7 +205,7 @@ export default function Home() {
           right: 26px;
           bottom: 82px;
           background: rgba(13,27,42,0.88);
-          border: 0.5px solid rgba(200,169,110,0.30);
+          border: 0.5px solid rgba(182,138,60,0.30);
           padding: 12px 16px;
           backdrop-filter: blur(8px);
           box-shadow: 0 14px 34px rgba(0,0,0,0.34);
@@ -223,7 +223,7 @@ export default function Home() {
           font-size: 10px;
           letter-spacing: 0.12em;
           text-transform: uppercase;
-          color: rgba(200,169,110,0.78);
+          color: var(--gold-rich);
         }
 
         .rule {
@@ -232,7 +232,7 @@ export default function Home() {
           background: linear-gradient(
             90deg,
             transparent,
-            rgba(200,169,110,0.35),
+            rgba(182,138,60,0.35),
             transparent
           );
           max-width: 1200px;
@@ -293,9 +293,9 @@ export default function Home() {
 
         .outcome:hover {
           transform: translateY(-6px);
-          border-color: rgba(200,169,110,0.36);
+          border-color: rgba(182,138,60,0.36);
           background: rgba(240,237,232,0.035);
-          box-shadow: 0 0 48px rgba(200,169,110,0.12);
+          box-shadow: 0 0 48px rgba(182,138,60,0.12);
         }
 
         .cards {
@@ -314,14 +314,14 @@ export default function Home() {
 
         .card:hover {
           transform: translateY(-8px);
-          border-color: rgba(200,169,110,0.40);
+          border-color: rgba(182,138,60,0.40);
           background: rgba(240,237,232,0.04);
-          box-shadow: 0 0 60px rgba(200,169,110,0.14);
+          box-shadow: 0 0 60px rgba(182,138,60,0.14);
         }
 
         .card-num {
           font-size: 11px;
-          color: rgba(200,169,110,0.7);
+          color: rgba(182,138,60,0.7);
           letter-spacing: 0.14em;
           margin-bottom: 22px;
         }
@@ -374,22 +374,22 @@ export default function Home() {
         .pill {
           font-size: 11px;
           letter-spacing: 0.07em;
-          color: rgba(200,169,110,0.72);
-          border: 0.5px solid rgba(200,169,110,0.22);
+          color: rgba(182,138,60,0.72);
+          border: 0.5px solid rgba(182,138,60,0.22);
           padding: 6px 12px;
           border-radius: 2px;
           transition: all 0.25s ease;
         }
 
         .pill:hover {
-          border-color: rgba(200,169,110,0.48);
+          border-color: rgba(182,138,60,0.48);
           color: rgba(240,237,232,0.88);
-          box-shadow: 0 0 24px rgba(200,169,110,0.10);
+          box-shadow: 0 0 24px rgba(182,138,60,0.10);
           transform: translateY(-2px);
         }
 
         .cta-bar {
-          background: linear-gradient(135deg, #E8CC7A 0%, #C8A96E 40%, #9A7030 75%, #C8A96E 100%);
+          background: var(--gold-metallic-bar);
           padding: 72px 48px;
         }
 

@@ -60,7 +60,7 @@ export default function ContactPage() {
         .page {
           min-height: 100vh;
           background:
-            radial-gradient(circle at 50% 6%, rgba(200,169,110,0.08), transparent 34%),
+            radial-gradient(circle at 50% 6%, rgba(182,138,60,0.08), transparent 34%),
             #0D1B2A;
         }
 
@@ -75,8 +75,8 @@ export default function ContactPage() {
           font-size: 11px;
           letter-spacing: 0.14em;
           text-transform: uppercase;
-          color: rgba(200,169,110,0.72);
-          border: 0.5px solid rgba(200,169,110,0.22);
+          color: rgba(182,138,60,0.72);
+          border: 0.5px solid rgba(182,138,60,0.22);
           padding: 8px 14px;
           margin-bottom: 30px;
         }
@@ -93,8 +93,8 @@ export default function ContactPage() {
 
         .gold {
           font-style: italic;
-          color: #C8A96E;
-          background: linear-gradient(160deg, #F5D98A 0%, #C8A96E 50%, #8B6318 100%);
+          color: #D4AF63;
+          background: linear-gradient(160deg, #E2C57D 0%, #D4AF63 35%, #B68A3C 70%, #8C6A2E 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
@@ -123,8 +123,8 @@ export default function ContactPage() {
         }
 
         .panel:hover {
-          border-color: rgba(200,169,110,0.24);
-          box-shadow: 0 0 42px rgba(200,169,110,0.08);
+          border-color: rgba(182,138,60,0.24);
+          box-shadow: 0 0 42px rgba(182,138,60,0.08);
         }
 
         .panel-title {
@@ -153,7 +153,7 @@ export default function ContactPage() {
         }
 
         label {
-          color: rgba(200,169,110,0.72);
+          color: rgba(182,138,60,0.72);
           font-size: 11px;
           letter-spacing: 0.12em;
           text-transform: uppercase;
@@ -176,8 +176,8 @@ export default function ContactPage() {
         input:focus,
         textarea:focus,
         select:focus {
-          border-color: rgba(200,169,110,0.55);
-          box-shadow: 0 0 24px rgba(200,169,110,0.08);
+          border-color: rgba(182,138,60,0.55);
+          box-shadow: 0 0 24px rgba(182,138,60,0.08);
         }
 
         textarea {
@@ -186,7 +186,7 @@ export default function ContactPage() {
         }
 
         .submit {
-          background: linear-gradient(135deg, #E8CC7A 0%, #C8A96E 40%, #9A7030 100%);
+          background: linear-gradient(135deg, #E2C57D 0%, #D4AF63 35%, #B68A3C 70%, #8C6A2E 100%);
           color: #0D1B2A;
           border: none;
           padding: 14px 26px;
@@ -199,7 +199,7 @@ export default function ContactPage() {
 
         .submit:hover {
           transform: translateY(-3px);
-          box-shadow: 0 18px 38px rgba(200,169,110,0.18);
+          box-shadow: 0 18px 38px rgba(182,138,60,0.18);
         }
 
         .submit:disabled {
@@ -232,7 +232,7 @@ export default function ContactPage() {
         }
 
         .info-label {
-          color: rgba(200,169,110,0.72);
+          color: rgba(182,138,60,0.72);
           font-size: 11px;
           letter-spacing: 0.12em;
           text-transform: uppercase;
@@ -248,7 +248,7 @@ export default function ContactPage() {
         }
 
         .info-value a:hover {
-          color: #C8A96E;
+          color: #D4AF63;
         }
 
         .quick-links {
@@ -266,8 +266,8 @@ export default function ContactPage() {
         }
 
         .quick-link:hover {
-          color: #C8A96E;
-          text-shadow: 0 0 18px rgba(200,169,110,0.18);
+          color: #D4AF63;
+          text-shadow: 0 0 18px rgba(182,138,60,0.18);
         }
 
         .disclaimer {
@@ -276,7 +276,7 @@ export default function ContactPage() {
           border-image: linear-gradient(
             90deg,
             transparent,
-            rgba(200,169,110,0.35),
+            rgba(182,138,60,0.35),
             transparent
           ) 1;
           padding-top: 28px;

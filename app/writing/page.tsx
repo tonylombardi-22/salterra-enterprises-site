@@ -94,8 +94,8 @@ export default function Writing() {
           font-size: 10px;
           letter-spacing: 0.08em;
           text-transform: uppercase;
-          color: rgba(200,169,110,0.7);
-          border: 0.5px solid rgba(200,169,110,0.25);
+          color: rgba(182,138,60,0.7);
+          border: 0.5px solid rgba(182,138,60,0.25);
           padding: 2px 8px;
           border-radius: 2px;
         }
@@ -126,8 +126,8 @@ export default function Writing() {
           font-size: 12px;
           letter-spacing: 0.06em;
           text-transform: uppercase;
-          color: #C8A96E;
-          background: linear-gradient(160deg, #F5D98A 0%, #C8A96E 50%, #8B6318 100%);
+          color: #D4AF63;
+          background: linear-gradient(160deg, #E2C57D 0%, #D4AF63 35%, #B68A3C 70%, #8C6A2E 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
@@ -177,8 +177,8 @@ export default function Writing() {
           font-size: 10px;
           letter-spacing: 0.08em;
           text-transform: uppercase;
-          color: rgba(200,169,110,0.7);
-          border: 0.5px solid rgba(200,169,110,0.25);
+          color: rgba(182,138,60,0.7);
+          border: 0.5px solid rgba(182,138,60,0.25);
           padding: 2px 8px;
           border-radius: 2px;
         }
@@ -198,8 +198,8 @@ export default function Writing() {
           font-size: 22px;
           font-style: italic;
           font-weight: 400;
-          color: #C8A96E;
-          background: linear-gradient(160deg, #F5D98A 0%, #C8A96E 50%, #8B6318 100%);
+          color: #D4AF63;
+          background: linear-gradient(160deg, #E2C57D 0%, #D4AF63 35%, #B68A3C 70%, #8C6A2E 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
@@ -233,7 +233,7 @@ export default function Writing() {
 
         .ar-body .section-break {
           text-align: center;
-          color: rgba(200,169,110,0.4);
+          color: rgba(182,138,60,0.4);
           font-size: 20px;
           letter-spacing: 0.3em;
           margin: 48px 0;
@@ -264,7 +264,7 @@ export default function Writing() {
         }
 
         .ar-footer-byline a {
-          color: #C8A96E;
+          color: #D4AF63;
           text-decoration: none;
         }
 
@@ -288,7 +288,7 @@ export default function Writing() {
         }
 
         .ar-nav-link:hover { color: rgba(240,237,232,0.6); }
-        .ar-nav-link.gold { color: #C8A96E; background: linear-gradient(160deg, #F5D98A 0%, #C8A96E 50%, #8B6318 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .ar-nav-link.gold { color: #D4AF63; background: linear-gradient(160deg, #E2C57D 0%, #D4AF63 35%, #B68A3C 70%, #8C6A2E 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
         .ar-nav-link.gold:hover { opacity: 0.8; }
 
         /* Footer */
@@ -313,7 +313,7 @@ export default function Writing() {
           text-decoration: none;
         }
 
-        .wr-footer-logo span { color: rgba(200,169,110,0.35); }
+        .wr-footer-logo span { color: rgba(182,138,60,0.35); }
 
         .wr-footer-links { display: flex; gap: 28px; }
 

@@ -49,7 +49,7 @@ export default function ServicesPage() {
         .page {
           min-height: 100vh;
           background:
-            radial-gradient(circle at 50% 6%, rgba(200,169,110,0.08), transparent 34%),
+            radial-gradient(circle at 50% 6%, rgba(182,138,60,0.08), transparent 34%),
             #0D1B2A;
         }
 
@@ -64,8 +64,8 @@ export default function ServicesPage() {
           font-size: 11px;
           letter-spacing: 0.14em;
           text-transform: uppercase;
-          color: rgba(200,169,110,0.72);
-          border: 0.5px solid rgba(200,169,110,0.22);
+          color: rgba(182,138,60,0.72);
+          border: 0.5px solid rgba(182,138,60,0.22);
           padding: 8px 14px;
           margin-bottom: 30px;
         }
@@ -81,8 +81,8 @@ export default function ServicesPage() {
 
         .gold {
           font-style: italic;
-          color: #C8A96E;
-          background: linear-gradient(160deg, #F5D98A 0%, #C8A96E 50%, #8B6318 100%);
+          color: #D4AF63;
+          background: linear-gradient(160deg, #E2C57D 0%, #D4AF63 35%, #B68A3C 70%, #8C6A2E 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
@@ -111,15 +111,15 @@ export default function ServicesPage() {
 
         .service-card:hover {
           transform: translateY(-8px);
-          border-color: rgba(200,169,110,0.40);
+          border-color: rgba(182,138,60,0.40);
           background: rgba(240,237,232,0.04);
-          box-shadow: 0 0 60px rgba(200,169,110,0.14);
+          box-shadow: 0 0 60px rgba(182,138,60,0.14);
         }
 
         .service-number {
           font-size: 11px;
           letter-spacing: 0.14em;
-          color: rgba(200,169,110,0.72);
+          color: rgba(182,138,60,0.72);
           margin-bottom: 22px;
         }
 
@@ -150,7 +150,7 @@ export default function ServicesPage() {
 
         .service-list li::before {
           content: "• ";
-          color: #C8A96E;
+          color: #D4AF63;
         }
 
         .section {
@@ -160,7 +160,7 @@ export default function ServicesPage() {
           border-image: linear-gradient(
             90deg,
             transparent,
-            rgba(200,169,110,0.35),
+            rgba(182,138,60,0.35),
             transparent
           ) 1;
         }
@@ -186,8 +186,8 @@ export default function ServicesPage() {
         }
 
         .industry {
-          border: 0.5px solid rgba(200,169,110,0.25);
-          color: rgba(200,169,110,0.8);
+          border: 0.5px solid rgba(182,138,60,0.25);
+          color: rgba(182,138,60,0.8);
           padding: 8px 14px;
           font-size: 12px;
           letter-spacing: 0.06em;
@@ -196,14 +196,14 @@ export default function ServicesPage() {
 
         .industry:hover {
           color: #f0ede8;
-          border-color: rgba(200,169,110,0.48);
-          box-shadow: 0 0 24px rgba(200,169,110,0.10);
+          border-color: rgba(182,138,60,0.48);
+          box-shadow: 0 0 24px rgba(182,138,60,0.10);
           transform: translateY(-2px);
         }
 
         .cta {
           margin-top: 88px;
-          background: linear-gradient(135deg, #E8CC7A 0%, #C8A96E 40%, #9A7030 75%, #C8A96E 100%);
+          background: linear-gradient(135deg, #E2C57D 0%, #D4AF63 35%, #B68A3C 70%, #8C6A2E 100%);
           padding: 56px;
           display: flex;
           justify-content: space-between;

@@ -30,7 +30,7 @@ export default function ThankYouPage() {
         .page {
           min-height: 100vh;
           background:
-            radial-gradient(circle at 50% 8%, rgba(200,169,110,0.08), transparent 36%),
+            radial-gradient(circle at 50% 8%, rgba(182,138,60,0.08), transparent 36%),
             #0D1B2A;
         }
 
@@ -44,19 +44,19 @@ export default function ThankYouPage() {
         .check-mark {
           width: 56px;
           height: 56px;
-          border: 0.5px solid rgba(200,169,110,0.35);
+          border: 0.5px solid rgba(182,138,60,0.35);
           border-radius: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
           margin: 0 auto 32px;
-          background: rgba(200,169,110,0.06);
+          background: rgba(182,138,60,0.06);
         }
 
         .check-mark svg {
           width: 22px;
           height: 22px;
-          color: #C8A96E;
+          color: #D4AF63;
         }
 
         .eyebrow {
@@ -64,8 +64,8 @@ export default function ThankYouPage() {
           font-size: 11px;
           letter-spacing: 0.14em;
           text-transform: uppercase;
-          color: rgba(200,169,110,0.72);
-          border: 0.5px solid rgba(200,169,110,0.22);
+          color: rgba(182,138,60,0.72);
+          border: 0.5px solid rgba(182,138,60,0.22);
           padding: 8px 14px;
           margin-bottom: 30px;
         }
@@ -81,8 +81,8 @@ export default function ThankYouPage() {
 
         .gold {
           font-style: italic;
-          color: #C8A96E;
-          background: linear-gradient(160deg, #F5D98A 0%, #C8A96E 50%, #8B6318 100%);
+          color: #D4AF63;
+          background: linear-gradient(160deg, #E2C57D 0%, #D4AF63 35%, #B68A3C 70%, #8C6A2E 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
@@ -100,8 +100,8 @@ export default function ThankYouPage() {
           display: inline-block;
           font-size: 12px;
           letter-spacing: 0.06em;
-          color: rgba(200,169,110,0.65);
-          border: 0.5px solid rgba(200,169,110,0.18);
+          color: rgba(182,138,60,0.65);
+          border: 0.5px solid rgba(182,138,60,0.18);
           padding: 8px 16px;
           margin: 22px auto 48px;
         }
@@ -109,7 +109,7 @@ export default function ThankYouPage() {
         .divider {
           width: 1px;
           height: 40px;
-          background: linear-gradient(to bottom, rgba(200,169,110,0.35), transparent);
+          background: linear-gradient(to bottom, rgba(182,138,60,0.35), transparent);
           margin: 0 auto 40px;
         }
 
@@ -141,7 +141,7 @@ export default function ThankYouPage() {
         }
 
         .btn-calendly {
-          background: linear-gradient(135deg, #E8CC7A 0%, #C8A96E 40%, #9A7030 100%);
+          background: linear-gradient(135deg, #E2C57D 0%, #D4AF63 35%, #B68A3C 70%, #8C6A2E 100%);
           color: #0D1B2A;
           text-decoration: none;
           padding: 15px 32px;
@@ -155,7 +155,7 @@ export default function ThankYouPage() {
 
         .btn-calendly:hover {
           transform: translateY(-3px);
-          box-shadow: 0 18px 38px rgba(200,169,110,0.22);
+          box-shadow: 0 18px 38px rgba(182,138,60,0.22);
         }
 
         .btn-ghost {
@@ -172,8 +172,8 @@ export default function ThankYouPage() {
 
         .btn-ghost:hover {
           color: #f0ede8;
-          border-color: rgba(200,169,110,0.45);
-          box-shadow: 0 0 32px rgba(200,169,110,0.10);
+          border-color: rgba(182,138,60,0.45);
+          box-shadow: 0 0 32px rgba(182,138,60,0.10);
         }
 
         .btn-home {

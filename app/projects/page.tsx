@@ -102,7 +102,7 @@ export default function Projects() {
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
-          background: #0a0a0a;
+          background: #0D1B2A;
           color: #f0ede8;
           font-family: 'DM Sans', sans-serif;
           -webkit-font-smoothing: antialiased;
@@ -134,8 +134,12 @@ export default function Projects() {
         }
 
         .pj-h1 em {
-          color: #C8A96E;
+          color: #D4AF63;
           font-style: italic;
+          background: linear-gradient(160deg, #E2C57D 0%, #D4AF63 35%, #B68A3C 70%, #8C6A2E 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
         }
 
         .pj-lead {
@@ -162,7 +166,7 @@ export default function Projects() {
         }
 
         .pj-project {
-          background: #0a0a0a;
+          background: #0D1B2A;
           padding: 72px 48px;
           display: grid;
           grid-template-columns: 260px 1fr;
@@ -170,7 +174,7 @@ export default function Projects() {
           transition: background 0.2s ease;
         }
 
-        .pj-project:hover { background: #0d0d0d; }
+        .pj-project:hover { background: #0E1E2F; }
 
         /* Left column */
         .pj-left {}
@@ -179,7 +183,7 @@ export default function Projects() {
           font-family: 'Cormorant Garamond', serif;
           font-size: 13px;
           font-weight: 500;
-          color: rgba(200,169,110,0.4);
+          color: rgba(182,138,60,0.4);
           letter-spacing: 0.1em;
           margin-bottom: 16px;
         }
@@ -218,8 +222,8 @@ export default function Projects() {
           display: inline-block;
           font-size: 10px;
           letter-spacing: 0.08em;
-          color: rgba(200,169,110,0.65);
-          border: 0.5px solid rgba(200,169,110,0.2);
+          color: rgba(182,138,60,0.65);
+          border: 0.5px solid rgba(182,138,60,0.2);
           padding: 3px 10px;
           border-radius: 2px;
           width: fit-content;
@@ -228,9 +232,9 @@ export default function Projects() {
         }
 
         .pj-tag:hover {
-          color: #C8A96E;
-          border-color: rgba(200,169,110,0.55);
-          background: rgba(200,169,110,0.06);
+          color: #D4AF63;
+          border-color: rgba(182,138,60,0.55);
+          background: rgba(182,138,60,0.06);
         }
 
         /* Right column */
@@ -241,10 +245,10 @@ export default function Projects() {
           font-size: 20px;
           font-style: italic;
           font-weight: 500;
-          color: rgba(200,169,110,0.75);
+          color: rgba(182,138,60,0.75);
           line-height: 1.45;
           margin-bottom: 28px;
-          border-left: 1.5px solid rgba(200,169,110,0.25);
+          border-left: 1.5px solid rgba(182,138,60,0.25);
           padding-left: 22px;
         }
 
@@ -277,7 +281,7 @@ export default function Projects() {
         }
 
         .pj-proof-dash {
-          color: #C8A96E;
+          color: #D4AF63;
           opacity: 0.5;
           flex-shrink: 0;
           font-size: 14px;
@@ -293,7 +297,7 @@ export default function Projects() {
 
         /* ── CTA ──────────────────────────────── */
         .pj-cta {
-          background: #C8A96E;
+          background: linear-gradient(135deg, #E2C57D 0%, #D4AF63 35%, #B68A3C 70%, #8C6A2E 100%);
           padding: 72px 48px;
           display: flex;
           align-items: center;
@@ -305,7 +309,7 @@ export default function Projects() {
           font-family: 'Cormorant Garamond', serif;
           font-size: 40px;
           font-weight: 600;
-          color: #0a0a0a;
+          color: #0D1B2A;
           margin-bottom: 8px;
           line-height: 1.05;
         }
@@ -313,11 +317,11 @@ export default function Projects() {
         .pj-cta-sub {
           font-size: 13px;
           font-weight: 300;
-          color: rgba(10,10,10,0.58);
+          color: rgba(13,27,42,0.72);
         }
 
         .pj-cta-btn {
-          background: #0a0a0a;
+          background: #0D1B2A;
           color: #f0ede8;
           padding: 15px 36px;
           font-size: 12.5px;
@@ -353,7 +357,7 @@ export default function Projects() {
           text-decoration: none;
         }
 
-        .pj-footer-logo span { color: rgba(200,169,110,0.35); }
+        .pj-footer-logo span { color: rgba(182,138,60,0.35); }
 
         .pj-footer-links {
           display: flex;
@@ -397,7 +401,7 @@ export default function Projects() {
         }
       `}</style>
 
-      <div style={{ background: "#0a0a0a", minHeight: "100vh" }}>
+      <div style={{ background: "#0D1B2A", minHeight: "100vh" }}>
         <Navbar />
 
         {/* Hero */}

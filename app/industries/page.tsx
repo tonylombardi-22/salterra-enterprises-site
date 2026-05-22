@@ -42,28 +42,28 @@ export default function IndustriesPage() {
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=DM+Sans:wght@300;400;500;600&display=swap');
 
         body { background: #0D1B2A; color: #f0ede8; font-family: 'DM Sans', sans-serif; }
-        .page { min-height: 100vh; background: radial-gradient(circle at 50% 6%, rgba(200,169,110,0.08), transparent 34%), #0D1B2A; }
+        .page { min-height: 100vh; background: radial-gradient(circle at 50% 6%, rgba(182,138,60,0.08), transparent 34%), #0D1B2A; }
         .container { max-width: 1200px; margin: 0 auto; padding: 88px 48px; }
-        .eyebrow { display: inline-block; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(200,169,110,0.72); border: 0.5px solid rgba(200,169,110,0.22); padding: 8px 14px; margin-bottom: 30px; }
+        .eyebrow { display: inline-block; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(182,138,60,0.72); border: 0.5px solid rgba(182,138,60,0.22); padding: 8px 14px; margin-bottom: 30px; }
         h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(54px, 7vw, 84px); line-height: 0.95; letter-spacing: -0.04em; margin-bottom: 28px; max-width: 980px; }
-        .gold { font-style: italic; color: #C8A96E; background: linear-gradient(160deg, #F5D98A 0%, #C8A96E 50%, #8B6318 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .gold { font-style: italic; color: #D4AF63; background: linear-gradient(160deg, #E2C57D 0%, #D4AF63 35%, #B68A3C 70%, #8C6A2E 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
         .intro { max-width: 820px; color: rgba(240,237,232,0.6); line-height: 1.9; font-size: 16px; margin-bottom: 72px; }
         .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
         .card { border: 0.5px solid rgba(240,237,232,0.08); background: rgba(240,237,232,0.02); padding: 36px; transition: all 0.3s ease; }
-        .card:hover { transform: translateY(-8px); border-color: rgba(200,169,110,0.40); background: rgba(240,237,232,0.04); box-shadow: 0 0 60px rgba(200,169,110,0.14); }
-        .card-number { font-size: 11px; letter-spacing: 0.14em; color: rgba(200,169,110,0.72); margin-bottom: 22px; }
+        .card:hover { transform: translateY(-8px); border-color: rgba(182,138,60,0.40); background: rgba(240,237,232,0.04); box-shadow: 0 0 60px rgba(182,138,60,0.14); }
+        .card-number { font-size: 11px; letter-spacing: 0.14em; color: rgba(182,138,60,0.72); margin-bottom: 22px; }
         .card-title { font-family: 'Cormorant Garamond', serif; font-size: 38px; line-height: 1; margin-bottom: 18px; }
         .card-description { color: rgba(240,237,232,0.55); line-height: 1.85; font-size: 14px; margin-bottom: 22px; }
         .card-list { list-style: none; padding: 0; }
         .card-list li { color: rgba(240,237,232,0.72); margin-bottom: 10px; font-size: 13px; }
-        .card-list li::before { content: "- "; color: #C8A96E; }
-        .section { margin-top: 88px; padding-top: 56px; border-top: 1px solid transparent; border-image: linear-gradient(90deg, transparent, rgba(200,169,110,0.35), transparent) 1; }
+        .card-list li::before { content: "- "; color: #D4AF63; }
+        .section { margin-top: 88px; padding-top: 56px; border-top: 1px solid transparent; border-image: linear-gradient(90deg, transparent, rgba(182,138,60,0.35), transparent) 1; }
         .section-title { font-family: 'Cormorant Garamond', serif; font-size: 48px; line-height: 1; margin-bottom: 24px; }
         .section-copy { max-width: 780px; color: rgba(240,237,232,0.55); line-height: 1.9; margin-bottom: 42px; }
         .tags { display: flex; flex-wrap: wrap; gap: 10px; }
-        .tag { border: 0.5px solid rgba(200,169,110,0.25); color: rgba(200,169,110,0.8); padding: 8px 14px; font-size: 12px; letter-spacing: 0.06em; transition: all 0.25s ease; }
-        .tag:hover { color: #f0ede8; border-color: rgba(200,169,110,0.48); box-shadow: 0 0 24px rgba(200,169,110,0.10); transform: translateY(-2px); }
-        .cta { margin-top: 88px; background: linear-gradient(135deg, #E8CC7A 0%, #C8A96E 40%, #9A7030 75%, #C8A96E 100%); padding: 56px; display: flex; justify-content: space-between; align-items: center; gap: 32px; }
+        .tag { border: 0.5px solid rgba(182,138,60,0.25); color: rgba(182,138,60,0.8); padding: 8px 14px; font-size: 12px; letter-spacing: 0.06em; transition: all 0.25s ease; }
+        .tag:hover { color: #f0ede8; border-color: rgba(182,138,60,0.48); box-shadow: 0 0 24px rgba(182,138,60,0.10); transform: translateY(-2px); }
+        .cta { margin-top: 88px; background: linear-gradient(135deg, #E2C57D 0%, #D4AF63 35%, #B68A3C 70%, #8C6A2E 100%); padding: 56px; display: flex; justify-content: space-between; align-items: center; gap: 32px; }
         .cta-title { font-family: 'Cormorant Garamond', serif; font-size: 44px; color: #0D1B2A; margin-bottom: 8px; }
         .cta-copy { color: rgba(13,27,42,0.72); font-size: 14px; }
         .cta-button { background: #0D1B2A; color: #f0ede8; text-decoration: none; padding: 14px 28px; font-size: 13px; white-space: nowrap; transition: all 0.3s ease; }

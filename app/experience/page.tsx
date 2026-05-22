@@ -175,8 +175,8 @@ export default function Experience() {
 
         .ex-h1 em {
           font-style: italic;
-          color: #C8A96E;
-          background: linear-gradient(160deg, #F5D98A 0%, #C8A96E 50%, #8B6318 100%);
+          color: #D4AF63;
+          background: linear-gradient(160deg, #E2C57D 0%, #D4AF63 35%, #B68A3C 70%, #8C6A2E 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
@@ -197,15 +197,15 @@ export default function Experience() {
           align-items: center;
           gap: 10px;
           padding: 12px 28px;
-          border: 0.5px solid rgba(200,169,110,0.45);
+          border: 0.5px solid rgba(182,138,60,0.45);
           border-radius: 2px;
           font-size: 11px;
           font-weight: 500;
           letter-spacing: 0.1em;
           text-transform: uppercase;
           text-decoration: none;
-          color: #C8A96E;
-          background: linear-gradient(160deg, #F5D98A 0%, #C8A96E 50%, #8B6318 100%);
+          color: #D4AF63;
+          background: linear-gradient(160deg, #E2C57D 0%, #D4AF63 35%, #B68A3C 70%, #8C6A2E 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
@@ -214,7 +214,7 @@ export default function Experience() {
 
         .ex-resume-btn:hover {
           opacity: 0.75;
-          border-color: rgba(200,169,110,0.70);
+          border-color: rgba(182,138,60,0.70);
         }
 
         .ex-resume-btn svg {
@@ -283,8 +283,8 @@ export default function Experience() {
           display: inline-block;
           font-size: 10px;
           letter-spacing: 0.08em;
-          color: rgba(200,169,110,0.65);
-          border: 0.5px solid rgba(200,169,110,0.22);
+          color: rgba(182,138,60,0.65);
+          border: 0.5px solid rgba(182,138,60,0.22);
           padding: 3px 10px;
           border-radius: 2px;
           width: fit-content;
@@ -318,8 +318,8 @@ export default function Experience() {
           font-family: 'Cormorant Garamond', serif;
           font-size: 24px;
           font-weight: 600;
-          color: #C8A96E;
-          background: linear-gradient(160deg, #F5D98A 0%, #C8A96E 50%, #8B6318 100%);
+          color: #D4AF63;
+          background: linear-gradient(160deg, #E2C57D 0%, #D4AF63 35%, #B68A3C 70%, #8C6A2E 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
@@ -394,7 +394,7 @@ export default function Experience() {
 
         /* ── CTA ──────────────────────────────── */
         .ex-cta {
-          background: linear-gradient(135deg, #E8CC7A 0%, #C8A96E 40%, #9A7030 75%, #C8A96E 100%);
+          background: linear-gradient(135deg, #E2C57D 0%, #D4AF63 35%, #B68A3C 70%, #8C6A2E 100%);
           padding: 72px 48px;
           display: flex;
           align-items: center;
@@ -454,7 +454,7 @@ export default function Experience() {
           text-decoration: none;
         }
 
-        .ex-footer-logo span { color: rgba(200,169,110,0.35); }
+        .ex-footer-logo span { color: rgba(182,138,60,0.35); }
 
         .ex-footer-links {
           display: flex;

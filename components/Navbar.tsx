@@ -19,9 +19,9 @@ export default function Navbar() {
 
         .tl-nav {
           background:
-            radial-gradient(circle at 78% 0%, rgba(200, 169, 110, 0.055), transparent 28%),
+            radial-gradient(circle at 78% 0%, rgba(182, 138, 60, 0.055), transparent 28%),
             rgba(13, 27, 42, 0.96);
-          border-bottom: 0.5px solid rgba(200, 169, 110, 0.12);
+          border-bottom: 0.5px solid rgba(182, 138, 60, 0.12);
           position: sticky;
           top: 0;
           z-index: 100;
@@ -43,14 +43,14 @@ export default function Navbar() {
           display: flex;
           align-items: center;
           padding-right: 46px;
-          border-right: 0.5px solid rgba(200, 169, 110, 0.22);
+          border-right: 0.5px solid rgba(182, 138, 60, 0.22);
           flex-shrink: 0;
           text-decoration: none;
           transition: filter 0.3s ease, opacity 0.3s ease;
         }
 
         .tl-logo-zone:hover {
-          filter: drop-shadow(0 0 18px rgba(200, 169, 110, 0.16));
+          filter: drop-shadow(0 0 18px rgba(182, 138, 60, 0.16));
           opacity: 0.96;
         }
 
@@ -91,19 +91,19 @@ export default function Navbar() {
         }
 
         .tl-link:hover {
-          color: #C8A96E;
-          background: rgba(200, 169, 110, 0.055);
-          border-color: rgba(200, 169, 110, 0.22);
-          text-shadow: 0 0 18px rgba(200, 169, 110, 0.25);
-          box-shadow: 0 0 28px rgba(200, 169, 110, 0.08);
+          color: #D4AF63;
+          background: rgba(182, 138, 60, 0.055);
+          border-color: rgba(182, 138, 60, 0.22);
+          text-shadow: 0 0 18px rgba(182, 138, 60, 0.25);
+          box-shadow: 0 0 28px rgba(182, 138, 60, 0.08);
           transform: translateY(-1px);
         }
 
         .tl-link.active {
-          color: #C8A96E;
-          background: rgba(200, 169, 110, 0.08);
-          border-color: rgba(200, 169, 110, 0.26);
-          text-shadow: 0 0 14px rgba(200, 169, 110, 0.18);
+          color: #D4AF63;
+          background: rgba(182, 138, 60, 0.08);
+          border-color: rgba(182, 138, 60, 0.26);
+          text-shadow: 0 0 14px rgba(182, 138, 60, 0.18);
         }
 
         .tl-cta {
@@ -111,13 +111,13 @@ export default function Navbar() {
           font-size: 17px;
           font-weight: 600;
           letter-spacing: 0.11em;
-          color: #C8A96E;
-          background-image: linear-gradient(160deg, #F5D98A 0%, #C8A96E 50%, #8B6318 100%);
+          color: #D4AF63;
+          background-image: linear-gradient(160deg, #E2C57D 0%, #D4AF63 35%, #B68A3C 70%, #8C6A2E 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
           text-decoration: none;
-          border: 0.5px solid rgba(200, 169, 110, 0.52);
+          border: 0.5px solid rgba(182, 138, 60, 0.52);
           border-radius: 3px;
           padding: 11px 22px;
           transition:
@@ -131,12 +131,12 @@ export default function Navbar() {
 
         .tl-cta:hover {
           background-image: none;
-          background-color: rgba(200, 169, 110, 0.105);
+          background-color: rgba(182, 138, 60, 0.105);
           -webkit-background-clip: initial;
           -webkit-text-fill-color: #f0ede8;
           background-clip: initial;
-          border-color: rgba(200, 169, 110, 0.9);
-          box-shadow: 0 0 34px rgba(200, 169, 110, 0.14);
+          border-color: rgba(182, 138, 60, 0.9);
+          box-shadow: 0 0 34px rgba(182, 138, 60, 0.14);
           transform: translateY(-2px);
         }
 
@@ -145,7 +145,7 @@ export default function Navbar() {
           flex-direction: column;
           gap: 5px;
           background: none;
-          border: 0.5px solid rgba(200, 169, 110, 0.16);
+          border: 0.5px solid rgba(182, 138, 60, 0.16);
           border-radius: 3px;
           cursor: pointer;
           padding: 8px;
@@ -154,15 +154,15 @@ export default function Navbar() {
         }
 
         .tl-hamburger:hover {
-          border-color: rgba(200, 169, 110, 0.42);
-          box-shadow: 0 0 24px rgba(200, 169, 110, 0.10);
+          border-color: rgba(182, 138, 60, 0.42);
+          box-shadow: 0 0 24px rgba(182, 138, 60, 0.10);
         }
 
         .tl-hamburger span {
           display: block;
           width: 24px;
           height: 1.5px;
-          background: rgba(200, 169, 110, 0.85);
+          background: rgba(182, 138, 60, 0.85);
           transition: all 0.25s ease;
         }
 
@@ -170,9 +170,9 @@ export default function Navbar() {
           display: none;
           flex-direction: column;
           background:
-            radial-gradient(circle at 80% 0%, rgba(200, 169, 110, 0.06), transparent 36%),
+            radial-gradient(circle at 80% 0%, rgba(182, 138, 60, 0.06), transparent 36%),
             #0D1B2A;
-          border-top: 0.5px solid rgba(200, 169, 110, 0.12);
+          border-top: 0.5px solid rgba(182, 138, 60, 0.12);
           padding: 18px 24px 26px;
           gap: 6px;
           box-shadow: 0 20px 44px rgba(0, 0, 0, 0.22);
@@ -196,8 +196,8 @@ export default function Navbar() {
 
         .tl-mobile-link:hover,
         .tl-mobile-link.active {
-          color: #C8A96E;
-          text-shadow: 0 0 18px rgba(200, 169, 110, 0.22);
+          color: #D4AF63;
+          text-shadow: 0 0 18px rgba(182, 138, 60, 0.22);
           padding-left: 4px;
         }
 
@@ -206,13 +206,13 @@ export default function Navbar() {
           font-size: 18px;
           font-weight: 600;
           letter-spacing: 0.1em;
-          color: #C8A96E;
-          background: linear-gradient(160deg, #F5D98A 0%, #C8A96E 50%, #8B6318 100%);
+          color: #D4AF63;
+          background: linear-gradient(160deg, #E2C57D 0%, #D4AF63 35%, #B68A3C 70%, #8C6A2E 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
           text-decoration: none;
-          border: 0.5px solid rgba(200, 169, 110, 0.45);
+          border: 0.5px solid rgba(182, 138, 60, 0.45);
           border-radius: 3px;
           padding: 12px 16px;
           text-align: center;
@@ -226,10 +226,10 @@ export default function Navbar() {
         }
 
         .tl-mobile-cta:hover {
-          background: rgba(200, 169, 110, 0.105);
-          border-color: rgba(200, 169, 110, 0.86);
+          background: rgba(182, 138, 60, 0.105);
+          border-color: rgba(182, 138, 60, 0.86);
           color: #f0ede8;
-          box-shadow: 0 0 34px rgba(200, 169, 110, 0.13);
+          box-shadow: 0 0 34px rgba(182, 138, 60, 0.13);
           transform: translateY(-2px);
         }
 
