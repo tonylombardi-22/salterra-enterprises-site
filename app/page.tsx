@@ -567,23 +567,6 @@ export default function Home() {
         <hr className="rule" />
 
         <section className="section">
-          <div className="section-eyebrow fade-up">What we help businesses achieve</div>
-
-          <div className="outcomes">
-            <div className="outcome fade-up">Streamlined operational systems</div>
-            <div className="outcome fade-up">Greater organizational clarity</div>
-            <div className="outcome fade-up">Improved scalability and efficiency</div>
-            <div className="outcome fade-up">Stronger customer experiences</div>
-            <div className="outcome fade-up">Strategic growth alignment</div>
-            <div className="outcome fade-up">Technology-enabled execution</div>
-            <div className="outcome fade-up">Distinctive brand and market positioning</div>
-            <div className="outcome fade-up">Sustainable long-term infrastructure</div>
-          </div>
-        </section>
-
-        <hr className="rule" />
-
-        <section className="section">
           <div className="section-eyebrow fade-up">How Salterra helps</div>
 
           <div className="cards">
