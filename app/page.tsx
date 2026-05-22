@@ -614,6 +614,16 @@ export default function Home() {
                 the systems that shape how customers experience the business.
               </div>
             </div>
+
+            <div className="card fade-up">
+              <div className="card-num">06</div>
+              <div className="card-title">Project & Program Management</div>
+              <div className="card-body">
+                Plan, coordinate, and drive initiatives from kickoff to completion — managing
+                timelines, stakeholders, and deliverables so projects stay on track and produce
+                real results.
+              </div>
+            </div>
           </div>
         </section>
 
