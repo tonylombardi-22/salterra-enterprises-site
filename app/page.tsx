@@ -501,7 +501,7 @@ export default function Home() {
 
             <h1 className="hero-h1">
               Transforming<br />
-              complexity into <span className="gold">strategic momentum.</span>
+              <span style={{whiteSpace: 'nowrap'}}>complexity into <span className="gold">strategic momentum.</span></span>
             </h1>
 
             <p className="hero-sub">
