@@ -264,17 +264,9 @@ export default function ServicesPage() {
           </div>
 
           <h1>
-            Integrated support for businesses ready to{" "}
-            <span className="gold">grow with clarity and momentum.</span>
+            Salterra provides practical partnership designed to reduce complexity{" "}
+            <span className="gold">& support sustainable growth.</span>
           </h1>
-
-          <p className="intro">
-            Salterra Enterprises helps growing businesses align strategy, operations, brand,
-            technology, and execution. Whether you need stronger internal systems, sharper
-            positioning, digital support, improved customer experience, or help moving strategic
-            initiatives forward, Salterra provides practical partnership designed to reduce
-            complexity and support sustainable growth.
-          </p>
 
           <div className="services-grid">
 
