@@ -86,6 +86,7 @@ export default function ServicesPage() {
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
+          padding-right: 0.08em;
         }
 
         .intro {

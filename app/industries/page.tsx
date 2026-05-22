@@ -46,7 +46,7 @@ export default function IndustriesPage() {
         .container { max-width: 1200px; margin: 0 auto; padding: 88px 48px; }
         .eyebrow { display: inline-block; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(182,138,60,0.72); border: 0.5px solid rgba(182,138,60,0.22); padding: 8px 14px; margin-bottom: 30px; }
         h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(54px, 7vw, 84px); line-height: 0.95; letter-spacing: -0.04em; margin-bottom: 28px; max-width: 980px; }
-        .gold { font-style: italic; color: #D4AF63; background: linear-gradient(160deg, #E2C57D 0%, #D4AF63 35%, #B68A3C 70%, #8C6A2E 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .gold { font-style: italic; color: #D4AF63; background: linear-gradient(160deg, #E2C57D 0%, #D4AF63 35%, #B68A3C 70%, #8C6A2E 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; padding-right: 0.08em; }
         .intro { max-width: 820px; color: rgba(240,237,232,0.6); line-height: 1.9; font-size: 16px; margin-bottom: 72px; }
         .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
         .card { border: 0.5px solid rgba(240,237,232,0.08); background: rgba(240,237,232,0.02); padding: 36px; transition: all 0.3s ease; }

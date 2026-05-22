@@ -46,7 +46,7 @@ export default function AboutPage() {
         .wrap { max-width: 1200px; margin: 0 auto; padding: 88px 48px; }
         .eyebrow { display: inline-block; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(182,138,60,0.72); border: 0.5px solid rgba(182,138,60,0.22); padding: 8px 14px; margin-bottom: 32px; }
         h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(54px, 7vw, 86px); line-height: 0.95; letter-spacing: -0.04em; font-weight: 600; max-width: 900px; margin-bottom: 32px; }
-        .gold { font-style: italic; color: #D4AF63; background: linear-gradient(160deg, #E2C57D 0%, #D4AF63 35%, #B68A3C 70%, #8C6A2E 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .gold { font-style: italic; color: #D4AF63; background: linear-gradient(160deg, #E2C57D 0%, #D4AF63 35%, #B68A3C 70%, #8C6A2E 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; padding-right: 0.08em; }
         .intro { max-width: 780px; font-size: 16px; line-height: 1.85; color: rgba(240,237,232,0.6); margin-bottom: 72px; }
         .split { display: grid; grid-template-columns: 1fr 420px; gap: 72px; align-items: start; }
         .section-title { font-family: 'Cormorant Garamond', serif; font-size: 42px; line-height: 1.05; font-weight: 600; margin-bottom: 22px; }
