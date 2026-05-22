@@ -537,7 +537,7 @@ export default function Home() {
 
             <div className="portrait-caption">
               <div className="portrait-name">Amber Zeigler</div>
-              <div className="portrait-title">Founder & Principal Consultant</div>
+              <div className="portrait-title">Founder & CEO</div>
             </div>
           </div>
         </section>

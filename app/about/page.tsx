@@ -123,7 +123,7 @@ export default function AboutPage() {
             <aside className="panel">
               <img src="/amber-headshot-1.jpg" alt="Amber Zeigler, Founder of Salterra Enterprises" />
               <div className="panel-title">Amber Zeigler</div>
-              <div className="panel-sub">Founder & Principal Consultant</div>
+              <div className="panel-sub">Founder & CEO</div>
               <p className="body-copy">
                 Built to support organizations that need practical help improving how work
                 gets done — from strategy and planning to operations and execution.
