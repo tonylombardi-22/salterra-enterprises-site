@@ -5,11 +5,11 @@ import Footer from "@/components/footer";
 export const metadata: Metadata = {
   title: "Consulting Services | Salterra Enterprises",
   description:
-    "Strategic advisory, operational excellence, brand strategy, technology solutions, and customer experience consulting for growing businesses.",
+    "Strategic advisory, operational excellence, brand strategy, technology solutions, and customer experience consulting for growing businesses",
   openGraph: {
     title: "Consulting Services | Salterra Enterprises",
     description:
-      "Strategic advisory, operational excellence, brand strategy, technology solutions, and customer experience consulting for growing businesses.",
+      "Strategic advisory, operational excellence, brand strategy, technology solutions, and customer experience consulting for growing businesses",
     url: "https://www.salterraenterprises.com/services",
     siteName: "Salterra Enterprises",
     images: [
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Consulting Services | Salterra Enterprises",
     description:
-      "Strategic advisory, operational excellence, brand strategy, technology solutions, and customer experience consulting for growing businesses.",
+      "Strategic advisory, operational excellence, brand strategy, technology solutions, and customer experience consulting for growing businesses",
     images: ["/salterra-hero.jpg"],
   },
 };
@@ -398,7 +398,7 @@ export default function ServicesPage() {
 
               <div className="cta-copy">
                 Schedule a conversation about your strategy, operations, brand, technology needs,
-                and the support your business needs to grow.
+                and the support your business needs to grow
               </div>
             </div>
 

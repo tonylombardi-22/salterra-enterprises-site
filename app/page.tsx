@@ -501,7 +501,7 @@ export default function Home() {
 
             <h1 className="hero-h1">
               Transforming complexity into<br />
-              <span className="gold">strategic momentum.</span>
+              <span className="gold">strategic momentum</span>
             </h1>
 
             <p className="hero-sub">
@@ -510,10 +510,7 @@ export default function Home() {
             </p>
 
             <div className="hero-btns">
-              <Link href="/contact" className="btn-primary">
-                Start the Conversation
-              </Link>
-              <Link href="/services" className="btn-ghost">
+              <Link href="/contact" className="btn-ghost">
                 Start the Conversation
               </Link>
             </div>
@@ -547,7 +544,7 @@ export default function Home() {
         <section className="section vision">
           <div className="fade-up">
             <div className="section-headline">
-              Built for businesses<br />ready to <span className="gold">evolve.</span>
+              Built for businesses<br />ready to <span className="gold">evolve</span>
             </div>
           </div>
 
@@ -632,7 +629,7 @@ export default function Home() {
             <div className="section-eyebrow">About Amber Zeigler</div>
             <div className="split-headline">
               Corporate experience.<br />
-              <span className="gold">Entrepreneurial focus.</span>
+              <span className="gold">Entrepreneurial focus</span>
             </div>
             <p className="split-body">
               Amber Zeigler is a business professional with experience across product management,
@@ -651,7 +648,7 @@ export default function Home() {
             <div className="section-eyebrow">Core capabilities</div>
             <div className="split-headline">
               Practical support for<br />
-              <span className="gold">growing organizations.</span>
+              <span className="gold">growing organizations</span>
             </div>
             <div className="pills">
               <span className="pill">Business Advisory</span>
