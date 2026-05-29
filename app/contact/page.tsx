@@ -312,7 +312,7 @@ export default function ContactPage() {
           <p className="intro">
             Whether you need help aligning strategy, improving operations, strengthening your
             brand, implementing technology solutions, or supporting growth initiatives, Salterra
-            Enterprises helps organizations move from complexity to confident execution.
+            Enterprises helps organizations move from complexity to confident execution
           </p>
 
           <div className="contact-grid">
@@ -323,7 +323,7 @@ export default function ContactPage() {
                 Share a few details about your business, growth goals, and the challenges you are
                 facing. Salterra Enterprises will follow up to discuss opportunities to improve
                 strategy, operations, customer experience, brand positioning, technology execution,
-                or business growth initiatives.
+                or business growth initiatives
               </p>
 
               <form className="form" onSubmit={handleSubmit}>
@@ -388,7 +388,7 @@ export default function ContactPage() {
                   <textarea
                     id="message"
                     name="message"
-                    placeholder="Tell us about your business goals, challenges, and what success looks like for your organization."
+                    placeholder="Tell us about your business goals, challenges, and what success looks like for your organization"
                     required
                   />
                 </div>
@@ -435,7 +435,7 @@ export default function ContactPage() {
                 <div className="info-value">
                   Experience spanning product management, customer experience, sales, operations,
                   regulated financial services, workflow improvement, business strategy, and
-                  growth-focused execution.
+                  growth-focused execution
                 </div>
               </div>
 
