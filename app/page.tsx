@@ -546,9 +546,8 @@ export default function Home() {
 
         <section className="section vision">
           <div className="fade-up">
-            <div className="section-eyebrow">Built for businesses ready to evolve</div>
             <div className="section-headline">
-              Built for businesses ready to evolve.
+              Built for businesses<br />ready to <span className="gold">evolve.</span>
             </div>
           </div>
 
