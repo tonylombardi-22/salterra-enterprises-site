@@ -6,11 +6,11 @@ import Footer from "@/components/footer";
 export const metadata: Metadata = {
   title: "About Amber Zeigler | Salterra Enterprises",
   description:
-    "Meet Amber Zeigler, founder of Salterra Enterprises. Practical consulting led by product management discipline, financial services experience, and operational expertise.",
+    "Meet Amber Zeigler, founder of Salterra Enterprises. Practical consulting led by product management discipline, financial services experience & operational expertise.",
   openGraph: {
     title: "About Amber Zeigler | Salterra Enterprises",
     description:
-      "Meet Amber Zeigler, founder of Salterra Enterprises. Practical consulting led by product management discipline, financial services experience, and operational expertise.",
+      "Meet Amber Zeigler, founder of Salterra Enterprises. Practical consulting led by product management discipline, financial services experience & operational expertise.",
     url: "https://www.salterraenterprises.com/about",
     siteName: "Salterra Enterprises",
     images: [
