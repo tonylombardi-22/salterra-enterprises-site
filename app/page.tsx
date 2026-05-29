@@ -64,10 +64,9 @@ export default function Home() {
           letter-spacing: 0.14em;
           text-transform: uppercase;
           color: rgba(182,138,60,0.72);
-          border: 0.5px solid rgba(182,138,60,0.22);
-          padding: 8px 14px;
+          border: none;
+          padding: 8px 0;
           margin-bottom: 34px;
-          box-shadow: 0 0 24px rgba(182,138,60,0.04);
         }
 
         .hero-h1 {
@@ -515,7 +514,7 @@ export default function Home() {
                 Start the Conversation
               </Link>
               <Link href="/services" className="btn-ghost">
-                Explore Services
+                Start the Conversation
               </Link>
             </div>
           </div>
