@@ -1,3 +1,4 @@
+// app/page.tsx
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/footer";
 import ScrollAnimations from "@/components/ScrollAnimations";
@@ -655,7 +656,6 @@ export default function Home() {
               <span className="gold">growing organizations.</span>
             </div>
             <div className="pills">
-              <span className="pill">FINRA Licensed in 40+ States</span>
               <span className="pill">Business Advisory</span>
               <span className="pill">Product Management</span>
               <span className="pill">Workflow Re-engineering</span>
