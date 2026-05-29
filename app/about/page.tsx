@@ -57,12 +57,76 @@ export default function AboutPage() {
         .panel-sub { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(182,138,60,0.72); margin-bottom: 20px; }
         .capabilities { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
         .pill { font-size: 11px; letter-spacing: 0.07em; color: rgba(182,138,60,0.72); border: 0.5px solid rgba(182,138,60,0.22); padding: 7px 12px; border-radius: 2px; }
-        .values { margin-top: 56px; border-top: 0.5px solid rgba(240,237,232,0.08); padding-top: 56px; }
-        .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 34px; }
-        .value-card { border: 0.5px solid rgba(240,237,232,0.09); background: rgba(240,237,232,0.02); padding: 30px; min-height: 210px; }
-        .value-num { color: rgba(182,138,60,0.72); font-size: 11px; letter-spacing: 0.14em; margin-bottom: 22px; }
-        .value-title { font-family: 'Cormorant Garamond', serif; font-size: 30px; margin-bottom: 14px; }
-        .value-body { color: rgba(240,237,232,0.5); font-size: 13.5px; line-height: 1.75; }
         .cta { margin-top: 72px; background: linear-gradient(135deg, #E2C57D 0%, #D4AF63 35%, #B68A3C 70%, #8C6A2E 100%); padding: 48px; display: flex; justify-content: space-between; align-items: center; gap: 32px; }
         .cta-title { font-family: 'Cormorant Garamond', serif; font-size: 42px; line-height: 1.05; color: #0D1B2A; font-weight: 600; }
-        .cta-copy { margin-top: 8px; color: rgba(13,27,42,0.72)
+        .cta-copy { margin-top: 8px; color: rgba(13,27,42,0.72); font-size: 13.5px; }
+        .btn { background: #0D1B2A; color: #f0ede8; padding: 14px 28px; text-decoration: none; font-size: 13px; border-radius: 2px; white-space: nowrap; }
+        @media (max-width: 900px) {
+          .wrap { padding: 56px 24px; }
+          .split { grid-template-columns: 1fr; }
+          .panel img { height: 380px; object-position: center 18%; }
+          .cta { flex-direction: column; align-items: flex-start; }
+        }
+      `}</style>
+
+      <main className="page">
+        <Navbar />
+        <section className="wrap">
+          <div className="eyebrow">About Salterra Enterprises</div>
+          <h1>Practical business support led by <span className="gold">clarity, discipline, and execution.</span></h1>
+          <p className="intro">
+            Salterra Enterprises helps organizations simplify operations, improve workflows,
+            and move strategic priorities forward with confidence. Founded by Amber Zeigler,
+            the company brings together corporate experience, product management discipline,
+            sales perspective, regulated financial services experience, and hands-on operational
+            support for businesses that need a clearer way to work and grow.
+          </p>
+          <div className="split">
+            <div>
+              <div className="section-title">Meet Amber Zeigler</div>
+              <p className="body-copy">
+                Amber Zeigler is a business professional with experience across product
+                management, sales, customer experience, regulated financial environments,
+                and workflow improvement. Her background gives her a practical understanding
+                of how business strategy, operational process, and customer-facing execution
+                need to work together.
+              </p>
+              <p className="body-copy">
+                Through Salterra Enterprises, Amber partners with business owners and
+                leadership teams that need more structure, better processes, and stronger
+                follow-through. Her work is grounded in simplifying complexity, improving
+                communication, and helping organizations turn ideas into action.
+              </p>
+              <div className="capabilities">
+                <span className="pill">Product Management</span>
+                <span className="pill">Workflow Re-engineering</span>
+                <span className="pill">Sales Operations</span>
+                <span className="pill">Customer Experience</span>
+                <span className="pill">Business Operations</span>
+                <span className="pill">Project Management</span>
+                <span className="pill">Administrative Support</span>
+              </div>
+            </div>
+            <aside className="panel">
+              <img src="/amber-headshot-1.jpg" alt="Amber Zeigler, Founder of Salterra Enterprises" />
+              <div className="panel-title">Amber Zeigler</div>
+              <div className="panel-sub">Founder & CEO</div>
+              <p className="body-copy">
+                Built to support organizations that need practical help improving how work
+                gets done — from strategy and planning to operations and execution.
+              </p>
+            </aside>
+          </div>
+          <div className="cta">
+            <div>
+              <div className="cta-title">Ready to improve how your business works?</div>
+              <div className="cta-copy">Start with a conversation about your goals, workflows, and operational challenges.</div>
+            </div>
+            <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn">Schedule Consultation</a>
+          </div>
+        </section>
+        <Footer />
+      </main>
+    </>
+  );
+}
