@@ -83,7 +83,7 @@ export default function IndustriesPage() {
 
           <h1>
             Support for organizations navigating{" "}
-            <span className="gold">growth, change, and complexity.</span>
+            <span className="gold">growth, change & complexity.</span>
           </h1>
 
           <p className="intro">
