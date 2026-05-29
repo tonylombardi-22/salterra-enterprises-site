@@ -73,7 +73,7 @@ export default function AboutPage() {
         <Navbar />
         <section className="wrap">
           <div className="eyebrow">About Salterra Enterprises</div>
-          <h1>Practical business support led by <span className="gold">clarity, discipline, and execution</span></h1>
+          <h1>Practical business support led by <span className="gold">clarity, discipline & execution</span></h1>
           <p className="intro">
             Salterra Enterprises helps organizations simplify operations, improve workflows,
             and move strategic priorities forward with confidence. Founded by Amber Zeigler,
