@@ -265,7 +265,7 @@ export default function ServicesPage() {
 
           <h1>
             Salterra provides practical partnership designed to reduce complexity{" "}
-            <span className="gold">& support sustainable growth.</span>
+            <span className="gold">& support sustainable growth</span>
           </h1>
 
           <div className="services-grid">

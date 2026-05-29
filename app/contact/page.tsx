@@ -306,7 +306,7 @@ export default function ContactPage() {
 
           <h1>
             Let’s discuss how your business can{" "}
-            <span className="gold">grow with greater clarity and momentum.</span>
+            <span className="gold">grow with greater clarity and momentum</span>
           </h1>
 
           <p className="intro">

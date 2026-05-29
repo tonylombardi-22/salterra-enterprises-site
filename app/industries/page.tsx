@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Who We Serve | Salterra Enterprises",
     description:
-      "Salterra Enterprises works with regulated organizations, founders, service-based businesses, and growth-focused teams navigating complexity & change.",
+      "Salterra Enterprises works with regulated organizations, founders, service-based businesses, and growth-focused teams navigating complexity & change",
     images: ["/salterra-hero.jpg"],
   },
 };
